@@ -4,3 +4,6 @@
 [submodule "submodule/antigen"]
 	path = submodule/antigen
 	url = https://github.com/zsh-users/antigen.git
+[submodule "submodule/fresh"]
+	path = submodule/fresh
+	url = https://github.com/freshshell/fresh.git
