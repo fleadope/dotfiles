@@ -27,7 +27,10 @@ if has('gui_running')
         autocmd!
         au InsertEnter * set timeoutlen=0
         au InsertLeave * set timeoutlen=1000
-    set 
-else
-    set background=dark
-endif
+        set 
+    else
+        set background=dark
+    endif
+
+    " format
+    nmap <Leader>fa ggVG=

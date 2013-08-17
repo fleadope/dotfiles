@@ -1,11 +1,14 @@
 export PATH=~/bin:/usr/local/bin:$PATH
 
-export CHRUBY_HOME=/usr/local/share/chruby
-[[ -s $CHRUBY_HOME/chruby.sh ]] && source $CHRUBY_HOME/chruby.sh
-[[ -s $CHRUBY_HOME/auto.sh ]] && source $CHRUBY_HOME/auto.sh
-RUBIES=(~/.rubies/*)
-# use ruby 2.0
-chruby ruby-2.0
+
+
+
+#export CHRUBY_HOME=/usr/local/schruby
+#[[ -s $CHRUBY_HOME/chruby.sh ]] && source $CHRUBY_HOME/chruby.sh
+#[[ -s $CHRUBY_HOME/auto.sh ]] && source $CHRUBY_HOME/auto.sh
+#RUBIES=(~/.rubies/*)
+## use ruby 2.0
+#chruby ruby-2.0
 
 
 
