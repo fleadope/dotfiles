@@ -9,7 +9,6 @@ antigen bundles <<EOBUNDLES
   
   zsh-users/zsh-completions
   zsh-users/zsh-syntax-highlighting
-  zsh-users/zaw
 
   # do what i mean
   oknowton/zsh-dwim
