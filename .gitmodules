@@ -1,3 +1,6 @@
 [submodule "submodule/zaw"]
 	path = submodule/zaw
 	url = https://github.com/zsh-users/zaw.git
+[submodule "submodule/antigen"]
+	path = submodule/antigen
+	url = https://github.com/zsh-users/antigen.git
