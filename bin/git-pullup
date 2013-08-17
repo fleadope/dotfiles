@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# 
+# git pullup: merge changes from upstream
+
+git ls-remote --exit-code . upstream/master > /dev/null
+
+if [ $? == 0 ]; then
+  git fetch origin -v && git fetch upstream -v && git merge upstream/master
+else
+  echo "no upstream/master branch, exiting.";
+fi
