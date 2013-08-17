@@ -9,7 +9,6 @@ submodules_dir=$dotfiles_dir/submodule
 
 local_env_file=$dotfiles_dir/env.local
 [[ -f $local_env_file ]] && source $local_env_file
-echo "GIT_AUTHOR_EMAIL = $GIT_AUTHOR_EMAIL"
 
 # setup the projects dir
 #if [ -d $HOME/projects ]; then 
