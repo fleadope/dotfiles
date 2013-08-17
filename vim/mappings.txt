@@ -1,0 +1,324 @@
+
+
+nox<C-B>         :CtrlPBuffer<CR>
+nox<C-E>         :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+s  <C-H>       * a<BS>
+nox<C-H>         <C-W>h<C-W>_
+s  <Tab>         <Right><Plug>(neosnippet_jump_or_expand)
+nox<NL>          <C-W>j<C-W>_
+s  <C-K>         <Plug>(neosnippet_expand_or_jump)
+nox<C-K>         <C-W>k<C-W>_
+nox<C-L>         <C-W>l<C-W>_
+s  <CR>        * a<BS>
+nox<CR>          :CtrlPMRU<CR>
+x  <C-N>       * :<C-U>call multiple_cursors#new("v")<CR>
+n  <C-N>       * :call multiple_cursors#new("n")<CR>
+n  <C-P>       * :<C-U>CtrlP<CR>
+nox<Esc>[H       g0
+nox<Esc>[F       $
+o  %           * v:<C-U>call <SNR>60_Match_wrapper('',1,'o') <CR>
+x  %           * :<C-U>call <SNR>60_Match_wrapper('',1,'v') <CR>m'gv``
+n  %           * :<C-U>call <SNR>60_Match_wrapper('',1,'n') <CR>
+n  ;fa           ggVG=
+n  ;P            :Preview<CR>
+n  ;ca           <Plug>NERDCommenterAltDelims
+x  ;cu           <Plug>NERDCommenterUncomment
+n  ;cu           <Plug>NERDCommenterUncomment
+x  ;cb           <Plug>NERDCommenterAlignBoth
+n  ;cb           <Plug>NERDCommenterAlignBoth
+x  ;cl           <Plug>NERDCommenterAlignLeft
+n  ;cl           <Plug>NERDCommenterAlignLeft
+n  ;cA           <Plug>NERDCommenterAppend
+x  ;cy           <Plug>NERDCommenterYank
+n  ;cy           <Plug>NERDCommenterYank
+x  ;cs           <Plug>NERDCommenterSexy
+n  ;cs           <Plug>NERDCommenterSexy
+x  ;ci           <Plug>NERDCommenterInvert
+n  ;ci           <Plug>NERDCommenterInvert
+n  ;c$           <Plug>NERDCommenterToEOL
+x  ;cn           <Plug>NERDCommenterNested
+n  ;cn           <Plug>NERDCommenterNested
+x  ;cm           <Plug>NERDCommenterMinimal
+n  ;cm           <Plug>NERDCommenterMinimal
+x  ;c<Space>     <Plug>NERDCommenterToggle
+n  ;c<Space>     <Plug>NERDCommenterToggle
+x  ;cc           <Plug>NERDCommenterComment
+n  ;cc           <Plug>NERDCommenterComment
+n  ;ig           <Plug>IndentGuidesToggle
+x  ;;w         * :<C-U>call EasyMotion#WB(1, 0)<CR>
+o  ;;w         * :call EasyMotion#WB(0, 0)<CR>
+n  ;;w         * :call EasyMotion#WB(0, 0)<CR>
+x  ;;t         * :<C-U>call EasyMotion#T(1, 0)<CR>
+o  ;;t         * :call EasyMotion#T(0, 0)<CR>
+n  ;;t         * :call EasyMotion#T(0, 0)<CR>
+x  ;;n         * :<C-U>call EasyMotion#Search(1, 0)<CR>
+o  ;;n         * :call EasyMotion#Search(0, 0)<CR>
+n  ;;n         * :call EasyMotion#Search(0, 0)<CR>
+x  ;;k         * :<C-U>call EasyMotion#JK(1, 1)<CR>
+o  ;;k         * :call EasyMotion#JK(0, 1)<CR>
+n  ;;k         * :call EasyMotion#JK(0, 1)<CR>
+x  ;;j         * :<C-U>call EasyMotion#JK(1, 0)<CR>
+o  ;;j         * :call EasyMotion#JK(0, 0)<CR>
+n  ;;j         * :call EasyMotion#JK(0, 0)<CR>
+x  ;;gE        * :<C-U>call EasyMotion#EW(1, 1)<CR>
+o  ;;gE        * :call EasyMotion#EW(0, 1)<CR>
+n  ;;gE        * :call EasyMotion#EW(0, 1)<CR>
+x  ;;f         * :<C-U>call EasyMotion#F(1, 0)<CR>
+o  ;;f         * :call EasyMotion#F(0, 0)<CR>
+n  ;;f         * :call EasyMotion#F(0, 0)<CR>
+x  ;;e         * :<C-U>call EasyMotion#E(1, 0)<CR>
+o  ;;e         * :call EasyMotion#E(0, 0)<CR>
+n  ;;e         * :call EasyMotion#E(0, 0)<CR>
+x  ;;b         * :<C-U>call EasyMotion#WB(1, 1)<CR>
+o  ;;b         * :call EasyMotion#WB(0, 1)<CR>
+n  ;;b         * :call EasyMotion#WB(0, 1)<CR>
+x  ;;W         * :<C-U>call EasyMotion#WBW(1, 0)<CR>
+o  ;;W         * :call EasyMotion#WBW(0, 0)<CR>
+n  ;;W         * :call EasyMotion#WBW(0, 0)<CR>
+x  ;;T         * :<C-U>call EasyMotion#T(1, 1)<CR>
+o  ;;T         * :call EasyMotion#T(0, 1)<CR>
+n  ;;T         * :call EasyMotion#T(0, 1)<CR>
+x  ;;N         * :<C-U>call EasyMotion#Search(1, 1)<CR>
+o  ;;N         * :call EasyMotion#Search(0, 1)<CR>
+n  ;;N         * :call EasyMotion#Search(0, 1)<CR>
+x  ;;ge        * :<C-U>call EasyMotion#E(1, 1)<CR>
+o  ;;ge        * :call EasyMotion#E(0, 1)<CR>
+n  ;;ge        * :call EasyMotion#E(0, 1)<CR>
+x  ;;F         * :<C-U>call EasyMotion#F(1, 1)<CR>
+o  ;;F         * :call EasyMotion#F(0, 1)<CR>
+n  ;;F         * :call EasyMotion#F(0, 1)<CR>
+x  ;;E         * :<C-U>call EasyMotion#EW(1, 0)<CR>
+o  ;;E         * :call EasyMotion#EW(0, 0)<CR>
+n  ;;E         * :call EasyMotion#EW(0, 0)<CR>
+x  ;;B         * :<C-U>call EasyMotion#WBW(1, 1)<CR>
+o  ;;B         * :call EasyMotion#WBW(0, 1)<CR>
+n  ;;B         * :call EasyMotion#WBW(0, 1)<CR>
+nox;R            :VroomRunNearestTest<CR>
+nox;r            :VroomRunTestFile<CR>
+n  ;u          * :UndotreeToggle<CR>
+n  ;gg         * :GitGutterToggle<CR>
+n  ;gw         * :Gwrite<CR>:GitGutter<CR>
+n  ;gp         * :Git push<CR>
+n  ;gl         * :Glog<CR>
+n  ;gb         * :Gblame<CR>
+n  ;gc         * :Gcommit<CR>
+n  ;gd         * :Gdiff<CR>
+n  ;gs         * :Gstatus<CR>
+n  ;tt         * :TagbarToggle<CR>
+n  ;jt           <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+n  ;ss           :SessionSave<CR>
+n  ;sl           :SessionList<CR>
+v  ;a|           :Tabularize /|<CR>
+n  ;a|           :Tabularize /|<CR>
+x  ;a,           :Tabularize /,<CR>
+n  ;a,           :Tabularize /,<CR>
+x  ;a::          :Tabularize /:\zs<CR>
+n  ;a::          :Tabularize /:\zs<CR>
+x  ;a:           :Tabularize /:<CR>
+n  ;a:           :Tabularize /:<CR>
+x  ;a=           :Tabularize /=<CR>
+n  ;a=           :Tabularize /=<CR>
+x  ;a&           :Tabularize /&<CR>
+n  ;a&           :Tabularize /&<CR>
+n  ;nt           :NERDTreeFind<CR>
+nox;e            :NERDTreeFind<CR>
+n  ;ac           <Plug>ToggleAutoCloseMappings
+n  ;ff           [I:let nr = input("Which one: ")|exe "normal " . nr ."[\t"<CR>
+nox;=            <C-W>=
+nox;et           :tabe %%
+nox;ev           :vsp %%
+nox;es           :sp %%
+nox;ew           :e %%
+n  ;/            :set invhlsearch<CR>
+n  ;f9           :set foldlevel=9<CR>
+n  ;f8           :set foldlevel=8<CR>
+n  ;f7           :set foldlevel=7<CR>
+n  ;f6           :set foldlevel=6<CR>
+n  ;f5           :set foldlevel=5<CR>
+n  ;f4           :set foldlevel=4<CR>
+n  ;f3           :set foldlevel=3<CR>
+n  ;f2           :set foldlevel=2<CR>
+n  ;f1           :set foldlevel=1<CR>
+n  ;f0           :set foldlevel=0<CR>
+n  <D-r>       * :CtrlPMRU<CR>
+n  <D-t>       * :CtrlP<CR>
+x  <           * <gv
+x  >           * >gv
+noxH             gT
+noxL             gt
+x  S             <Plug>VSurround
+n  Y           * y$
+n  [h            <Plug>GitGutterPrevHunk
+o  [%          * v:<C-U>call <SNR>60_MultiMatch("bW", "o") <CR>
+x  [%            <Esc>[%m'gv``
+n  [%          * :<C-U>call <SNR>60_MultiMatch("bW", "n") <CR>
+x  ]f            :call PythonDec("function", 1)<CR>
+no ]f            :call PythonDec("function", 1)<CR>
+x  ]F            :call PythonDec("function", -1)<CR>
+no ]F            :call PythonDec("function", -1)<CR>
+x  ]j            :call PythonDec("class", 1)<CR>
+no ]j            :call PythonDec("class", 1)<CR>
+x  ]J            :call PythonDec("class", -1)<CR>
+no ]J            :call PythonDec("class", -1)<CR>
+nox]<Down>       :call PythonNextLine(1)<CR>
+nox]<Up>         :call PythonNextLine(-1)<CR>
+nox]d            :call PythonSelectObject("function")<CR>
+nox]c            :call PythonSelectObject("class")<CR>
+x  ]u            :call PythonUncommentSelection()<CR>
+no ]u            :call PythonUncommentSelection()<CR>
+x  ]#            :call PythonCommentSelection()<CR>
+no ]#            :call PythonCommentSelection()<CR>
+x  ]>            >
+no ]>            ]tV]e>
+x  ]<            <
+no ]<            ]tV]e<
+nox]v            ]tV]e
+x  ]e            :<C-U>PEoB<CR>m'gv``
+no ]e            :PEoB<CR>
+x  ]t            :<C-U>PBOB<CR>m'gv``
+no ]t            :PBoB<CR>
+n  ]h            <Plug>GitGutterNextHunk
+o  ]%          * v:<C-U>call <SNR>60_MultiMatch("W",  "o") <CR>
+x  ]%            <Esc>]%m'gv``
+n  ]%          * :<C-U>call <SNR>60_MultiMatch("W",  "n") <CR>
+x  a%            <Esc>[%v]%
+n  cr            <Plug>Coerce
+n  cs            <Plug>Csurround
+n  ds            <Plug>Dsurround
+n  gx            <Plug>NetrwBrowseX
+o  g%          * v:<C-U>call <SNR>60_Match_wrapper('',0,'o') <CR>
+x  g%          * :<C-U>call <SNR>60_Match_wrapper('',0,'v') <CR>m'gv``
+n  g%          * :<C-U>call <SNR>60_Match_wrapper('',0,'n') <CR>
+x  gS            <Plug>VgSurround
+o  io          * :normal vio<CR>
+x  io            <Plug>InnerOffside
+noxj           * gj
+noxk           * gk
+n  ySS           <Plug>YSsurround
+n  ySs           <Plug>YSsurround
+n  yss           <Plug>Yssurround
+n  yS            <Plug>YSurround
+n  ys            <Plug>Ysurround
+noxzh            zH
+noxzl            zL
+s  <Left>      * <Esc>bi
+s  <Right>     * <Esc>a
+s  <Del>       * a<BS>
+s  <BS>        * a<BS>
+n  <Plug>NetrwBrowseX * :call netrw#NetrwBrowseX(expand("<cWORD>"),0)<CR>
+n  <Plug>(godoc-keyword) * :<C-U>call <SNR>106_Godoc('')<CR>
+x  <Plug>InnerOffside * :<C-U>call <SNR>103_InnerOffside()<CR>
+x  <Plug>(neosnippet_register_oneshot_snippet) * :<C-U>call neosnippet#register_oneshot_snippet()<CR>
+x  <Plug>(neosnippet_start_unite_snippet_target) * unite#sources#snippet_target#start()
+x  <Plug>(neosnippet_expand_target) * :<C-U>call neosnippet#expand_target()<CR>
+x  <Plug>(neosnippet_get_selected_text) * :call neosnippet#get_selected_text(visualmode(), 1)<CR>
+s  <Plug>(neosnippet_jump) * neosnippet#jump_impl()
+s  <Plug>(neosnippet_expand) * neosnippet#expand_impl()
+s  <Plug>(neosnippet_jump_or_expand) * neosnippet#jump_or_expand_impl()
+s  <Plug>(neosnippet_expand_or_jump) * neosnippet#expand_or_jump_impl()
+s  <Plug>(neocomplcache_snippets_force_jump) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+s  <Plug>(neocomplcache_snippets_force_expand) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+s  <Plug>(neocomplcache_snippets_jump) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+s  <Plug>(neocomplcache_snippets_expand) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+n  <Plug>NERDCommenterAltDelims * :call <SNR>87_SwitchToAlternativeDelimiters(1)<CR>
+x  <Plug>NERDCommenterUncomment * :call NERDComment("x", "Uncomment")<CR>
+n  <Plug>NERDCommenterUncomment * :call NERDComment("n", "Uncomment")<CR>
+x  <Plug>NERDCommenterAlignBoth * :call NERDComment("x", "AlignBoth")<CR>
+n  <Plug>NERDCommenterAlignBoth * :call NERDComment("n", "AlignBoth")<CR>
+x  <Plug>NERDCommenterAlignLeft * :call NERDComment("x", "AlignLeft")<CR>
+n  <Plug>NERDCommenterAlignLeft * :call NERDComment("n", "AlignLeft")<CR>
+n  <Plug>NERDCommenterAppend * :call NERDComment("n", "Append")<CR>
+x  <Plug>NERDCommenterYank * :call NERDComment("x", "Yank")<CR>
+n  <Plug>NERDCommenterYank * :call NERDComment("n", "Yank")<CR>
+x  <Plug>NERDCommenterSexy * :call NERDComment("x", "Sexy")<CR>
+n  <Plug>NERDCommenterSexy * :call NERDComment("n", "Sexy")<CR>
+x  <Plug>NERDCommenterInvert * :call NERDComment("x", "Invert")<CR>
+n  <Plug>NERDCommenterInvert * :call NERDComment("n", "Invert")<CR>
+n  <Plug>NERDCommenterToEOL * :call NERDComment("n", "ToEOL")<CR>
+x  <Plug>NERDCommenterNested * :call NERDComment("x", "Nested")<CR>
+n  <Plug>NERDCommenterNested * :call NERDComment("n", "Nested")<CR>
+x  <Plug>NERDCommenterMinimal * :call NERDComment("x", "Minimal")<CR>
+n  <Plug>NERDCommenterMinimal * :call NERDComment("n", "Minimal")<CR>
+x  <Plug>NERDCommenterToggle * :call NERDComment("x", "Toggle")<CR>
+n  <Plug>NERDCommenterToggle * :call NERDComment("n", "Toggle")<CR>
+x  <Plug>NERDCommenterComment * :call NERDComment("x", "Comment")<CR>
+n  <Plug>NERDCommenterComment * :call NERDComment("n", "Comment")<CR>
+n  <Plug>Coerce * :<C-U>call <SNR>72_coerce(nr2char(getchar()))<CR>
+n  <Plug>GitGutterPrevHunk * :<C-U>execute v:count1 . "GitGutterPrevHunk"<CR>
+n  <Plug>GitGutterNextHunk * :<C-U>execute v:count1 . "GitGutterNextHunk"<CR>
+n  <Plug>IndentGuidesDisable & :IndentGuidesDisable<CR>
+n  <Plug>IndentGuidesEnable & :IndentGuidesEnable<CR>
+n  <Plug>IndentGuidesToggle & :IndentGuidesToggle<CR>
+n  <Plug>ToggleAutoCloseMappings   :call <SNR>55_ToggleAutoCloseMappings()<CR>
+x  <Plug>VgSurround * :<C-U>call <SNR>54_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
+x  <Plug>VSurround * :<C-U>call <SNR>54_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
+n  <Plug>YSurround * :<C-U>set opfunc=<SNR>54_opfunc2<CR>g@
+n  <Plug>Ysurround * :<C-U>set opfunc=<SNR>54_opfunc<CR>g@
+n  <Plug>YSsurround * :<C-U>call <SNR>54_opfunc2(v:count1)<CR>
+n  <Plug>Yssurround * :<C-U>call <SNR>54_opfunc(v:count1)<CR>
+n  <Plug>Csurround * :<C-U>call <SNR>54_changesurround()<CR>
+n  <Plug>Dsurround * :<C-U>call <SNR>54_dosurround(<SNR>54_inputtarget())<CR>
+n  <Plug>SurroundRepeat * .
+nox<Plug>NERDTreeSteppedClose & :call <SNR>53_NERDTreeSteppedClose()
+nox<Plug>NERDTreeSteppedOpen & :call <SNR>53_NERDTreeSteppedOpen()
+nox<Plug>NERDTreeMirrorToggle & :call <SNR>53_NERDTreeMirrorToggle()
+nox<Plug>NERDTreeMirrorOpen & :call <SNR>53_NERDTreeMirrorOrCreate()
+nox<Plug>NERDTreeTabsToggle & :call <SNR>53_NERDTreeToggleAllTabs()
+nox<Plug>NERDTreeTabsClose & :call <SNR>53_NERDTreeCloseAllTabs()
+nox<Plug>NERDTreeTabsOpen & :call <SNR>53_NERDTreeOpenAllTabs()
+
+i  <Plug>(neocomplcache_start_omni_complete) * <C-X><C-O><C-P>
+i  <Plug>(neocomplcache_start_auto_complete_no_select) * <C-X><C-U><C-P>
+i  <Plug>(neocomplcache_start_auto_complete) * <C-X><C-U><C-R>=neocomplcache#mappings#popup_post()<CR>
+i  <Plug>(neocomplcache_start_unite_quick_match) * unite#sources#neocomplcache#start_quick_match()
+i  <Plug>(neocomplcache_start_unite_complete) * unite#sources#neocomplcache#start_complete()
+i  <Plug>(neosnippet_start_unite_snippet) * unite#sources#snippet#start_complete()
+i  <Plug>(neosnippet_jump) * neosnippet#jump_impl()
+i  <Plug>(neosnippet_expand) * neosnippet#expand_impl()
+i  <Plug>(neosnippet_jump_or_expand) * neosnippet#jump_or_expand_impl()
+i  <Plug>(neosnippet_expand_or_jump) * neosnippet#expand_or_jump_impl()
+i  <Plug>(neocomplcache_snippets_force_jump) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+i  <Plug>(neocomplcache_snippets_force_expand) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+i  <Plug>(neocomplcache_snippets_jump) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+i  <Plug>(neocomplcache_snippets_expand) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+i  <Plug>NERDCommenterInsert * <Space><BS><Esc>:call NERDComment('i', "insert")<CR>
+i  <Del>       * <C-R>=<SNR>55_OpenCloseBackspaceOrDel("Del")<CR>
+i  <Plug>ISurround * <C-R>=<SNR>54_insert(1)<CR>
+i  <Plug>Isurround * <C-R>=<SNR>54_insert()<CR>
+i  <BS>        * <C-R>=<SNR>55_OpenCloseBackspaceOrDel("BS")<CR>
+i  <S-CR>      * pumvisible() ? neocomplcache#close_popup()"\<CR>" : "\<CR>"
+i  <S-Tab>     * pumvisible() ? "\<C-P>" : "\<Tab>"
+i  <Up>        * pumvisible() ? "\<C-P>" : "\<Up>"
+i  <Down>      * pumvisible() ? "\<C-N>" : "\<Down>"
+i  <C-D>       * pumvisible() ? "\<PageDown>\<C-P>\<C-N>" : "\<C-D>"
+i  <C-G>S        <Plug>ISurround
+i  <C-G>s        <Plug>Isurround
+i  <C-G>       * neocomplcache#undo_completion()
+i  <C-H>       * <C-R>=<SNR>55_OpenCloseBackspaceOrDel("BS")<CR>
+i  <Tab>       * pumvisible() ? "\<C-N>" : "\<Tab>"
+i  <C-K>         <Plug>(neosnippet_expand_or_jump)
+i  <C-L>       * neocomplcache#complete_common_string()
+i  <CR>        * pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+i  <C-S>         <Plug>Isurround
+i  <C-U>       * pumvisible() ? "\<PageUp>\<C-P>\<C-N>" : "\<C-U>"
+i  <C-Y>       * neocomplcache#close_popup()
+i  <Esc>OC     * <Right>
+i  <Esc>       * <C-R>=<SNR>55_CloseStackPop('', '')<CR><Esc>
+i  <Esc>[H       <C-O>g0
+i  <Esc>[F       <C-O>$
+i  "           * <C-R>=<SNR>55_QuoteDelim('"')<CR>
+c  %%          * <C-R>=expand('%:h').'/'<CR>
+i  '           * <C-R>=match(getline('.')[col('.') - 2],'\w') == 0 && getline('.')[col('.')-1] != "'" ? "'" : <SNR>55_QuoteDelim("'")<CR>
+i  (           * (<C-R>=<SNR>55_CloseStackPush(')')<CR>
+i  )           * <C-R>=<SNR>55_CloseStackPop(')', '(')<CR>
+c  Tabe          tabe
+i  [           * [<C-R>=<SNR>55_CloseStackPush(']')<CR>
+i  ]           * <C-R>=<SNR>55_CloseStackPop(']', '[')<CR>
+i  `           * <C-R>=<SNR>55_QuoteDelim('`')<CR>
+c  cd.           lcd %:p:h
+c  cwd           lcd %:p:h
+c  w!!           w !sudo tee % >/dev/null
+i  {<CR>       * {<CR>}<C-O>O
+i  {           * {<C-R>=<SNR>55_CloseStackPush('}')<CR>
+i  |           * |<Esc>:call <SNR>108_align()<CR>a
+i  }           * <C-R>=<SNR>55_CloseStackPop('}', '{')<CR>
