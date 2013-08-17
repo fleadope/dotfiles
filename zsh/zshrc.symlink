@@ -1,0 +1,60 @@
+export CASE_SENSITIVE="true"
+
+dotfiles_dir=~/.dotfiles
+zsh_dir=$dotfiles_dir/zsh
+submodules_dir=$dotfiles_dir/submodule
+
+# Grab some useful env variables i don't want in 
+# a repository
+
+local_env_file=$dotfiles_dir/env.local
+[[ -f $local_env_file ]] && source $local_env_file
+echo "GIT_AUTHOR_EMAIL = $GIT_AUTHOR_EMAIL"
+
+# setup the projects dir
+#if [ -d $HOME/projects ]; then 
+    export PROJECTS="$HOME/projects"
+    export CDPATH=$PROJECTS:$HOME
+# fi
+
+# use fresh (http://freshell.com) for dotfile maintenance
+source ~/.fresh/build/shell.sh
+
+# use antigen 
+source $submodules_dir/antigen/antigen.zsh
+
+# load all of our zsh files
+typeset -U config_files
+config_files=($dotfiles_dir/**/*.zsh)
+
+# load the files, except for submodules
+for file in ${${config_files:#*/submodule/**/*.zsh}:#*/zsh/os/**/*.zsh}
+do
+  source $file
+done
+
+# os specific config
+if islinux; then
+    typeset -U os_config_files
+    os_config_files=($dotfiles_dir/zsh/os/linux/**/*.zsh)
+    for file in ${os_config_files}
+    do
+        source $file
+    done
+fi
+
+if isdarwin; then
+    typeset -U os_config_files
+    os_config_files=($dotfiles_dir/zsh/os/mac/**/*.zsh)
+    for file in ${os_config_files}
+    do
+        source $file
+    done
+fi
+
+# machine specific config
+machine_config="$zsh/machine/`hostname`.zsh"
+if [ -f $machine_config ]; then
+  source $machine_config
+fi
+
