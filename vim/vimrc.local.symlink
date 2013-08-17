@@ -1,0 +1,38 @@
+" Globally applicable settings should be applied here, as well as anything else
+" that needs to be loaded before the config files get executed.
+"
+" Get solarized to work right
+set t_Co=256
+color solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
+" Use semicolon as leader
+let g:spf13_mapleader=";"
+
+" Custom mappings for CtrlP
+map <c-b> :CtrlPBuffer<CR>
+map <C-M> :CtrlPMRU<CR>
+
+" Enough with not knowing where I am!
+let g:spf13_no_atochdir = 1
+
+" ***********************************
+" GVIM vs VIM (easier to just have
+" one config file)
+" ***********************************
+"
+" Dark works better in the terminal
+if has('gui_running')
+    set background=light
+    " turn powerline timeout
+    " see https://powerline.readthedocs.org/en/latest/tipstricks.html#vim
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    set 
+else
+    set background=dark
+endif
