@@ -9,3 +9,4 @@ let g:spf13_no_autochdir = 1
 " Extra bundles
 Bundle "vimux"
 Bundle "vroom"
+Bundle 'sudo.vim'
