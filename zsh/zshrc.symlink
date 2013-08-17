@@ -3,6 +3,10 @@ export CASE_SENSITIVE="true"
 dotfiles_dir=~/.dotfiles
 zsh_dir=$dotfiles_dir/zsh
 submodules_dir=$dotfiles_dir/submodule
+os_config_dir=$dotfiles_dir/zsh/os
+linux_config_dir=$dotfiles_dir/zsh/os/linux
+mac_config_dir=$dotfiles_dir/zsh/os/mac
+machine_config="$zsh/machine/`hostname`.zsh"
 
 # Grab some useful env variables i don't want in 
 # a repository
@@ -11,10 +15,10 @@ local_env_file=$dotfiles_dir/env.local
 [[ -f $local_env_file ]] && source $local_env_file
 
 # setup the projects dir
-#if [ -d $HOME/projects ]; then 
+if [ -d $HOME/projects ]; then 
     export PROJECTS="$HOME/projects"
     export CDPATH=$PROJECTS:$HOME
-# fi
+fi
 
 # use fresh (http://freshell.com) for dotfile maintenance
 source ~/.fresh/build/shell.sh
@@ -27,32 +31,41 @@ typeset -U config_files
 config_files=($dotfiles_dir/**/*.zsh)
 
 # load the files, except for submodules
-for file in ${${config_files:#*/submodule/**/*.zsh}:#*/zsh/os/**/*.zsh}
+for file in ${${config_files:#*/$submodules_dir/**/*.zsh}:#*/$os_config_dir/**/*.zsh}
 do
   source $file
 done
 
 # os specific config
+
+_source_configs() {
+   typeset -U config_files
+        for file in $1
+        do
+            source $file
+        done
+}
+
+_dir_empty() {
+  [ x$(find "$1" -prune -empty) != x"$1" ]
+}
+
+source_configs_unless_empty() {
+    if ! _dir_empty($os_config_dir)
+    then
+        _source_configs("$os_config_dir/**/*.zsh")
+    fi
+}
+
 if islinux; then
-    typeset -U os_config_files
-    os_config_files=($dotfiles_dir/zsh/os/linux/**/*.zsh)
-    for file in ${os_config_files}
-    do
-        source $file
-    done
+    source_configs_unless_empty($linux_config_dir)
 fi
 
 if isdarwin; then
-    typeset -U os_config_files
-    os_config_files=($dotfiles_dir/zsh/os/mac/**/*.zsh)
-    for file in ${os_config_files}
-    do
-        source $file
-    done
+    source_configs_unless_empty($mac_config_dir)
 fi
 
 # machine specific config
-machine_config="$zsh/machine/`hostname`.zsh"
 if [ -f $machine_config ]; then
   source $machine_config
 fi
