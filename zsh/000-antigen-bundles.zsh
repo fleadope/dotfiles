@@ -6,6 +6,7 @@ antigen bundles <<EOBUNDLES
   #Take a guess if not found
   command-not-found
   git
+  ssh-agent
   
   zsh-users/zsh-completions
   zsh-users/zsh-syntax-highlighting
