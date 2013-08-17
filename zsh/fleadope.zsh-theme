@@ -1,13 +1,11 @@
 autoload colors
 colors
 
-# ruby_version=`chruby | grep '\*' | cut -d ' ' -f 3 `
 ruby_version=`ruby -v | cut -d ' ' -f 2 `
-# PROMPT='%{$FG_bold[red]%}➜ '
-# PROMPT='%{$FG[190]%}%n@%m ➜ '
-PROMPT="%{%(!~$fg[red]%n@%m~$fg[blue])%}%#%{$fg[default]%} "
-PROMPT+='%{$FG[159]%}%c '
-PROMPT+='%{$fg[red]%}<$ruby_version>'
+PROMPT="%{%(#~$fg[red]~$fg[blue])%}%n@%m "
+PROMPT+='%{$fg[green]%}%c '
+PROMPT+="%{%(#~$fg[cyan]~$fg[magenta])%}<$ruby_version>"
+PROMPT+="%{%(#~$fg[red]~$fg[blue])%}%# "
 PROMPT+='%{$reset_color%}'
 
 RPROMPT='%{$FG[069]%}$(git_prompt_info)'
