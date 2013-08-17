@@ -28,11 +28,5 @@ alias sl=ls # often screw this up
 
 alias af="alias | grep $1"
 
-# Extra git aliases
-alias gaa="git add -A ."
-
-test $(which hub) && alias git="hub"
-
-
 
 
