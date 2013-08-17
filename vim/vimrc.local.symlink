@@ -7,15 +7,10 @@ color solarized
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 
-" Use semicolon as leader
-let g:spf13_mapleader=";"
 
 " Custom mappings for CtrlP
 map <c-b> :CtrlPBuffer<CR>
 map <C-M> :CtrlPMRU<CR>
-
-" Enough with not knowing where I am!
-let g:spf13_no_atochdir = 1
 
 " ***********************************
 " GVIM vs VIM (easier to just have
