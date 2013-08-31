@@ -11,10 +11,11 @@ local_env_file=$dotfiles_dir/env.local
 [[ -f $local_env_file ]] && source $local_env_file
 
 # setup the projects dir
-#if [ -d $HOME/projects ]; then 
+# if [ -d $HOME/projects ]; then 
+    echo "projects & cdpath"
     export PROJECTS="$HOME/projects"
-    export CDPATH=$PROJECTS:$HOME
-# fi
+    export CDPATH=$PROJECTS:$HOME:$CDPATH
+#fi
 
 # use fresh (http://freshell.com) for dotfile maintenance
 source ~/.fresh/build/shell.sh
