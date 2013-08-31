@@ -1,0 +1,17 @@
+rubygems-update
+bundler
+debugger-ruby_core_source
+debugger
+debugger-linecache
+git-pulls
+git_remote_branch
+libv8
+lolcat
+nokogiri
+pry
+rails
+rake
+therubyracer
+thin
+unicorn
+zeus
