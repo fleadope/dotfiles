@@ -1,6 +1,19 @@
 " Globally applicable settings should be applied here, as well as anything else
 " that needs to be loaded before the config files get executed.
 "
+" Some settings for search
+set incsearch
+set hlsearch
+nnoremap <F3> :set hlsearch!<CR>
+
+set wildignore+=
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.gem/**     " MacOSX/Linux
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.gem$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
+
 " Get solarized to work right
 set t_Co=256
 color solarized
@@ -27,10 +40,19 @@ if has('gui_running')
         autocmd!
         au InsertEnter * set timeoutlen=0
         au InsertLeave * set timeoutlen=1000
-        set 
-    else
-        set background=dark
-    endif
+    augroup END
+else
+    set background=dark
+endif
 
-    " format
-    nmap <Leader>fa ggVG=
+" format
+nmap <Leader>fa ggVG=
+
+" hashrocket
+imap <C-l> <Space>=><Space>
+
+" toggle symbol <=> string
+imap <C-k> <C-o>b:<Esc>Ea
+nmap <C-k> lbi:<Esc>E
+
+UnBundle 'Ack.vim'
