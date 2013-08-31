@@ -6,17 +6,16 @@
 # if it's a gem, then gem install it
 
 if islinux; then
-    alias update="sudo apt-get update "
+    alias "update"="sudo apt-get update "
     alias upgrade="sudo aptitude safe-upgrade"
     alias install="sudo aptitude install "
     alias remove="sudo aptitude remove "
     alias search="apt-cache search "
 elif isdarwin; then
-    alias update="brew update"
+    alias 'update'="brew update"
     alias upgrade="brew outdated | xargs brew install"
-    alias install="brew search "
+    alias install="brew install "
+    alias search="brew search "
     alias remove="brew uninstall "
 fi
 
-alias gimme="update"
-alias get="update"
