@@ -7,6 +7,7 @@ antigen bundles <<EOBUNDLES
   command-not-found
   git
   ssh-agent
+  vagrant
   
   zsh-users/zsh-completions
   zsh-users/zsh-syntax-highlighting
