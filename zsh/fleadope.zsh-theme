@@ -2,13 +2,9 @@ autoload colors
 colors
 setopt PROMPT_SUBST
 
-function ruby_version () {
-  ruby -v | cut -d ' ' -f 2
-}
-# ruby_version=`ruby -v | cut -d ' ' -f 2 `
 PROMPT='%{%(#~$fg[red]~$fg[blue])%}%n@%m '
 PROMPT+='%{$fg[green]%}%c '
-PROMPT+='%{%(#~$fg[cyan]~$fg[magenta])%}<$( ruby_version )>'
+PROMPT+='%{%(#~$fg[cyan]~$fg[magenta])%}<$( rbenv version-name )>'
 PROMPT+='%{%(#~$fg[red]~$fg[blue])%}%# '
 PROMPT+='%{$reset_color%}'
 
