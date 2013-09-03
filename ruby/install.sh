@@ -7,6 +7,8 @@ if [ ! $(which git) ]; then
 fi
 
 DOTFILES_ROOT="$HOME/.dotfiles"
+func_file=$DOTFILES_ROOT/zsh/001-functions.zsh
+[[ -f $func_file ]] && source $func_file
 
 if [ -z "${RBENV_ROOT}" ]; then
   RBENV_ROOT="$HOME/.rbenv"
@@ -38,9 +40,8 @@ PLUGINS=(
   rkh/rbenv-update
   rkh/rbenv-whatis
   rkh/rbenv-use
-  tpope/rbenv-alias
+  tpope/rbenv-aliases
   tpope/rbenv-communal-gems
-  iangehhie/rbenv-binstubs
 )
 
 for plugin in ${PLUGINS[@]} ; do
@@ -62,4 +63,3 @@ done
 # install heroku
 is_linux && ! [ `which heroku` ] &&wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
 
-fi
