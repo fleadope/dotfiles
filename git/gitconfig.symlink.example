@@ -1,18 +1,12 @@
-# Sample gitconfig
-#
-
 [hub]
         protocol = https
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
 [credential]
         helper = GIT_CREDENTIAL_HELPER
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
 [color]
         diff = auto
@@ -21,7 +15,6 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -35,4 +28,4 @@
         # for more information on different options of the below setting.
         #
         # Setting to git 2.0 default to surpress warning message
-        default = simple
+        # default = simple
