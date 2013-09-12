@@ -27,7 +27,8 @@ else
 fi
 
 # link the default-gems file
-ln -s $DOTFILES_ROOT/ruby/default-gems $RBENV_ROOT
+default_file=$DOTFILES_ROOT/ruby/default-gems
+[ ! -e $default_file ] && ln -s $default_file $RBENV_ROOT
 
 # Install plugins:
 PLUGINS=(
@@ -61,5 +62,5 @@ for plugin in ${PLUGINS[@]} ; do
 done
 
 # install heroku
-islinux && ! [ `which heroku` ] &&wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
+islinux && ! [ `which heroku` ] && wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
 
