@@ -64,3 +64,5 @@ done
 # install heroku
 islinux && wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
 
+# install hub
+[ ! -e ~/bin/hub ] && curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
