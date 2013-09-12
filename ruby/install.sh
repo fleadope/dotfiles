@@ -61,5 +61,5 @@ for plugin in ${PLUGINS[@]} ; do
 done
 
 # install heroku
-is_linux && ! [ `which heroku` ] &&wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
+islinux && ! [ `which heroku` ] &&wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
 
