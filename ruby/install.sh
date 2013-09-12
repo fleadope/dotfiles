@@ -61,8 +61,14 @@ for plugin in ${PLUGINS[@]} ; do
 
 done
 
-# install heroku
-islinux && wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
-
 # install hub
 [ ! -e ~/bin/hub ] && curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
+
+# install heroku
+if islinux 
+then
+    dpkg-query -l heroku > /dev/null 2>&1
+    # [ $? == 0 ] && wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh 
+    [ $? == 0 ] && curl https://toolbelt.heroku.com/install-ubuntu.sh | sh 
+fi
+
