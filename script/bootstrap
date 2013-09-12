@@ -55,6 +55,12 @@ link_files () {
   success "linked $1 to $2"
 }
 
+update_submodules () {
+    info 'updating submodules'
+    git submodule init 
+    git submodule update
+}
+
 install_dotfiles () {
   info 'installing dotfiles'
 
