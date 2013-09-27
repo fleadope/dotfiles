@@ -10,15 +10,9 @@ submodules_dir=$dotfiles_dir/submodule
 local_env_file=$dotfiles_dir/env.local
 [[ -f $local_env_file ]] && source $local_env_file
 
-# setup the projects dir
-# if [ -d $HOME/projects ]; then 
-    echo "projects & cdpath"
-    export PROJECTS="$HOME/projects"
-    export CDPATH=$PROJECTS:$HOME:$CDPATH
-#fi
 
 # use fresh (http://freshell.com) for dotfile maintenance
-source ~/.fresh/build/shell.sh
+# source ~/.fresh/build/shell.sh
 
 # use antigen 
 source $submodules_dir/antigen/antigen.zsh
@@ -58,3 +52,12 @@ if [ -f $machine_config ]; then
   source $machine_config
 fi
 
+
+#zstyle: 'completion:*:complete:(cd|pushd):*' tag-order \
+    #'local-directories named-directories path-directories'
+
+# setup the projects dir
+if [ -d $HOME/projects ]; then 
+    export PROJECTS="$HOME/projects"
+    export CDPATH=$PROJECTS:$HOME:$CDPATH
+fi
