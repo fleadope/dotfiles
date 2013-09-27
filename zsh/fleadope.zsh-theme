@@ -3,7 +3,7 @@ colors
 setopt PROMPT_SUBST
 
 PROMPT='%{%(#~$fg[red]~$fg[blue])%}%n@%m '
-PROMPT+='%{$fg[green]%}%c '
+PROMPT+='%{$fg[green]%}%d '
 PROMPT+='%{%(#~$fg[cyan]~$fg[magenta])%}<$( rbenv version-name )>'
 PROMPT+='%{%(#~$fg[red]~$fg[blue])%}%# '
 PROMPT+='%{$reset_color%}'
