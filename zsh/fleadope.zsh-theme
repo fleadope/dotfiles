@@ -3,7 +3,7 @@ colors
 setopt PROMPT_SUBST
 
 PROMPT='%{%(#~$fg[red]~$fg[blue])%}%n@%m '
-PROMPT+='%{$fg[green]%}%d '
+PROMPT+='%{$fg[green]%}%c '
 PROMPT+='%{%(#~$fg[cyan]~$fg[magenta])%}<$( rbenv version-name )>'
 PROMPT+='%{%(#~$fg[red]~$fg[blue])%}%# '
 PROMPT+='%{$reset_color%}'
@@ -22,4 +22,7 @@ ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+# the %c interprets environment variables, which messes with the dir stack
+unsetopt AUTO_NAME_DIRS
 
