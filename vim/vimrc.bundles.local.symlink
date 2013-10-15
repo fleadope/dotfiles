@@ -11,3 +11,7 @@ Bundle "vimux"
 Bundle "vroom"
 Bundle 'sudo.vim'
 Bundle 'ag.vim'
+Bundle 'tpope/vim-dispatch'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'editorconfig'
+Bundle 'https://github.com/sgur/ctrlp-extensions.vim'

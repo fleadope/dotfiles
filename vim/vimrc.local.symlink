@@ -55,6 +55,37 @@ imap <C-l> <Space>=><Space>
 imap <C-k> <C-o>b:<Esc>Ea
 nmap <C-k> lbi:<Esc>E
 
+" From https://coderwall.com/p/tmsljq 
+" Surround text currently selected while in visual mode
+" (The surrounded text is kept selected after being surround)
+vmap <leader>" S"lvi"
+vmap <leader>' S'lvi'
+vmap <leader>` S`lvi`
+vmap <leader>( S)lvi(
+vmap <leader>{ S}lvi{
+vmap <leader>[ S]lvi[
+vmap <leader>< S>lvi< 
+
+" Mappings for Vim-Rspec (https://github.com/thoughtbot/vim-rspec)
+let g:rspec_command = "Dispatch zeus spec {spec}"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>ss :call RunNearestSpec()<CR>
+map <Leader>ls :call RunLastSpec()<CR>
+map <Leader>as :call RunAllSpecs()<CR>
+
+" CtrlP Extensions
+let g:ctrlp_extensions = ['yankring', 'quickfix', 'changes', 'mixed']
+noremap <Leader>yr :CtrlPYankring<CR>
+
+" Mappings for neosnippet https://github.com/Shougo/neosnippet.vim
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+
+smap <expr><Tab> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<Tab>"
+
 UnBundle 'Ack.vim'
 UnBundle 'vim-scala'
 UnBundle 'vim-golang'
