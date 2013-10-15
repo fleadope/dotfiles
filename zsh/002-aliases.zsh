@@ -17,6 +17,7 @@ alias please='sudo'
 
 # Show history
 alias history='fc -l 1'
+alias gh="history | grep $1"
 
 # List direcory contents
 alias lh='ls -lh'
@@ -27,6 +28,11 @@ alias la='ls -lA'
 alias sl=ls # often screw this up
 
 alias af="alias | grep $1"
+
+# Zeus
+alias zrs="zeus spec spec/**/*_spec.rb"
+alias zsw="rm .zeus.sock"
+alias zweep="rm .zeus.sock"
 
 
 
