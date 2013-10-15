@@ -8,9 +8,15 @@ antigen bundles <<EOBUNDLES
   git
   ssh-agent
   vagrant
-  
+  dirpersist
+  last-working-dir
+  zeus
+  taskwarrior
+  sharat87/autoenv
+
   zsh-users/zsh-completions
   zsh-users/zsh-syntax-highlighting
+  abull/better_zeus
 
   # do what i mean
   oknowton/zsh-dwim
