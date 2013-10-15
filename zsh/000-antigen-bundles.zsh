@@ -12,9 +12,6 @@ antigen bundles <<EOBUNDLES
   zsh-users/zsh-completions
   zsh-users/zsh-syntax-highlighting
 
-  # let's try autoenv
-  sharat87/autoenv
-  
   # do what i mean
   oknowton/zsh-dwim
 
