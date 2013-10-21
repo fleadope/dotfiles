@@ -30,9 +30,10 @@ alias sl=ls # often screw this up
 alias af="alias | grep $1"
 
 # Zeus
-alias zrs="zeus spec spec/**/*_spec.rb"
+alias zrs="zeus spec --tag \"~pending\" spec/**/*_spec.rb"
+alias zall=zrs
 alias zsw="rm .zeus.sock"
-alias zweep="rm .zeus.sock"
+alias zweep=zsw
 
 
 

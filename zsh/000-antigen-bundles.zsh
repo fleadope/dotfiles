@@ -10,7 +10,6 @@ antigen bundles <<EOBUNDLES
   vagrant
   dirpersist
   last-working-dir
-  zeus
   taskwarrior
   sharat87/autoenv
 
