@@ -12,5 +12,5 @@ Bundle "vroom"
 Bundle 'sudo.vim'
 Bundle 'tpope/vim-dispatch'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'editorconfig/editorconfig-vim'
 Bundle 'sgur/ctrlp-extensions.vim'
+Bundle 'milkypostman/vim-togglelist'
