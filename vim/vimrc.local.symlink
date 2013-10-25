@@ -19,6 +19,7 @@ set t_Co=256
 color solarized
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+autocmd ColorScheme * highlight clear SignColumn
 
 
 " Custom mappings for CtrlP
@@ -55,7 +56,37 @@ imap <C-l> <Space>=><Space>
 imap <C-k> <C-o>b:<Esc>Ea
 nmap <C-k> lbi:<Esc>E
 
-" From https://coderwall.com/p/tmsljq 
+" A couple from airblade:https://github.com/airblade/dotvim/blob/master/vimrc
+" Scroll on space bar
+nnoremap <Space> <C-F>
+nnoremap <S-Space> <C-B>
+" Turn off highlighting
+nnoremap <Leader><Space> :noh<CR>
+" Kill trailing whitespace
+nnoremap <Leader>ws :%s/\s\+$//<CR>
+" Copy to / paste from system pasteboard.
+" (Use `:put *<CR>` and `:put! *<CR>` for linewise pasting.)
+noremap <Leader>p :set paste<CR>"*p:set nopaste<CR>
+noremap <Leader>P :set paste<CR>"*P:set nopaste<CR>
+" Make Y consistent with D and C (instead of yy)
+noremap Y y$
+" Duplicate and comment out duplicate.
+nmap <leader>dc :t.<CR>k<Plug>NERDComComment
+" Ruby: convert 1.8 hash syntax to 1.9, e.g `:foo => bar` to `foo: bar`.
+map <Leader>h :s/\v:(\w+)\s*\=\>\s*(\S)/\1: \2/<CR>:noh<CR>
+" Tabularize
+nmap <Leader>t= :Tabularize /=<CR>
+vmap <Leader>t= :Tabularize /=<CR>
+" key: value
+nmap <Leader>t: :Tabularize /:\zs<CR>
+vmap <Leader>t: :Tabularize /:\zs<CR>
+" Ruby symbols
+nmap <Leader>ts :Tabularize /:/l1c0l0<CR>
+vmap <Leader>ts :Tabularize /:/l1c0l0<CR>
+" vim-gitgutter
+let g:gitgutter_sign_column_always = 1
+
+" From https://coderwall.com/p/tmsljq
 " Surround text currently selected while in visual mode
 " (The surrounded text is kept selected after being surround)
 vmap <leader>" S"lvi"
@@ -64,7 +95,7 @@ vmap <leader>` S`lvi`
 vmap <leader>( S)lvi(
 vmap <leader>{ S}lvi{
 vmap <leader>[ S]lvi[
-vmap <leader>< S>lvi< 
+vmap <leader>< S>lvi<
 
 " Mappings for Vim-Rspec (https://github.com/thoughtbot/vim-rspec)
 let g:rspec_command = "Dispatch zeus spec {spec}"
@@ -108,4 +139,5 @@ UnBundle 'lukerandall/haskellmode-vim'
 UnBundle 'ujihisa/neoc-ghc'
 UnBundle 'beyondwords/vim-twig'
 UnBundle 'ujihisa/neoc-ghc'
+UnBundle 'numbers.vim'
 

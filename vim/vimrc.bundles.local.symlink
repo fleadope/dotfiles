@@ -1,4 +1,4 @@
-" Looks like spf13-vim  overrides go here? 
+" Looks like spf13-vim  overrides go here?
 "
 " Use semicolon as leader
 let g:spf13_leader=";"
@@ -10,8 +10,7 @@ let g:spf13_no_autochdir = 1
 Bundle "vimux"
 Bundle "vroom"
 Bundle 'sudo.vim'
-Bundle 'ag.vim'
 Bundle 'tpope/vim-dispatch'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'editorconfig'
-Bundle 'https://github.com/sgur/ctrlp-extensions.vim'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'sgur/ctrlp-extensions.vim'
