@@ -11,7 +11,6 @@ antigen bundles <<EOBUNDLES
   dirpersist
   last-working-dir
   taskwarrior
-  sharat87/autoenv
 
   zsh-users/zsh-completions
   zsh-users/zsh-syntax-highlighting
