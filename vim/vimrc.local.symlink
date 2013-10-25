@@ -21,6 +21,8 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 autocmd ColorScheme * highlight clear SignColumn
 
+" Format the current buffer
+nnoremap <Leader>fmt ggVG=`
 
 " Custom mappings for CtrlP
 map <c-b> :CtrlPBuffer<CR>
