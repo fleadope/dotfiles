@@ -1,4 +1,4 @@
-/.bin
-/vendor/bundle
+.bin/
+vendor/bundle/
 .DS_STORE
 *.swp
