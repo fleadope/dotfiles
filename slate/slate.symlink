@@ -1,0 +1,60 @@
+# Most of this is from here:
+# https://gist.github.com/lmullen/4736568/raw/6068631bbd03d6fd515b97b1e03d0c50b9144c1d/.slate
+
+# GLOBAL CONFIGURATIONS
+# -------------------------------------------------------------------
+# See https://github.com/jigish/slate/wiki/Global-Configs
+
+config defaultToCurrentScreen true
+config secondsBeforeRepeat 0.4
+config secondsBetweenRepeat 0.1
+config keyboardLayout "qwerty"
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+
+# HYPER KEY
+# -------------------------------------------------------------------
+# The "hyper" key is a shortcut for CTRL + ALT + CMD
+
+# alias hyper ctrl;alt;cmd
+alias hyper fn;ctrl
+
+# MONITOR ALIASES
+# -------------------------------------------------------------------
+
+alias monitor-macbook 1280x800
+
+# APPLICATION ALIASES AND BINDINGS
+# -------------------------------------------------------------------
+
+alias terminal 'iTerm'
+bind i:${hyper} focus ${terminal}
+
+alias browser 'Firefox'
+bind b:${hyper} focus ${browser}
+
+alias music 'Spotify'
+bind m:${hyper} focus ${browser}
+
+bind t:${hyper} focus 'Twitter'
+
+bind g:${hyper} focus 'GitX'
+
+# SLATE FEATURES
+# -------------------------------------------------------------------
+
+# Show quick key overlays for each window
+config windowHintsShowIcons true
+config windowHintsSpread true
+config windowHintsIgnoreHiddenWindows false
+bind h:cmd;shift hint ASDFHJKLQWERTYUIOPCVBNG
+
+# Show a positioning grid for each monitor
+bind g:cmd grid padding:5 0:6,2 1:8,3
+
+# Better application switcher
+# bind tab:cmd switch
+
+# Reload Slate configuration file
+bind s:${hyper} relaunch
