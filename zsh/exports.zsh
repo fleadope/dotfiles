@@ -2,4 +2,4 @@
 # For sensitive variables, see .dotfiles/env.local,
 # which is not committed
 
-export PATH=./bin:~/.dotfiles/bin:~/bin:$PATH
+#export PATH=./bin:~/.dotfiles/bin:~/bin:$PATH
