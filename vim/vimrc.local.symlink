@@ -6,13 +6,18 @@ set incsearch
 set hlsearch
 nnoremap <F3> :set hlsearch!<CR>
 
+" Rails.vim is ignoring my desires!
+autocmd FileType ruby,eruby,yaml,rspec set tw=80 ai sw=2 sts=2 et
+autocmd FileType ruby,eruby,yaml setlocal foldmethod=manual
+autocmd User Rails set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+
 set wildignore+=
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.gem/**     " MacOSX/Linux
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.gem$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-  \ 'file': '\.exe$\|\.so$\|\.dat$'
-  \ }
+            \ 'dir':  '\.git$\|\.hg$\|\.gem$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+            \ 'file': '\.exe$\|\.so$\|\.dat$'
+            \ }
 
 " Get solarized to work right
 set t_Co=256
@@ -111,15 +116,28 @@ let g:ctrlp_extensions = ['yankring', 'quickfix', 'changes', 'mixed']
 noremap <Leader>yr :CtrlPYankring<CR>
 
 " Mappings for neosnippet https://github.com/Shougo/neosnippet.vim
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+let g:neosnippet#snippets_directory .= ", ~/.dotfiles/vim/snippets"
+imap <expr><TAB> neosnippet#jumpable() ?
+            \ "\<Plug>(neosnippet_jump)"
+            \: pumvisible() ? "\<C-n>" : "\<TAB>"
 
-smap <expr><Tab> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<Tab>"
+smap <expr><Tab> neosnippet#jumpable() ?
+            \ "\<Plug>(neosnippet_jump)"
+            \: "\<Tab>"
 
-UnBundle 'Ack.vim'
+imap <expr><CR> neosnippet#expandable() ?
+            \ "\<Plug>(neosnippet_expand)"
+            \: pumvisible() ? "\<C-n>" : "\<CR>"
+
+smap <expr><CR> neosnippet#expandable() ?
+            \ "\<Plug>(neosnippet_expand)"
+            \: "\<CR>"
+
+if has('conceal')
+    set conceallevel=2 concealcursor=i
+endif
+
+" Get rid of unused bundles
 UnBundle 'vim-scala'
 UnBundle 'vim-golang'
 UnBundle 'vim-gocode'
