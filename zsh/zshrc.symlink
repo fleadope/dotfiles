@@ -61,3 +61,5 @@ if [ -d $HOME/projects ]; then
     export PROJECTS="$HOME/projects"
     export CDPATH=$PROJECTS:$HOME:$CDPATH
 fi
+
+[ -r "$HOME/.smartcd_config" ] && ( [ -n $BASH_VERSION ] || [ -n $ZSH_VERSION ] ) && source ~/.smartcd_config
