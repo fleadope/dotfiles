@@ -35,5 +35,8 @@ alias zall=zrs
 alias zsw="rm .zeus.sock"
 alias zweep=zsw
 
+# Tmux
+alias tmux="tmux -2"
+
 
 
