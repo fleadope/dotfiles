@@ -12,7 +12,7 @@ local_env_file=$DOTFILES_DIR/env.local
 [[ -f $local_env_file ]] && source $local_env_file
 
 # use antigen
-source $submodules_dir/antigen/antigen.zsh
+source $SUBMODULES_DIR/antigen/antigen.zsh
 
 # load all of our zsh files
 typeset -U config_files
