@@ -1,5 +1,9 @@
 export CASE_SENSITIVE="true"
 
+# Kill autocorrect
+unsetopt correct_all
+
+# UNCOMMENT TO GET PROFILING
 # zmodload zsh/zprof
 
 # load profile from ~/.profile, since other shells will use that too
@@ -10,73 +14,45 @@ export CASE_SENSITIVE="true"
 local_env_file=$DOTFILES_DIR/env.local
 [[ -f $local_env_file ]] && source $local_env_file
 
-# stuff for antibody
-DISABLE_AUTO_UPDATE=true
-export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh"
-export ZSH_CACHE_DIR=$ZSH/cache
-export ZSH_BUNDLES_FILE="$DOTFILES_DIR/antibody/zsh_bundles.txt"
-export ZSH_PLUGINS_FILE="$DOTFILES_DIR/antibody/zsh_plugins.zsh"
+# initiate zsh first
+typeset -U zsh_dir
+zsh_dir=$DOTFILES_DIR/zsh
+source $zsh_dir/functions.zsh
+source $zsh_dir/aliases.zsh
 
-source <(antibody init)
-source $ZSH_PLUGINS_FILE
-
-# and direnv
-eval "$(direnv hook zsh)"
-
-# and zaw
-source $SUBMODULES_DIR/zaw/zaw.zsh
-
-# and nix
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for Netlify's Git Credential Helper.
-if [ -f '$HOME/.netlify/helper/path.zsh.inc' ]; then source '$HOME/.netlify/helper/path.zsh.inc'; fi
-
-# Add asdf
-source ${DOTFILES_DIR}/submodule/asdf/asdf.sh
-source ${DOTFILES_DIR}/submodule/asdf/completions/asdf.bash
-
-# load all of our zsh files, except for submodules, os and completions
-typeset -U config_files
-config_files=($DOTFILES_DIR/**/*.zsh)
-
-for file in ${${config_files:#*/submodule/**/*.zsh}:#*/zsh/os/**/*.zsh}
+# now handle plugins
+typeset -U zsh_config_files
+zsh_config_files=($DOTFILES_DIR/**/init.zsh)
+for file in ${zsh_config_files}
 do
   source $file
 done
 
 # os specific config
 if islinux; then
-    typeset -U os_config_files
-    os_config_files=($DOTFILES_DIR/zsh/os/linux/**/*.zsh)
-    for file in ${os_config_files}
-    do
-        # source $file
-    done
+typeset -U os_config_files
+  os_config_files=($DOTFILES_DIR/zsh/os/linux/**/*.zsh)
+  for file in ${os_config_files}
+  do
+    source $file
+  done
 fi
 
 if isdarwin; then
-    typeset -U os_config_files
-    os_config_files=($DOTFILES_DIR/zsh/os/mac/**/*.zsh)
-    for file in ${os_config_files}
-    do
-        # source $file
-
-    done
+  typeset -U os_config_files
+  os_config_files=($DOTFILES_DIR/zsh/os/mac/**/*.zsh)
+  for file in ${os_config_files}
+  do
+    source $file
+  done
 fi
 
 # machine specific config
 machine_config="$zsh/machine/`hostname`.zsh"
 if [ -f $machine_config ]; then
-  # source $machine_config
+  source $machine_config
 fi
 
-# setup the projects dir
 if [ -d $HOME/projects ]; then
     export PROJECTS="$HOME/projects"
     export CDPATH=$PROJECTS:$HOME:$CDPATH
@@ -123,5 +99,3 @@ unfunction _update_zcomp
 
 eval `dircolors ~/.dir_colors/dircolors`
 source ~/.dotfiles/zsh/fleadope.zsh-theme
-eval "$(direnv hook zsh)"
-

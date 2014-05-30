@@ -1,13 +1,7 @@
-#!/usr/bin/env bash
-#
-# Spf-13 http://github.com/spf13/spf13-vim.git 
-#
-# This is a non-standard install of this module, 
-# so this script will move all the pieces into place
-# 
+#!/usr/bin/env zsh
 
-sh <(curl https://j.mp/spf13-vim3 -L)
+mkdir $HOME/SpaceVim.d/
+ln -s $DOTFILES_DIR/vim/init.toml $HOME/.SpaceVim.d/
 
-echo -e "Done."
-
+curl -sLf https://spacevim.org/install.sh | bash
 

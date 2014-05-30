@@ -1,59 +1,25 @@
 
 
-v  ["          *@:<C-U>exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")<CR>
-n  ["          *@:call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")<CR>
-v  []          *@m':<C-U>exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")<CR>
-n  []          *@m':call search('^\s*endf*\%[unction]\>', "bW")<CR>
-v  [[          *@m':<C-U>exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")<CR>
-n  [[          *@m':call search('^\s*fu\%[nction]\>', "bW")<CR>
-v  ]"          *@:<C-U>exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")<CR>
-n  ]"          *@:call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")<CR>
-v  ][          *@m':<C-U>exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")<CR>
-n  ][          *@m':call search('^\s*endf*\%[unction]\>', "W")<CR>
-v  ]]          *@m':<C-U>exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")<CR>
-n  ]]          *@m':call search('^\s*fu\%[nction]\>', "W")<CR>
-n  y<C-G>      *@:call setreg(v:register, <SNR>115_recall())<CR>
-   î           *@:call AutoPairsJump()<CR>
-   ð           *@:call AutoPairsToggle()<CR>
-   <C-B>         :CtrlPBuffer<CR>
-   <C-E>         <Plug>NERDTreeTabsToggle<CR>
-o  <C-F>         :call PreciseJumpF(-1, -1, 0)<CR>
-v  <C-F>         <Esc>:call PreciseJumpF(-1, -1, 1)<CR>
-n  <C-F>         :call PreciseJumpF(-1, -1, 0)<CR>
-   <C-H>         <C-W>h<C-W>_
-s  <Tab>         neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)": "\<Tab>"
-   <NL>          <C-W>j<C-W>_
-n  <C-K>         lbi:<Esc>E
+nox<C-B>         :CtrlPBuffer<CR>
+nox<C-E>         :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+s  <C-H>       * a<BS>
+nox<C-H>         <C-W>h<C-W>_
+s  <Tab>         <Right><Plug>(neosnippet_jump_or_expand)
+nox<NL>          <C-W>j<C-W>_
 s  <C-K>         <Plug>(neosnippet_expand_or_jump)
-ox <C-K>         <C-W>k<C-W>_
-   <C-L>         <C-W>l<C-W>_
-   <CR>          <Plug>(wildfire-fuel)
-x  <C-N>       * :<C-U>call multiple_cursors#new("v", 0)<CR>
-n  <C-N>       * :call multiple_cursors#new("n", 1)<CR>
-   <C-P>         <Plug>(ctrlp)
-n  <Space>     * <C-F>
-v  $           * :<C-U>call WrapRelativeMotion("$", 1)<CR>
-o  $           * v:call WrapRelativeMotion("$")<CR>
-n  $           * :call WrapRelativeMotion("$")<CR>
-o  %           * v:<C-U>call <SNR>79_Match_wrapper('',1,'o') <CR>
-v  %           * :<C-U>call <SNR>79_Match_wrapper('',1,'v') <CR>m'gv``
-n  %           * :<C-U>call <SNR>79_Match_wrapper('',1,'n') <CR>
-v  +             <Plug>(expand_region_expand)
-n  +             <Plug>(expand_region_expand)
-o  ,             <Plug>fanfingtastic_,
-x  ,             <Plug>fanfingtastic_,
-n  ,             <Plug>fanfingtastic_,
-v  .           * :normal .<CR>
-v  0           * :<C-U>call WrapRelativeMotion("0", 1)<CR>
-no 0           * :call WrapRelativeMotion("0")<CR>
-n  ;as         * :call ArduinoSerialMonitor()<CR>
-n  ;ad         * :call ArduinoDeploy()<CR>
-o  ;             <Plug>fanfingtastic_;
-x  ;             <Plug>fanfingtastic_;
-n  ;             <Plug>fanfingtastic_;
-n  ;l          & :call ToggleLocationList()<CR>
-   ;R            :VroomRunNearestTest<CR>
-   ;r            :VroomRunTestFile<CR>
+nox<C-K>         <C-W>k<C-W>_
+nox<C-L>         <C-W>l<C-W>_
+s  <CR>        * a<BS>
+nox<CR>          :CtrlPMRU<CR>
+x  <C-N>       * :<C-U>call multiple_cursors#new("v")<CR>
+n  <C-N>       * :call multiple_cursors#new("n")<CR>
+n  <C-P>       * :<C-U>CtrlP<CR>
+nox<Esc>[H       g0
+nox<Esc>[F       $
+o  %           * v:<C-U>call <SNR>60_Match_wrapper('',1,'o') <CR>
+x  %           * :<C-U>call <SNR>60_Match_wrapper('',1,'v') <CR>m'gv``
+n  %           * :<C-U>call <SNR>60_Match_wrapper('',1,'n') <CR>
+n  ;fa           ggVG=
 n  ;P            :Preview<CR>
 n  ;ca           <Plug>NERDCommenterAltDelims
 x  ;cu           <Plug>NERDCommenterUncomment
@@ -113,6 +79,59 @@ n  ;gi         * :Git add -p %<CR>
 n  ;ge         * :Gedit<CR>
 n  ;gw         * :Gwrite<CR>
 n  ;gr         * :Gread<CR>
+x  ;;w         * :<C-U>call EasyMotion#WB(1, 0)<CR>
+o  ;;w         * :call EasyMotion#WB(0, 0)<CR>
+n  ;;w         * :call EasyMotion#WB(0, 0)<CR>
+x  ;;t         * :<C-U>call EasyMotion#T(1, 0)<CR>
+o  ;;t         * :call EasyMotion#T(0, 0)<CR>
+n  ;;t         * :call EasyMotion#T(0, 0)<CR>
+x  ;;n         * :<C-U>call EasyMotion#Search(1, 0)<CR>
+o  ;;n         * :call EasyMotion#Search(0, 0)<CR>
+n  ;;n         * :call EasyMotion#Search(0, 0)<CR>
+x  ;;k         * :<C-U>call EasyMotion#JK(1, 1)<CR>
+o  ;;k         * :call EasyMotion#JK(0, 1)<CR>
+n  ;;k         * :call EasyMotion#JK(0, 1)<CR>
+x  ;;j         * :<C-U>call EasyMotion#JK(1, 0)<CR>
+o  ;;j         * :call EasyMotion#JK(0, 0)<CR>
+n  ;;j         * :call EasyMotion#JK(0, 0)<CR>
+x  ;;gE        * :<C-U>call EasyMotion#EW(1, 1)<CR>
+o  ;;gE        * :call EasyMotion#EW(0, 1)<CR>
+n  ;;gE        * :call EasyMotion#EW(0, 1)<CR>
+x  ;;f         * :<C-U>call EasyMotion#F(1, 0)<CR>
+o  ;;f         * :call EasyMotion#F(0, 0)<CR>
+n  ;;f         * :call EasyMotion#F(0, 0)<CR>
+x  ;;e         * :<C-U>call EasyMotion#E(1, 0)<CR>
+o  ;;e         * :call EasyMotion#E(0, 0)<CR>
+n  ;;e         * :call EasyMotion#E(0, 0)<CR>
+x  ;;b         * :<C-U>call EasyMotion#WB(1, 1)<CR>
+o  ;;b         * :call EasyMotion#WB(0, 1)<CR>
+n  ;;b         * :call EasyMotion#WB(0, 1)<CR>
+x  ;;W         * :<C-U>call EasyMotion#WBW(1, 0)<CR>
+o  ;;W         * :call EasyMotion#WBW(0, 0)<CR>
+n  ;;W         * :call EasyMotion#WBW(0, 0)<CR>
+x  ;;T         * :<C-U>call EasyMotion#T(1, 1)<CR>
+o  ;;T         * :call EasyMotion#T(0, 1)<CR>
+n  ;;T         * :call EasyMotion#T(0, 1)<CR>
+x  ;;N         * :<C-U>call EasyMotion#Search(1, 1)<CR>
+o  ;;N         * :call EasyMotion#Search(0, 1)<CR>
+n  ;;N         * :call EasyMotion#Search(0, 1)<CR>
+x  ;;ge        * :<C-U>call EasyMotion#E(1, 1)<CR>
+o  ;;ge        * :call EasyMotion#E(0, 1)<CR>
+n  ;;ge        * :call EasyMotion#E(0, 1)<CR>
+x  ;;F         * :<C-U>call EasyMotion#F(1, 1)<CR>
+o  ;;F         * :call EasyMotion#F(0, 1)<CR>
+n  ;;F         * :call EasyMotion#F(0, 1)<CR>
+x  ;;E         * :<C-U>call EasyMotion#EW(1, 0)<CR>
+o  ;;E         * :call EasyMotion#EW(0, 0)<CR>
+n  ;;E         * :call EasyMotion#EW(0, 0)<CR>
+x  ;;B         * :<C-U>call EasyMotion#WBW(1, 1)<CR>
+o  ;;B         * :call EasyMotion#WBW(0, 1)<CR>
+n  ;;B         * :call EasyMotion#WBW(0, 1)<CR>
+nox;R            :VroomRunNearestTest<CR>
+nox;r            :VroomRunTestFile<CR>
+n  ;u          * :UndotreeToggle<CR>
+n  ;gg         * :GitGutterToggle<CR>
+n  ;gw         * :Gwrite<CR>:GitGutter<CR>
 n  ;gp         * :Git push<CR>
 n  ;gl         * :Glog<CR>
 n  ;gb         * :Gblame<CR>
@@ -120,38 +139,30 @@ n  ;gc         * :Gcommit<CR>
 n  ;gd         * :Gdiff<CR>
 n  ;gs         * :Gstatus<CR>
 n  ;tt         * :TagbarToggle<CR>
-n  ;fu         * :CtrlPFunky<CR>
 n  ;jt           <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
-n  ;sc           :SessionClose<CR>
-   ;ss           :call RunNearestSpec()<CR>
+n  ;ss           :SessionSave<CR>
 n  ;sl           :SessionList<CR>
 v  ;a|           :Tabularize /|<CR>
 n  ;a|           :Tabularize /|<CR>
-v  ;a,,          :Tabularize /,\zs<CR>
-n  ;a,,          :Tabularize /,\zs<CR>
-v  ;a,           :Tabularize /,<CR>
+x  ;a,           :Tabularize /,<CR>
 n  ;a,           :Tabularize /,<CR>
-v  ;a::          :Tabularize /:\zs<CR>
+x  ;a::          :Tabularize /:\zs<CR>
 n  ;a::          :Tabularize /:\zs<CR>
-v  ;a:           :Tabularize /:<CR>
+x  ;a:           :Tabularize /:<CR>
 n  ;a:           :Tabularize /:<CR>
-v  ;a=>          :Tabularize /=><CR>
-n  ;a=>          :Tabularize /=><CR>
-v  ;a=           :Tabularize /^[^=]*\zs=<CR>
-n  ;a=           :Tabularize /^[^=]*\zs=<CR>
-v  ;a&           :Tabularize /&<CR>
+x  ;a=           :Tabularize /=<CR>
+n  ;a=           :Tabularize /=<CR>
+x  ;a&           :Tabularize /&<CR>
 n  ;a&           :Tabularize /&<CR>
 n  ;nt           :NERDTreeFind<CR>
-   ;e            :NERDTreeFind<CR>
-n  ;ac         * :call ArduinoCompile()<CR>
-n  ;q          & :call ToggleQuickfixList()<CR>
+nox;e            :NERDTreeFind<CR>
+n  ;ac           <Plug>ToggleAutoCloseMappings
 n  ;ff           [I:let nr = input("Which one: ")|exe "normal " . nr ."[\t"<CR>
-   ;=            <C-W>=
-   ;et           :tabe %%
-   ;ev         * :call <SNR>7_EditSpf13Config()<CR>
-   ;es           :sp %%
-   ;ew           :e %%
-   ;fc           /\v^[<|=>]{7}( .*|$)<CR>
+nox;=            <C-W>=
+nox;et           :tabe %%
+nox;ev           :vsp %%
+nox;es           :sp %%
+nox;ew           :e %%
 n  ;/            :set invhlsearch<CR>
 n  ;f9           :set foldlevel=9<CR>
 n  ;f8           :set foldlevel=8<CR>
@@ -165,112 +176,85 @@ n  ;f1           :set foldlevel=1<CR>
 n  ;f0           :set foldlevel=0<CR>
 n  <D-r>       * :CtrlPMRU<CR>
 n  <D-t>       * :CtrlP<CR>
-v  <           * <gv
-v  >           * >gv
-o  F             <Plug>fanfingtastic_F
-x  F             <Plug>fanfingtastic_F
-n  F             <Plug>fanfingtastic_F
-   H             gT
-   L             gt
+x  <           * <gv
+x  >           * >gv
+noxH             gT
+noxL             gt
 x  S             <Plug>VSurround
-o  T             <Plug>fanfingtastic_T
-x  T             <Plug>fanfingtastic_T
-n  T             <Plug>fanfingtastic_T
-   Y           * y$
-n  [c            <Plug>(signify-prev-hunk)
-o  [%          * v:<C-U>call <SNR>79_MultiMatch("bW", "o") <CR>
-v  [%            <Esc>[%m'gv``
-n  [%          * :<C-U>call <SNR>79_MultiMatch("bW", "n") <CR>
-n  \\u           <Plug>CommentaryUndo:echomsg '\\ is deprecated. Use gc'<CR>
-n  \\\           <Plug>CommentaryLine:echomsg '\\ is deprecated. Use gc'<CR>
-n  \\            :echomsg '\\ is deprecated. Use gc'<CR><Plug>Commentary
-x  \\            <Plug>Commentary:echomsg '\\ is deprecated. Use gc'<CR>
-   \bg         * :call ToggleBG()<CR>
-n  ]c            <Plug>(signify-next-hunk)
-o  ]%          * v:<C-U>call <SNR>79_MultiMatch("W",  "o") <CR>
-v  ]%            <Esc>]%m'gv``
-n  ]%          * :<C-U>call <SNR>79_MultiMatch("W",  "n") <CR>
-v  ^           * :<C-U>call WrapRelativeMotion("^", 1)<CR>
-no ^           * :call WrapRelativeMotion("^")<CR>
-n  _             <Plug>(expand_region_shrink)
-v  _             <Plug>(expand_region_shrink)
-o  ai            <Plug>(textobj-indent-a)
-x  ai            <Plug>(textobj-indent-a)
-o  aI            <Plug>(textobj-indent-same-a)
-x  aI            <Plug>(textobj-indent-same-a)
-v  a%            <Esc>[%v]%
-n  cgc           <Plug>ChangeCommentary
+n  Y           * y$
+n  [h            <Plug>GitGutterPrevHunk
+o  [%          * v:<C-U>call <SNR>60_MultiMatch("bW", "o") <CR>
+x  [%            <Esc>[%m'gv``
+n  [%          * :<C-U>call <SNR>60_MultiMatch("bW", "n") <CR>
+x  ]f            :call PythonDec("function", 1)<CR>
+no ]f            :call PythonDec("function", 1)<CR>
+x  ]F            :call PythonDec("function", -1)<CR>
+no ]F            :call PythonDec("function", -1)<CR>
+x  ]j            :call PythonDec("class", 1)<CR>
+no ]j            :call PythonDec("class", 1)<CR>
+x  ]J            :call PythonDec("class", -1)<CR>
+no ]J            :call PythonDec("class", -1)<CR>
+nox]<Down>       :call PythonNextLine(1)<CR>
+nox]<Up>         :call PythonNextLine(-1)<CR>
+nox]d            :call PythonSelectObject("function")<CR>
+nox]c            :call PythonSelectObject("class")<CR>
+x  ]u            :call PythonUncommentSelection()<CR>
+no ]u            :call PythonUncommentSelection()<CR>
+x  ]#            :call PythonCommentSelection()<CR>
+no ]#            :call PythonCommentSelection()<CR>
+x  ]>            >
+no ]>            ]tV]e>
+x  ]<            <
+no ]<            ]tV]e<
+nox]v            ]tV]e
+x  ]e            :<C-U>PEoB<CR>m'gv``
+no ]e            :PEoB<CR>
+x  ]t            :<C-U>PBOB<CR>m'gv``
+no ]t            :PBoB<CR>
+n  ]h            <Plug>GitGutterNextHunk
+o  ]%          * v:<C-U>call <SNR>60_MultiMatch("W",  "o") <CR>
+x  ]%            <Esc>]%m'gv``
+n  ]%          * :<C-U>call <SNR>60_MultiMatch("W",  "n") <CR>
+x  a%            <Esc>[%v]%
 n  cr            <Plug>Coerce
-n  cS            <Plug>CSurround
 n  cs            <Plug>Csurround
 n  ds            <Plug>Dsurround
-o  f             <Plug>fanfingtastic_f
-x  f             <Plug>fanfingtastic_f
-n  f             <Plug>fanfingtastic_f
 n  gx            <Plug>NetrwBrowseX
-n  gcu           <Plug>Commentary<Plug>Commentary
-n  gcc           <Plug>CommentaryLine
-o  gc            <Plug>Commentary
-n  gc            <Plug>Commentary
-x  gc            <Plug>Commentary
-o  g%          * v:<C-U>call <SNR>79_Match_wrapper('',0,'o') <CR>
-v  g%          * :<C-U>call <SNR>79_Match_wrapper('',0,'v') <CR>m'gv``
-n  g%          * :<C-U>call <SNR>79_Match_wrapper('',0,'n') <CR>
+o  g%          * v:<C-U>call <SNR>60_Match_wrapper('',0,'o') <CR>
+x  g%          * :<C-U>call <SNR>60_Match_wrapper('',0,'v') <CR>m'gv``
+n  g%          * :<C-U>call <SNR>60_Match_wrapper('',0,'n') <CR>
 x  gS            <Plug>VgSurround
-o  ii            <Plug>(textobj-indent-i)
-x  ii            <Plug>(textobj-indent-i)
-o  iI            <Plug>(textobj-indent-same-i)
-x  iI            <Plug>(textobj-indent-same-i)
-   j           * gj
-   k           * gk
-o  t             <Plug>fanfingtastic_t
-x  t             <Plug>fanfingtastic_t
-n  t             <Plug>fanfingtastic_t
+o  io          * :normal vio<CR>
+x  io            <Plug>InnerOffside
+noxj           * gj
+noxk           * gk
 n  ySS           <Plug>YSsurround
 n  ySs           <Plug>YSsurround
 n  yss           <Plug>Yssurround
 n  yS            <Plug>YSurround
 n  ys            <Plug>Ysurround
-   zh            zH
-   zl            zL
-n  <SNR>210_:  * :<C-U><C-R>=v:count ? v:count : ''<CR>
+noxzh            zH
+noxzl            zL
+s  <Left>      * <Esc>bi
+s  <Right>     * <Esc>a
+s  <Del>       * a<BS>
+s  <BS>        * a<BS>
 n  <Plug>NetrwBrowseX * :call netrw#NetrwBrowseX(expand("<cWORD>"),0)<CR>
-x  <Plug>(expand_region_shrink) * :<C-U>call expand_region#next('v', '-')<CR>
-x  <Plug>(expand_region_expand) * :<C-U>call expand_region#next('v', '+')<CR>
-n  <Plug>(expand_region_expand) * :<C-U>call expand_region#next('n', '+')<CR>
-o  <Plug>fanfingtastic_, * :<C-U>call <SNR>147_operator_next_char(v:count1, <SNR>147_get("fchar"), <SNR>147_get("ff"), ",")<CR>
-o  <Plug>fanfingtastic_; * :<C-U>call <SNR>147_operator_next_char(v:count1, <SNR>147_get("fchar"), <SNR>147_get("ff"), ";")<CR>
-o  <Plug>fanfingtastic_T * :<C-U>call <SNR>147_operator_next_char(v:count1, "", "T", "T")<CR>
-o  <Plug>fanfingtastic_t * :<C-U>call <SNR>147_operator_next_char(v:count1, "", "t", "t")<CR>
-o  <Plug>fanfingtastic_F * :<C-U>call <SNR>147_operator_next_char(v:count1, "", "F", "F")<CR>
-o  <Plug>fanfingtastic_f * :<C-U>call <SNR>147_operator_next_char(v:count1, "", "f", "f")<CR>
-x  <Plug>fanfingtastic_, * :<C-U>call <SNR>147_visual_next_char(v:count1, <SNR>147_get("fchar"), <SNR>147_get("ff"), ",")<CR>
-x  <Plug>fanfingtastic_; * :<C-U>call <SNR>147_visual_next_char(v:count1, <SNR>147_get("fchar"), <SNR>147_get("ff"), ";")<CR>
-x  <Plug>fanfingtastic_T * :<C-U>call <SNR>147_visual_next_char(v:count1, "", "T", "T")<CR>
-x  <Plug>fanfingtastic_t * :<C-U>call <SNR>147_visual_next_char(v:count1, "", "t", "t")<CR>
-x  <Plug>fanfingtastic_F * :<C-U>call <SNR>147_visual_next_char(v:count1, "", "F", "F")<CR>
-x  <Plug>fanfingtastic_f * :<C-U>call <SNR>147_visual_next_char(v:count1, "", "f", "f")<CR>
-n  <Plug>fanfingtastic_, * :<C-U>call <SNR>147_next_char(v:count1, <SNR>147_get("fchar"), <SNR>147_get("ff"), ",")<CR>
-n  <Plug>fanfingtastic_; * :<C-U>call <SNR>147_next_char(v:count1, <SNR>147_get("fchar"), <SNR>147_get("ff"), ";")<CR>
-n  <Plug>fanfingtastic_T * :<C-U>call <SNR>147_next_char(v:count1, "", "T", "T")<CR>
-n  <Plug>fanfingtastic_t * :<C-U>call <SNR>147_next_char(v:count1, "", "t", "t")<CR>
-n  <Plug>fanfingtastic_F * :<C-U>call <SNR>147_next_char(v:count1, "", "F", "F")<CR>
-n  <Plug>fanfingtastic_f * :<C-U>call <SNR>147_next_char(v:count1, "", "f", "f")<CR>
-n  <SNR>140_   * <SNR>140_
-x  <Plug>(neosnippet_register_oneshot_snippet) * :<C-U>call neosnippet#mappings#_register_oneshot_snippet()<CR>
-x  <Plug>(neosnippet_expand_target) * :<C-U>call neosnippet#mappings#_expand_target()<CR>
-x  <Plug>(neosnippet_get_selected_text) * :call neosnippet#helpers#get_selected_text(visualmode(), 1)<CR>
-s  <Plug>(neosnippet_jump) * neosnippet#mappings#jump_impl()
-s  <Plug>(neosnippet_expand) * neosnippet#mappings#expand_impl()
-s  <Plug>(neosnippet_jump_or_expand) * neosnippet#mappings#jump_or_expand_impl()
-s  <Plug>(neosnippet_expand_or_jump) * neosnippet#mappings#expand_or_jump_impl()
-n  <Plug>CommentaryUndo   <Plug>Commentary<Plug>Commentary
-n  <Plug>ChangeCommentary * c:<C-U>call <SNR>118_textobject(1)<CR>
-o  <Plug>Commentary * :<C-U>call <SNR>118_textobject(0)<CR>
-n  <Plug>CommentaryLine * :<C-U>set opfunc=<SNR>118_go|exe 'norm! 'v:count1.'g@_'<CR>
-n  <Plug>Commentary * :<C-U>set opfunc=<SNR>118_go<CR>g@
-x  <Plug>Commentary * :<C-U>call <SNR>118_go(line("'<"),line("'>"))<CR>
-n  <Plug>NERDCommenterAltDelims * :call <SNR>117_SwitchToAlternativeDelimiters(1)<CR>
+n  <Plug>(godoc-keyword) * :<C-U>call <SNR>106_Godoc('')<CR>
+x  <Plug>InnerOffside * :<C-U>call <SNR>103_InnerOffside()<CR>
+x  <Plug>(neosnippet_register_oneshot_snippet) * :<C-U>call neosnippet#register_oneshot_snippet()<CR>
+x  <Plug>(neosnippet_start_unite_snippet_target) * unite#sources#snippet_target#start()
+x  <Plug>(neosnippet_expand_target) * :<C-U>call neosnippet#expand_target()<CR>
+x  <Plug>(neosnippet_get_selected_text) * :call neosnippet#get_selected_text(visualmode(), 1)<CR>
+s  <Plug>(neosnippet_jump) * neosnippet#jump_impl()
+s  <Plug>(neosnippet_expand) * neosnippet#expand_impl()
+s  <Plug>(neosnippet_jump_or_expand) * neosnippet#jump_or_expand_impl()
+s  <Plug>(neosnippet_expand_or_jump) * neosnippet#expand_or_jump_impl()
+s  <Plug>(neocomplcache_snippets_force_jump) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+s  <Plug>(neocomplcache_snippets_force_expand) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+s  <Plug>(neocomplcache_snippets_jump) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+s  <Plug>(neocomplcache_snippets_expand) * :<C-U>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+n  <Plug>NERDCommenterAltDelims * :call <SNR>87_SwitchToAlternativeDelimiters(1)<CR>
 x  <Plug>NERDCommenterUncomment * :call NERDComment("x", "Uncomment")<CR>
 n  <Plug>NERDCommenterUncomment * :call NERDComment("n", "Uncomment")<CR>
 x  <Plug>NERDCommenterAlignBoth * :call NERDComment("x", "AlignBoth")<CR>
@@ -293,336 +277,82 @@ x  <Plug>NERDCommenterToggle * :call NERDComment("x", "Toggle")<CR>
 n  <Plug>NERDCommenterToggle * :call NERDComment("n", "Toggle")<CR>
 x  <Plug>NERDCommenterComment * :call NERDComment("x", "Comment")<CR>
 n  <Plug>NERDCommenterComment * :call NERDComment("n", "Comment")<CR>
-n  <SNR>115_:  * :<C-U><C-R>=v:count ? v:count : ''<CR>
-v  <Plug>SurroundWithSingle * :<C-U>call textobj#quote#surround#surround(0, visualmode())<CR>
-n  <Plug>SurroundWithSingle * :call textobj#quote#surround#surround(0, '')<CR>
-v  <Plug>SurroundWithDouble * :<C-U>call textobj#quote#surround#surround(1, visualmode())<CR>
-n  <Plug>SurroundWithDouble * :call textobj#quote#surround#surround(1, '')<CR>
-v  <Plug>ReplaceWithStraight * :<C-U>call textobj#quote#replace#replace(0, visualmode())<CR>
-n  <Plug>ReplaceWithStraight * :call textobj#quote#replace#replace(0, '')<CR>
-v  <Plug>ReplaceWithCurly * :<C-U>call textobj#quote#replace#replace(1, visualmode())<CR>
-n  <Plug>ReplaceWithCurly * :call textobj#quote#replace#replace(1, '')<CR>
-v  <BS>          <Plug>(wildfire-water)
-o  <Plug>(wildfire-quick-select) * :<C-U>call wildfire#QuickSelect({'*': ['i''', 'i"', 'i)', 'i]', 'i}', 'ip'], 'html,xml': ['at']})<CR>
-n  <Plug>(wildfire-quick-select) * :<C-U>call wildfire#QuickSelect({'*': ['i''', 'i"', 'i)', 'i]', 'i}', 'ip'], 'html,xml': ['at']})<CR>
-v  <Plug>(wildfire-fuel) * :<C-U>call wildfire#Fuel(v:count1)<CR>
-o  <Plug>(wildfire-fuel) * :<C-U>call wildfire#Start(v:count1, {'*': ['i''', 'i"', 'i)', 'i]', 'i}', 'ip'], 'html,xml': ['at']})<CR>
-n  <Plug>(wildfire-fuel) * :<C-U>call wildfire#Start(v:count1, {'*': ['i''', 'i"', 'i)', 'i]', 'i}', 'ip'], 'html,xml': ['at']})<CR>
-v  <Plug>(wildfire-water) * :<C-U>call wildfire#Water(v:count1)<CR>
-o  <Plug>(textobj-indent-i) * :<C-U>call g:__textobj_indent.do_by_function("select-i","-","o")<CR>
-v  <Plug>(textobj-indent-i) * :<C-U>call g:__textobj_indent.do_by_function("select-i","-","v")<CR>
-o  <Plug>(textobj-indent-a) * :<C-U>call g:__textobj_indent.do_by_function("select-a","-","o")<CR>
-v  <Plug>(textobj-indent-a) * :<C-U>call g:__textobj_indent.do_by_function("select-a","-","v")<CR>
-o  <Plug>(textobj-indent-same-i) * :<C-U>call g:__textobj_indent.do_by_function("select-i","same","o")<CR>
-v  <Plug>(textobj-indent-same-i) * :<C-U>call g:__textobj_indent.do_by_function("select-i","same","v")<CR>
-o  <Plug>(textobj-indent-same-a) * :<C-U>call g:__textobj_indent.do_by_function("select-a","same","o")<CR>
-v  <Plug>(textobj-indent-same-a) * :<C-U>call g:__textobj_indent.do_by_function("select-a","same","v")<CR>
-n  <SNR>95_    * <SNR>95_
-n  <Plug>Coerce * :<C-U>call <SNR>92_coerce(nr2char(getchar()))<CR>
-x  <Plug>(signify-motion-outer-visual) * :<C-U>call sy#util#hunk_text_object(1)<CR>
-o  <Plug>(signify-motion-outer-pending) * :<C-U>call sy#util#hunk_text_object(1)<CR>
-x  <Plug>(signify-motion-inner-visual) * :<C-U>call sy#util#hunk_text_object(0)<CR>
-o  <Plug>(signify-motion-inner-pending) * :<C-U>call sy#util#hunk_text_object(0)<CR>
-n  <Plug>(signify-prev-hunk) * &diff ? '[c' : ":\<C-U>call sy#jump#prev_hunk(v:count1)\<CR>"
-n  <Plug>(signify-next-hunk) * &diff ? ']c' : ":\<C-U>call sy#jump#next_hunk(v:count1)\<CR>"
+n  <Plug>Coerce * :<C-U>call <SNR>72_coerce(nr2char(getchar()))<CR>
+n  <Plug>GitGutterPrevHunk * :<C-U>execute v:count1 . "GitGutterPrevHunk"<CR>
+n  <Plug>GitGutterNextHunk * :<C-U>execute v:count1 . "GitGutterNextHunk"<CR>
 n  <Plug>IndentGuidesDisable & :IndentGuidesDisable<CR>
 n  <Plug>IndentGuidesEnable & :IndentGuidesEnable<CR>
 n  <Plug>IndentGuidesToggle & :IndentGuidesToggle<CR>
-   <Plug>(easymotion-prefix)N   <Plug>(easymotion-N)
-   <Plug>(easymotion-prefix)n   <Plug>(easymotion-n)
-   <Plug>(easymotion-prefix)k   <Plug>(easymotion-k)
-   <Plug>(easymotion-prefix)j   <Plug>(easymotion-j)
-   <Plug>(easymotion-prefix)gE   <Plug>(easymotion-gE)
-   <Plug>(easymotion-prefix)ge   <Plug>(easymotion-ge)
-   <Plug>(easymotion-prefix)E   <Plug>(easymotion-E)
-   <Plug>(easymotion-prefix)e   <Plug>(easymotion-e)
-   <Plug>(easymotion-prefix)B   <Plug>(easymotion-B)
-   <Plug>(easymotion-prefix)b   <Plug>(easymotion-b)
-   <Plug>(easymotion-prefix)W   <Plug>(easymotion-W)
-   <Plug>(easymotion-prefix)w   <Plug>(easymotion-w)
-   <Plug>(easymotion-prefix)T   <Plug>(easymotion-T)
-   <Plug>(easymotion-prefix)t   <Plug>(easymotion-t)
-   <Plug>(easymotion-prefix)s   <Plug>(easymotion-s)
-   <Plug>(easymotion-prefix)F   <Plug>(easymotion-F)
-   <Plug>(easymotion-prefix)f   <Plug>(easymotion-f)
-x  <Plug>(easymotion-activate) * :<C-U>call EasyMotion#activate(1)<CR>
-nos<Plug>(easymotion-activate) * :<C-U>call EasyMotion#activate(0)<CR>
-   <Plug>(easymotion-dotrepeat) * :<C-U>call EasyMotion#DotRepeat()<CR>
-x  <Plug>(easymotion-repeat) * <Esc>:<C-U>call EasyMotion#Repeat(1)<CR>
-nos<Plug>(easymotion-repeat) * :<C-U>call EasyMotion#Repeat(0)<CR>
-x  <Plug>(easymotion-prev) * :<C-U>call EasyMotion#NextPrevious(1,1)<CR>
-nos<Plug>(easymotion-prev) * :<C-U>call EasyMotion#NextPrevious(0,1)<CR>
-x  <Plug>(easymotion-next) * :<C-U>call EasyMotion#NextPrevious(1,0)<CR>
-nos<Plug>(easymotion-next) * :<C-U>call EasyMotion#NextPrevious(0,0)<CR>
-x  <Plug>(easymotion-wl) * <Esc>:<C-U>call EasyMotion#WBL(1,0)<CR>
-nos<Plug>(easymotion-wl) * :<C-U>call EasyMotion#WBL(0,0)<CR>
-x  <Plug>(easymotion-lineforward) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,0)<CR>
-nos<Plug>(easymotion-lineforward) * :<C-U>call EasyMotion#LineAnywhere(0,0)<CR>
-x  <Plug>(easymotion-lineanywhere) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,2)<CR>
-nos<Plug>(easymotion-lineanywhere) * :<C-U>call EasyMotion#LineAnywhere(0,2)<CR>
-x  <Plug>(easymotion-bd-wl) * <Esc>:<C-U>call EasyMotion#WBL(1,2)<CR>
-nos<Plug>(easymotion-bd-wl) * :<C-U>call EasyMotion#WBL(0,2)<CR>
-x  <Plug>(easymotion-linebackward) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,1)<CR>
-nos<Plug>(easymotion-linebackward) * :<C-U>call EasyMotion#LineAnywhere(0,1)<CR>
-x  <Plug>(easymotion-bl) * <Esc>:<C-U>call EasyMotion#WBL(1,1)<CR>
-nos<Plug>(easymotion-bl) * :<C-U>call EasyMotion#WBL(0,1)<CR>
-x  <Plug>(easymotion-el) * <Esc>:<C-U>call EasyMotion#EL(1,0)<CR>
-nos<Plug>(easymotion-el) * :<C-U>call EasyMotion#EL(0,0)<CR>
-x  <Plug>(easymotion-gel) * <Esc>:<C-U>call EasyMotion#EL(1,1)<CR>
-nos<Plug>(easymotion-gel) * :<C-U>call EasyMotion#EL(0,1)<CR>
-x  <Plug>(easymotion-bd-el) * <Esc>:<C-U>call EasyMotion#EL(1,2)<CR>
-nos<Plug>(easymotion-bd-el) * :<C-U>call EasyMotion#EL(0,2)<CR>
-x  <Plug>(easymotion-jumptoanywhere) * <Esc>:<C-U>call EasyMotion#JumpToAnywhere(1,2)<CR>
-nos<Plug>(easymotion-jumptoanywhere) * :<C-U>call EasyMotion#JumpToAnywhere(0,2)<CR>
-x  <Plug>(easymotion-vim-n) * <Esc>:<C-U>call EasyMotion#Search(1,0,1)<CR>
-nos<Plug>(easymotion-vim-n) * :<C-U>call EasyMotion#Search(0,0,1)<CR>
-x  <Plug>(easymotion-n) * <Esc>:<C-U>call EasyMotion#Search(1,0,0)<CR>
-nos<Plug>(easymotion-n) * :<C-U>call EasyMotion#Search(0,0,0)<CR>
-x  <Plug>(easymotion-bd-n) * <Esc>:<C-U>call EasyMotion#Search(1,2,0)<CR>
-nos<Plug>(easymotion-bd-n) * :<C-U>call EasyMotion#Search(0,2,0)<CR>
-x  <Plug>(easymotion-vim-N) * <Esc>:<C-U>call EasyMotion#Search(1,1,1)<CR>
-nos<Plug>(easymotion-vim-N) * :<C-U>call EasyMotion#Search(0,1,1)<CR>
-x  <Plug>(easymotion-N) * <Esc>:<C-U>call EasyMotion#Search(1,1,0)<CR>
-nos<Plug>(easymotion-N) * :<C-U>call EasyMotion#Search(0,1,0)<CR>
-x  <Plug>(easymotion-eol-j) * <Esc>:<C-U>call EasyMotion#Eol(1,0)<CR>
-nos<Plug>(easymotion-eol-j) * :<C-U>call EasyMotion#Eol(0,0)<CR>
-x  <Plug>(easymotion-sol-k) * <Esc>:<C-U>call EasyMotion#Sol(1,1)<CR>
-nos<Plug>(easymotion-sol-k) * :<C-U>call EasyMotion#Sol(0,1)<CR>
-x  <Plug>(easymotion-sol-j) * <Esc>:<C-U>call EasyMotion#Sol(1,0)<CR>
-nos<Plug>(easymotion-sol-j) * :<C-U>call EasyMotion#Sol(0,0)<CR>
-x  <Plug>(easymotion-k) * <Esc>:<C-U>call EasyMotion#JK(1,1)<CR>
-nos<Plug>(easymotion-k) * :<C-U>call EasyMotion#JK(0,1)<CR>
-x  <Plug>(easymotion-j) * <Esc>:<C-U>call EasyMotion#JK(1,0)<CR>
-nos<Plug>(easymotion-j) * :<C-U>call EasyMotion#JK(0,0)<CR>
-x  <Plug>(easymotion-bd-jk) * <Esc>:<C-U>call EasyMotion#JK(1,2)<CR>
-nos<Plug>(easymotion-bd-jk) * :<C-U>call EasyMotion#JK(0,2)<CR>
-x  <Plug>(easymotion-eol-bd-jk) * <Esc>:<C-U>call EasyMotion#Eol(1,2)<CR>
-nos<Plug>(easymotion-eol-bd-jk) * :<C-U>call EasyMotion#Eol(0,2)<CR>
-x  <Plug>(easymotion-sol-bd-jk) * <Esc>:<C-U>call EasyMotion#Sol(1,2)<CR>
-nos<Plug>(easymotion-sol-bd-jk) * :<C-U>call EasyMotion#Sol(0,2)<CR>
-x  <Plug>(easymotion-eol-k) * <Esc>:<C-U>call EasyMotion#Eol(1,1)<CR>
-nos<Plug>(easymotion-eol-k) * :<C-U>call EasyMotion#Eol(0,1)<CR>
-x  <Plug>(easymotion-iskeyword-ge) * <Esc>:<C-U>call EasyMotion#EK(1,1)<CR>
-nos<Plug>(easymotion-iskeyword-ge) * :<C-U>call EasyMotion#EK(0,1)<CR>
-x  <Plug>(easymotion-w) * <Esc>:<C-U>call EasyMotion#WB(1,0)<CR>
-nos<Plug>(easymotion-w) * :<C-U>call EasyMotion#WB(0,0)<CR>
-x  <Plug>(easymotion-bd-W) * <Esc>:<C-U>call EasyMotion#WBW(1,2)<CR>
-nos<Plug>(easymotion-bd-W) * :<C-U>call EasyMotion#WBW(0,2)<CR>
-x  <Plug>(easymotion-iskeyword-w) * <Esc>:<C-U>call EasyMotion#WBK(1,0)<CR>
-nos<Plug>(easymotion-iskeyword-w) * :<C-U>call EasyMotion#WBK(0,0)<CR>
-x  <Plug>(easymotion-gE) * <Esc>:<C-U>call EasyMotion#EW(1,1)<CR>
-nos<Plug>(easymotion-gE) * :<C-U>call EasyMotion#EW(0,1)<CR>
-x  <Plug>(easymotion-e) * <Esc>:<C-U>call EasyMotion#E(1,0)<CR>
-nos<Plug>(easymotion-e) * :<C-U>call EasyMotion#E(0,0)<CR>
-x  <Plug>(easymotion-bd-E) * <Esc>:<C-U>call EasyMotion#EW(1,2)<CR>
-nos<Plug>(easymotion-bd-E) * :<C-U>call EasyMotion#EW(0,2)<CR>
-x  <Plug>(easymotion-iskeyword-e) * <Esc>:<C-U>call EasyMotion#EK(1,0)<CR>
-nos<Plug>(easymotion-iskeyword-e) * :<C-U>call EasyMotion#EK(0,0)<CR>
-x  <Plug>(easymotion-b) * <Esc>:<C-U>call EasyMotion#WB(1,1)<CR>
-nos<Plug>(easymotion-b) * :<C-U>call EasyMotion#WB(0,1)<CR>
-x  <Plug>(easymotion-iskeyword-b) * <Esc>:<C-U>call EasyMotion#WBK(1,1)<CR>
-nos<Plug>(easymotion-iskeyword-b) * :<C-U>call EasyMotion#WBK(0,1)<CR>
-x  <Plug>(easymotion-iskeyword-bd-w) * <Esc>:<C-U>call EasyMotion#WBK(1,2)<CR>
-nos<Plug>(easymotion-iskeyword-bd-w) * :<C-U>call EasyMotion#WBK(0,2)<CR>
-x  <Plug>(easymotion-W) * <Esc>:<C-U>call EasyMotion#WBW(1,0)<CR>
-nos<Plug>(easymotion-W) * :<C-U>call EasyMotion#WBW(0,0)<CR>
-x  <Plug>(easymotion-bd-w) * <Esc>:<C-U>call EasyMotion#WB(1,2)<CR>
-nos<Plug>(easymotion-bd-w) * :<C-U>call EasyMotion#WB(0,2)<CR>
-x  <Plug>(easymotion-iskeyword-bd-e) * <Esc>:<C-U>call EasyMotion#EK(1,2)<CR>
-nos<Plug>(easymotion-iskeyword-bd-e) * :<C-U>call EasyMotion#EK(0,2)<CR>
-x  <Plug>(easymotion-ge) * <Esc>:<C-U>call EasyMotion#E(1,1)<CR>
-nos<Plug>(easymotion-ge) * :<C-U>call EasyMotion#E(0,1)<CR>
-x  <Plug>(easymotion-E) * <Esc>:<C-U>call EasyMotion#EW(1,0)<CR>
-nos<Plug>(easymotion-E) * :<C-U>call EasyMotion#EW(0,0)<CR>
-x  <Plug>(easymotion-bd-e) * <Esc>:<C-U>call EasyMotion#E(1,2)<CR>
-nos<Plug>(easymotion-bd-e) * :<C-U>call EasyMotion#E(0,2)<CR>
-x  <Plug>(easymotion-B) * <Esc>:<C-U>call EasyMotion#WBW(1,1)<CR>
-nos<Plug>(easymotion-B) * :<C-U>call EasyMotion#WBW(0,1)<CR>
-x  <Plug>(easymotion-Tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,1)<CR>
-nos<Plug>(easymotion-Tln) * :<C-U>call EasyMotion#TL(-1,0,1)<CR>
-x  <Plug>(easymotion-t2) * <Esc>:<C-U>call EasyMotion#T(2,1,0)<CR>
-nos<Plug>(easymotion-t2) * :<C-U>call EasyMotion#T(2,0,0)<CR>
-x  <Plug>(easymotion-t) * <Esc>:<C-U>call EasyMotion#T(1,1,0)<CR>
-nos<Plug>(easymotion-t) * :<C-U>call EasyMotion#T(1,0,0)<CR>
-x  <Plug>(easymotion-s) * <Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>
-nos<Plug>(easymotion-s) * :<C-U>call EasyMotion#S(1,0,2)<CR>
-x  <Plug>(easymotion-tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,0)<CR>
-nos<Plug>(easymotion-tn) * :<C-U>call EasyMotion#T(-1,0,0)<CR>
-x  <Plug>(easymotion-bd-t2) * <Esc>:<C-U>call EasyMotion#T(2,1,2)<CR>
-nos<Plug>(easymotion-bd-t2) * :<C-U>call EasyMotion#T(2,0,2)<CR>
-x  <Plug>(easymotion-tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,0)<CR>
-nos<Plug>(easymotion-tl) * :<C-U>call EasyMotion#TL(1,0,0)<CR>
-x  <Plug>(easymotion-bd-tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,2)<CR>
-nos<Plug>(easymotion-bd-tn) * :<C-U>call EasyMotion#T(-1,0,2)<CR>
-x  <Plug>(easymotion-fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,0)<CR>
-nos<Plug>(easymotion-fn) * :<C-U>call EasyMotion#S(-1,0,0)<CR>
-x  <Plug>(easymotion-bd-tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,2)<CR>
-nos<Plug>(easymotion-bd-tl) * :<C-U>call EasyMotion#TL(1,0,2)<CR>
-x  <Plug>(easymotion-fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,0)<CR>
-nos<Plug>(easymotion-fl) * :<C-U>call EasyMotion#SL(1,0,0)<CR>
-x  <Plug>(easymotion-bd-tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,2)<CR>
-nos<Plug>(easymotion-bd-tl2) * :<C-U>call EasyMotion#TL(2,0,2)<CR>
-x  <Plug>(easymotion-bd-fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>
-nos<Plug>(easymotion-bd-fn) * :<C-U>call EasyMotion#S(-1,0,2)<CR>
-x  <Plug>(easymotion-f) * <Esc>:<C-U>call EasyMotion#S(1,1,0)<CR>
-nos<Plug>(easymotion-f) * :<C-U>call EasyMotion#S(1,0,0)<CR>
-x  <Plug>(easymotion-bd-fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>
-nos<Plug>(easymotion-bd-fl) * :<C-U>call EasyMotion#SL(1,0,2)<CR>
-x  <Plug>(easymotion-Fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,1)<CR>
-nos<Plug>(easymotion-Fl2) * :<C-U>call EasyMotion#SL(2,0,1)<CR>
-x  <Plug>(easymotion-tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,0)<CR>
-nos<Plug>(easymotion-tl2) * :<C-U>call EasyMotion#TL(2,0,0)<CR>
-x  <Plug>(easymotion-f2) * <Esc>:<C-U>call EasyMotion#S(2,1,0)<CR>
-nos<Plug>(easymotion-f2) * :<C-U>call EasyMotion#S(2,0,0)<CR>
-x  <Plug>(easymotion-Fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,1)<CR>
-nos<Plug>(easymotion-Fln) * :<C-U>call EasyMotion#SL(-1,0,1)<CR>
-x  <Plug>(easymotion-sln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>
-nos<Plug>(easymotion-sln) * :<C-U>call EasyMotion#SL(-1,0,2)<CR>
-x  <Plug>(easymotion-tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,0)<CR>
-nos<Plug>(easymotion-tln) * :<C-U>call EasyMotion#TL(-1,0,0)<CR>
-x  <Plug>(easymotion-fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,0)<CR>
-nos<Plug>(easymotion-fl2) * :<C-U>call EasyMotion#SL(2,0,0)<CR>
-x  <Plug>(easymotion-bd-fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>
-nos<Plug>(easymotion-bd-fl2) * :<C-U>call EasyMotion#SL(2,0,2)<CR>
-x  <Plug>(easymotion-T2) * <Esc>:<C-U>call EasyMotion#T(2,1,1)<CR>
-nos<Plug>(easymotion-T2) * :<C-U>call EasyMotion#T(2,0,1)<CR>
-x  <Plug>(easymotion-bd-tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,2)<CR>
-nos<Plug>(easymotion-bd-tln) * :<C-U>call EasyMotion#TL(-1,0,2)<CR>
-x  <Plug>(easymotion-T) * <Esc>:<C-U>call EasyMotion#T(1,1,1)<CR>
-nos<Plug>(easymotion-T) * :<C-U>call EasyMotion#T(1,0,1)<CR>
-x  <Plug>(easymotion-bd-t) * <Esc>:<C-U>call EasyMotion#T(1,1,2)<CR>
-nos<Plug>(easymotion-bd-t) * :<C-U>call EasyMotion#T(1,0,2)<CR>
-x  <Plug>(easymotion-Tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,1)<CR>
-nos<Plug>(easymotion-Tn) * :<C-U>call EasyMotion#T(-1,0,1)<CR>
-x  <Plug>(easymotion-s2) * <Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>
-nos<Plug>(easymotion-s2) * :<C-U>call EasyMotion#S(2,0,2)<CR>
-x  <Plug>(easymotion-Tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,1)<CR>
-nos<Plug>(easymotion-Tl) * :<C-U>call EasyMotion#TL(1,0,1)<CR>
-x  <Plug>(easymotion-sn) * <Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>
-nos<Plug>(easymotion-sn) * :<C-U>call EasyMotion#S(-1,0,2)<CR>
-x  <Plug>(easymotion-Fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,1)<CR>
-nos<Plug>(easymotion-Fn) * :<C-U>call EasyMotion#S(-1,0,1)<CR>
-x  <Plug>(easymotion-sl) * <Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>
-nos<Plug>(easymotion-sl) * :<C-U>call EasyMotion#SL(1,0,2)<CR>
-x  <Plug>(easymotion-Fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,1)<CR>
-nos<Plug>(easymotion-Fl) * :<C-U>call EasyMotion#SL(1,0,1)<CR>
-x  <Plug>(easymotion-sl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>
-nos<Plug>(easymotion-sl2) * :<C-U>call EasyMotion#SL(2,0,2)<CR>
-x  <Plug>(easymotion-bd-fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>
-nos<Plug>(easymotion-bd-fln) * :<C-U>call EasyMotion#SL(-1,0,2)<CR>
-x  <Plug>(easymotion-F) * <Esc>:<C-U>call EasyMotion#S(1,1,1)<CR>
-nos<Plug>(easymotion-F) * :<C-U>call EasyMotion#S(1,0,1)<CR>
-x  <Plug>(easymotion-bd-f) * <Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>
-nos<Plug>(easymotion-bd-f) * :<C-U>call EasyMotion#S(1,0,2)<CR>
-x  <Plug>(easymotion-F2) * <Esc>:<C-U>call EasyMotion#S(2,1,1)<CR>
-nos<Plug>(easymotion-F2) * :<C-U>call EasyMotion#S(2,0,1)<CR>
-x  <Plug>(easymotion-bd-f2) * <Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>
-nos<Plug>(easymotion-bd-f2) * :<C-U>call EasyMotion#S(2,0,2)<CR>
-x  <Plug>(easymotion-Tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,1)<CR>
-nos<Plug>(easymotion-Tl2) * :<C-U>call EasyMotion#TL(2,0,1)<CR>
-x  <Plug>(easymotion-fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,0)<CR>
-nos<Plug>(easymotion-fln) * :<C-U>call EasyMotion#SL(-1,0,0)<CR>
-n  <Plug>(ctrlp) * :<C-U>CtrlP<CR>
-v  <Plug>VgSurround * :<C-U>call <SNR>72_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
-v  <Plug>VSurround * :<C-U>call <SNR>72_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
-n  <Plug>YSurround * :<C-U>set opfunc=<SNR>72_opfunc2<CR>g@
-n  <Plug>Ysurround * :<C-U>set opfunc=<SNR>72_opfunc<CR>g@
-n  <Plug>YSsurround * :<C-U>call <SNR>72_opfunc2(v:count1)<CR>
-n  <Plug>Yssurround * :<C-U>call <SNR>72_opfunc(v:count1)<CR>
-n  <Plug>CSurround * :<C-U>call <SNR>72_changesurround(1)<CR>
-n  <Plug>Csurround * :<C-U>call <SNR>72_changesurround()<CR>
-n  <Plug>Dsurround * :<C-U>call <SNR>72_dosurround(<SNR>72_inputtarget())<CR>
+n  <Plug>ToggleAutoCloseMappings   :call <SNR>55_ToggleAutoCloseMappings()<CR>
+x  <Plug>VgSurround * :<C-U>call <SNR>54_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
+x  <Plug>VSurround * :<C-U>call <SNR>54_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
+n  <Plug>YSurround * :<C-U>set opfunc=<SNR>54_opfunc2<CR>g@
+n  <Plug>Ysurround * :<C-U>set opfunc=<SNR>54_opfunc<CR>g@
+n  <Plug>YSsurround * :<C-U>call <SNR>54_opfunc2(v:count1)<CR>
+n  <Plug>Yssurround * :<C-U>call <SNR>54_opfunc(v:count1)<CR>
+n  <Plug>Csurround * :<C-U>call <SNR>54_changesurround()<CR>
+n  <Plug>Dsurround * :<C-U>call <SNR>54_dosurround(<SNR>54_inputtarget())<CR>
 n  <Plug>SurroundRepeat * .
-   <Plug>NERDTreeFocusToggle & :call <SNR>71_NERDTreeFocusToggle()
-   <Plug>NERDTreeSteppedClose & :call <SNR>71_NERDTreeSteppedClose()
-   <Plug>NERDTreeSteppedOpen & :call <SNR>71_NERDTreeSteppedOpen()
-   <Plug>NERDTreeMirrorToggle & :call <SNR>71_NERDTreeMirrorToggle()
-   <Plug>NERDTreeMirrorOpen & :call <SNR>71_NERDTreeMirrorOrCreate()
-   <Plug>NERDTreeTabsFind & :call <SNR>71_NERDTreeFindFile()
-   <Plug>NERDTreeTabsToggle & :call <SNR>71_NERDTreeToggleAllTabs()
-   <Plug>NERDTreeTabsClose & :call <SNR>71_NERDTreeCloseAllTabs()
-   <Plug>NERDTreeTabsOpen & :call <SNR>71_NERDTreeOpenAllTabs()
-n  <F3>        * :set hlsearch!<CR>
-n  <S-Space>   * <C-B>
-   <F11>         :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
-v  <Home>      * :<C-U>call WrapRelativeMotion("0", 1)<CR>
-v  <End>       * :<C-U>call WrapRelativeMotion("$", 1)<CR>
-o  <End>       * v:call WrapRelativeMotion("$")<CR>
-no <Home>      * :call WrapRelativeMotion("0")<CR>
-n  <End>       * :call WrapRelativeMotion("$")<CR>
+nox<Plug>NERDTreeSteppedClose & :call <SNR>53_NERDTreeSteppedClose()
+nox<Plug>NERDTreeSteppedOpen & :call <SNR>53_NERDTreeSteppedOpen()
+nox<Plug>NERDTreeMirrorToggle & :call <SNR>53_NERDTreeMirrorToggle()
+nox<Plug>NERDTreeMirrorOpen & :call <SNR>53_NERDTreeMirrorOrCreate()
+nox<Plug>NERDTreeTabsToggle & :call <SNR>53_NERDTreeToggleAllTabs()
+nox<Plug>NERDTreeTabsClose & :call <SNR>53_NERDTreeCloseAllTabs()
+nox<Plug>NERDTreeTabsOpen & :call <SNR>53_NERDTreeOpenAllTabs()
 
-i  <BS>        *@<C-R>=AutoPairsDelete()<CR>
-i  <SNR>73_AutoPairsOldCRWrapper73 &@CleverCr()
-i  <S-BS>       @<Plug>delimitMateS-BS
-i  <Plug>delimitMateJumpMany *@<SNR>144_TriggerAbb()."\<C-R>=delimitMate#JumpMany()\<CR>"
-i  î           *@<Esc>:call AutoPairsJump()<CR>a
-i  ð           *@AutoPairsToggle()
-i  â           *@<C-R>=AutoPairsBackInsert()<CR>
-i  å           *@<C-R>=AutoPairsFastWrap()<CR>
-i  <C-G>g       @<Plug>delimitMateJumpMany
-i  <C-H>       *@<C-R>=AutoPairsDelete()<CR>
-i  <CR>        &@<SNR>73_AutoPairsOldCRWrapper73<SNR>73_AutoPairsReturn
-c  <C-R><C-G>  *@fnameescape(<SNR>115_recall())
-i  <Space>     *@<C-]><C-R>=AutoPairsSpace()<CR>
-i  "           *@<C-R>=AutoPairsInsert('"')<CR>
-i  '           *@<C-R>=AutoPairsInsert('''')<CR>
-i  (           *@<C-R>=AutoPairsInsert('(')<CR>
-i  )           *@<C-R>=AutoPairsInsert(')')<CR>
-i  [           *@<C-R>=AutoPairsInsert('[')<CR>
-i  ]           *@<C-R>=AutoPairsInsert(']')<CR>
-i  `           *@<C-R>=AutoPairsInsert('`')<CR>
-i  {           *@<C-R>=AutoPairsInsert('{')<CR>
-i  }           *@<C-R>=AutoPairsInsert('}')<CR>
-i  <Plug>(neocomplete_start_manual_complete) * <C-R>=neocomplete#mappings#manual_complete()<CR><C-R>=neocomplete#mappings#popup_post()<CR>
-i  <Plug>(neocomplete_start_auto_complete) * <C-R>=neocomplete#mappings#auto_complete()<CR><C-R>=neocomplete#mappings#popup_post()<CR>
-i  <Plug>(neocomplete_start_omni_complete) * <C-X><C-O><C-P>
-i  <Plug>(neocomplete_start_unite_quick_match) * unite#sources#neocomplete#start_quick_match()
-i  <Plug>(neocomplete_start_unite_complete) * unite#sources#neocomplete#start_complete()
-i  <Plug>delimitMateS-Tab * <SNR>144_TriggerAbb()."\<C-R>=delimitMate#JumpAny()\<CR>"
-i  <Plug>delimitMateSpace * <SNR>144_TriggerAbb()."\<C-R>=delimitMate#ExpandSpace()\<CR>"
-i  <Plug>delimitMateCR * <SNR>144_TriggerAbb()."\<C-R>=delimitMate#ExpandReturn()\<CR>"
-i  <Plug>delimitMateS-BS * delimitMate#WithinEmptyPair() ? "\<Del>" : "\<S-BS>"
-i  <Plug>delimitMateBS * <C-R>=delimitMate#BS()<CR>
-i  <Plug>delimitMate` * <SNR>144_TriggerAbb()."<C-R>=delimitMate#QuoteDelim(\"\\\`\")<CR>"
-i  <Plug>delimitMate' * <SNR>144_TriggerAbb()."<C-R>=delimitMate#QuoteDelim(\"\\\'\")<CR>"
-i  <Plug>delimitMate" * <SNR>144_TriggerAbb()."<C-R>=delimitMate#QuoteDelim(\"\\\"\")<CR>"
-i  <Plug>delimitMate] * <SNR>144_TriggerAbb().delimitMate#JumpOut("\]")
-i  <Plug>delimitMate} * <SNR>144_TriggerAbb().delimitMate#JumpOut("\}")
-i  <Plug>delimitMate) * <SNR>144_TriggerAbb().delimitMate#JumpOut("\)")
-i  <Plug>delimitMate[ * <SNR>144_TriggerAbb().delimitMate#ParenDelim("]")
-i  <Plug>delimitMate{ * <SNR>144_TriggerAbb().delimitMate#ParenDelim("}")
-i  <Plug>delimitMate( * <SNR>144_TriggerAbb().delimitMate#ParenDelim(")")
-i  <Plug>(neosnippet_start_unite_snippet) * unite#sources#neosnippet#start_complete()
-i  <Plug>(neosnippet_jump) * neosnippet#mappings#jump_impl()
-i  <Plug>(neosnippet_expand) * neosnippet#mappings#expand_impl()
-i  <Plug>(neosnippet_jump_or_expand) * neosnippet#mappings#jump_or_expand_impl()
-i  <Plug>(neosnippet_expand_or_jump) * neosnippet#mappings#expand_or_jump_impl()
+i  <Plug>(neocomplcache_start_omni_complete) * <C-X><C-O><C-P>
+i  <Plug>(neocomplcache_start_auto_complete_no_select) * <C-X><C-U><C-P>
+i  <Plug>(neocomplcache_start_auto_complete) * <C-X><C-U><C-R>=neocomplcache#mappings#popup_post()<CR>
+i  <Plug>(neocomplcache_start_unite_quick_match) * unite#sources#neocomplcache#start_quick_match()
+i  <Plug>(neocomplcache_start_unite_complete) * unite#sources#neocomplcache#start_complete()
+i  <Plug>(neosnippet_start_unite_snippet) * unite#sources#snippet#start_complete()
+i  <Plug>(neosnippet_jump) * neosnippet#jump_impl()
+i  <Plug>(neosnippet_expand) * neosnippet#expand_impl()
+i  <Plug>(neosnippet_jump_or_expand) * neosnippet#jump_or_expand_impl()
+i  <Plug>(neosnippet_expand_or_jump) * neosnippet#expand_or_jump_impl()
+i  <Plug>(neocomplcache_snippets_force_jump) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+i  <Plug>(neocomplcache_snippets_force_expand) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+i  <Plug>(neocomplcache_snippets_jump) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
+i  <Plug>(neocomplcache_snippets_expand) * <C-O>:echoerr <SNR>94_print_snippets_complete_error()<CR>
 i  <Plug>NERDCommenterInsert * <Space><BS><Esc>:call NERDComment('i', "insert")<CR>
-i  <Plug>AutoPairsReturn & <SNR>73_AutoPairsReturn
-i  <SNR>73_AutoPairsReturn * <C-R>=AutoPairsReturn()<CR>
-i  <Plug>ISurround * <C-R>=<SNR>72_insert(1)<CR>
-i  <Plug>Isurround * <C-R>=<SNR>72_insert()<CR>
+i  <Del>       * <C-R>=<SNR>55_OpenCloseBackspaceOrDel("Del")<CR>
+i  <Plug>ISurround * <C-R>=<SNR>54_insert(1)<CR>
+i  <Plug>Isurround * <C-R>=<SNR>54_insert()<CR>
+i  <BS>        * <C-R>=<SNR>55_OpenCloseBackspaceOrDel("BS")<CR>
+i  <S-CR>      * pumvisible() ? neocomplcache#close_popup()"\<CR>" : "\<CR>"
 i  <S-Tab>     * pumvisible() ? "\<C-P>" : "\<Tab>"
-i  <BS>        * neocomplete#smart_close_popup()."\<C-H>"
-i  <S-CR>      * pumvisible() ? neocomplete#smart_close_popup()."\<CR>" : "\<CR>"
 i  <Up>        * pumvisible() ? "\<C-P>" : "\<Up>"
 i  <Down>      * pumvisible() ? "\<C-N>" : "\<Down>"
 i  <C-D>       * pumvisible() ? "\<PageDown>\<C-P>\<C-N>" : "\<C-D>"
 i  <C-G>S        <Plug>ISurround
 i  <C-G>s        <Plug>Isurround
-i  <C-G>       * neocomplete#undo_completion()
-i  <Tab>         neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)": pumvisible() ? "\<C-N>" : "\<Tab>"
-i  <C-K>         <C-O>b:<Esc>Ea
-i  <C-L>         <Space>=><Space>
-i  <CR>          CleverCr()
+i  <C-G>       * neocomplcache#undo_completion()
+i  <C-H>       * <C-R>=<SNR>55_OpenCloseBackspaceOrDel("BS")<CR>
+i  <Tab>       * pumvisible() ? "\<C-N>" : "\<Tab>"
+i  <C-K>         <Plug>(neosnippet_expand_or_jump)
+i  <C-L>       * neocomplcache#complete_common_string()
+i  <CR>        * pumvisible() ? neocomplcache#close_popup() : "\<CR>"
 i  <C-S>         <Plug>Isurround
 i  <C-U>       * pumvisible() ? "\<PageUp>\<C-P>\<C-N>" : "\<C-U>"
-i  <C-Y>       * neocomplete#smart_close_popup()
-i  <Esc>       * pumvisible() ? "\<C-E>" : "\<Esc>"
+i  <C-Y>       * neocomplcache#close_popup()
 i  <Esc>OC     * <Right>
-c  %%          * <C-R>=fnameescape(expand('%:h')).'/'<CR>
+i  <Esc>       * <C-R>=<SNR>55_CloseStackPop('', '')<CR><Esc>
+i  <Esc>[H       <C-O>g0
+i  <Esc>[F       <C-O>$
+i  "           * <C-R>=<SNR>55_QuoteDelim('"')<CR>
+c  %%          * <C-R>=expand('%:h').'/'<CR>
+i  '           * <C-R>=match(getline('.')[col('.') - 2],'\w') == 0 && getline('.')[col('.')-1] != "'" ? "'" : <SNR>55_QuoteDelim("'")<CR>
+i  (           * (<C-R>=<SNR>55_CloseStackPush(')')<CR>
+i  )           * <C-R>=<SNR>55_CloseStackPop(')', '(')<CR>
 c  Tabe          tabe
+i  [           * [<C-R>=<SNR>55_CloseStackPush(']')<CR>
+i  ]           * <C-R>=<SNR>55_CloseStackPop(']', '[')<CR>
+i  `           * <C-R>=<SNR>55_QuoteDelim('`')<CR>
 c  cd.           lcd %:p:h
 c  cwd           lcd %:p:h
-c  w!!           s !sudo tee > /dev/null %
-i  |           * |<Esc>:call <SNR>135_align()<CR>a
+c  w!!           w !sudo tee % >/dev/null
+i  {<CR>       * {<CR>}<C-O>O
+i  {           * {<C-R>=<SNR>55_CloseStackPush('}')<CR>
+i  |           * |<Esc>:call <SNR>108_align()<CR>a
+i  }           * <C-R>=<SNR>55_CloseStackPop('}', '{')<CR>

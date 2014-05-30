@@ -1,1 +1,1 @@
-export PATH=.bin:bin:vendor/bundle/bin:$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:$PATH
+export PATH=./.bin:./bin:$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:$PATH

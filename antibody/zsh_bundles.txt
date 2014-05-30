@@ -11,6 +11,7 @@ ohmyzsh/ohmyzsh path:plugins/fasd
 ohmyzsh/ohmyzsh path:plugins/mix
 ohmyzsh/ohmyzsh path:plugins/asdf
 ohmyzsh/ohmyzsh path:plugins/colorize
+ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:themes/agnoster.zsh-theme
 
 zsh-users/zsh-syntax-highlighting
