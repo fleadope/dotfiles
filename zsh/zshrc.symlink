@@ -30,21 +30,21 @@ done
 
 # os specific config
 if islinux; then
-    typeset -U os_config_files
-    os_config_files=($DOTFILES_DIR/zsh/os/linux/**/*.zsh)
-    for file in ${os_config_files}
-    do
-        source $file
-    done
+typeset -U os_config_files
+  os_config_files=($DOTFILES_DIR/zsh/os/linux/**/*.zsh)
+  for file in ${os_config_files}
+  do
+    source $file
+  done
 fi
 
 if isdarwin; then
-    typeset -U os_config_files
-    os_config_files=($DOTFILES_DIR/zsh/os/mac/**/*.zsh)
-    for file in ${os_config_files}
-    do
-        source $file
-    done
+  typeset -U os_config_files
+  os_config_files=($DOTFILES_DIR/zsh/os/mac/**/*.zsh)
+  for file in ${os_config_files}
+  do
+    source $file
+  done
 fi
 
 # machine specific config
