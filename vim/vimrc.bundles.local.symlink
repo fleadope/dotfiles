@@ -1,0 +1,30 @@
+" Looks like spf13-vim  overrides go here?
+"
+" Use semicolon as leader
+let g:spf13_leader=";"
+
+" Enough with not knowing where I am!
+let g:spf13_no_autochdir = 1
+
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'ruby', 'javascript', 'html', 'misc']
+
+" Extra bundles
+Bundle "vimux"
+Bundle "vroom"
+Bundle 'sudo.vim'
+Bundle 'tpope/vim-dispatch'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'sgur/ctrlp-extensions.vim'
+Bundle 'milkypostman/vim-togglelist'
+Bundle 'Yggdroot/indentLine'
+Bundle 'editorconfig-vim'
+Bundle 'delimitMate.vim'
+Bundle 'Keithbsmiley/rspec.vim'
+Bundle 'epeli/slimux'
+Bundle 'dahu/vim-fanfingtastic'
+Bundle 'terryma/vim-expand-region'
+Bundle 'semanticart/PreciseJump'
+Bundle 'tpope/vim-bundler'
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
+Bundle 'slim-template/vim-slim'

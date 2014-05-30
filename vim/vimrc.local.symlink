@@ -1,0 +1,7 @@
+" Globally applicable settings should be applied here, as well as anything else
+" that needs to be loaded before the config files get executed.
+"
+" delegate configuration to discrete files in vim/config dir
+for f in split(glob('~/.dotfiles/vim/config/*.vim'), '\n')
+  exe 'source' f
+endfor

@@ -1,0 +1,9 @@
+[submodule "submodule/antigen"]
+	path = submodule/antigen
+	url = https://github.com/zsh-users/antigen.git
+[submodule "submodule/zaw"]
+	path = submodule/zaw
+	url = https://github.com/zsh-users/zaw.git
+[submodule "submodule/direnv"]
+	path = submodule/direnv
+	url = https://github.com/zimbatm/direnv.git

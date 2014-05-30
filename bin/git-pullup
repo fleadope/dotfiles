@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# 
+# git pullup: merge changes from upstream
+
+git ls-remote --exit-code . upstream/master > /dev/null
+
+if [ $? == 0 ]; then
+  current_head=`git rev-parse --abbrev-ref HEAD`
+  git checkout master
+  git stash
+  git fetch origin -v && git fetch upstream -v && git merge upstream/master && git stash apply
+  git checkout $current_head
+else
+  echo "no upstream/master branch, exiting.";
+fi

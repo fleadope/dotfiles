@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# Git checkout and rebase on master
+
+# see if the branch exists
+branch_exists=`git show-ref refs/heads/$1`
+if [ -n "$branch_exists" ]; then
+  git checkout $1 && git rebase master
+else
+  echo "Sorry, there is no branch called '$1'."
+fi
+

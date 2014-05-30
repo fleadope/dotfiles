@@ -1,0 +1,4 @@
+export PATH=./.bin:./bin:$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:$PATH
+export DOTFILES_DIR=~/.dotfiles
+export ZSH_DIR=$DOTFILES_DIR/zsh
+export SUBMODULES_DIR=$DOTFILES_DIR/submodule

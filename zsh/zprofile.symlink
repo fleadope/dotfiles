@@ -1,0 +1,1 @@
+export PATH=.bin:bin:vendor/bundle/bin:$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:$PATH

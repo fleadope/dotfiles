@@ -1,0 +1,60 @@
+export CASE_SENSITIVE="true"
+
+# load profile from ~/.profile, since other shells will use that too
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
+# check for updates
+$DOTFILES_DIR/tools/check_for_update.sh
+
+# Grab some useful env variables i don't want in
+# a repository
+local_env_file=$dotfiles_dir/env.local
+[[ -f $local_env_file ]] && source $local_env_file
+
+# use antigen
+source $submodules_dir/antigen/antigen.zsh
+
+# load all of our zsh files
+typeset -U config_files
+config_files=($dotfiles_dir/**/*.zsh)
+
+
+# load the files, except for submodules
+for file in ${${config_files:#*/submodule/**/*.zsh}:#*/zsh/os/**/*.zsh}
+do
+  source $file
+done
+
+# os specific config
+if islinux; then
+    typeset -U os_config_files
+    os_config_files=($dotfiles_dir/zsh/os/linux/**/*.zsh)
+    for file in ${os_config_files}
+    do
+        source $file
+    done
+fi
+
+if isdarwin; then
+    typeset -U os_config_files
+    os_config_files=($dotfiles_dir/zsh/os/mac/**/*.zsh)
+    for file in ${os_config_files}
+    do
+        source $file
+    done
+fi
+
+# machine specific config
+machine_config="$zsh/machine/`hostname`.zsh"
+if [ -f $machine_config ]; then
+  source $machine_config
+fi
+
+# setup the projects dir
+if [ -d $HOME/projects ]; then
+    export PROJECTS="$HOME/projects"
+    export CDPATH=$PROJECTS:$HOME:$CDPATH
+fi
+
+eval "$(direnv hook zsh)"
+
