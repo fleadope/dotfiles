@@ -8,7 +8,7 @@ $DOTFILES_DIR/tools/check_for_update.sh
 
 # Grab some useful env variables i don't want in
 # a repository
-local_env_file=$dotfiles_dir/env.local
+local_env_file=$DOTFILES_DIR/env.local
 [[ -f $local_env_file ]] && source $local_env_file
 
 # use antigen
@@ -16,7 +16,7 @@ source $submodules_dir/antigen/antigen.zsh
 
 # load all of our zsh files
 typeset -U config_files
-config_files=($dotfiles_dir/**/*.zsh)
+config_files=($DOTFILES_DIR/**/*.zsh)
 
 
 # load the files, except for submodules
@@ -28,7 +28,7 @@ done
 # os specific config
 if islinux; then
     typeset -U os_config_files
-    os_config_files=($dotfiles_dir/zsh/os/linux/**/*.zsh)
+    os_config_files=($DOTFILES_DIR/zsh/os/linux/**/*.zsh)
     for file in ${os_config_files}
     do
         source $file
@@ -37,7 +37,7 @@ fi
 
 if isdarwin; then
     typeset -U os_config_files
-    os_config_files=($dotfiles_dir/zsh/os/mac/**/*.zsh)
+    os_config_files=($DOTFILES_DIR/zsh/os/mac/**/*.zsh)
     for file in ${os_config_files}
     do
         source $file
