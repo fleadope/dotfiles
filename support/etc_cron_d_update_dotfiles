@@ -1,0 +1,2 @@
+# Cron job to git clone/pull dotfiles
+0 */15 * * * * {{ cron_user }} cd ~/.dotfiles && git pull >> /var/log/dotfiles.log
