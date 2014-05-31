@@ -3,9 +3,6 @@ export CASE_SENSITIVE="true"
 # load profile from ~/.profile, since other shells will use that too
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
-# check for updates
-$DOTFILES_DIR/tools/check_for_update.sh
-
 # Grab some useful env variables i don't want in
 # a repository
 local_env_file=$DOTFILES_DIR/env.local
