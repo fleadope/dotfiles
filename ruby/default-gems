@@ -1,7 +1,7 @@
 rubygems-update
 bundler
 debugger-ruby_core_source
-debugger
+byebug
 debugger-linecache
 git-pulls
 git_remote_branch
@@ -24,3 +24,12 @@ gem-browse
 watson-ruby
 pry-plus
 pry-nav
+pry
+pry-doc
+pry-byebug
+coderay
+colorize
+commands
+rails-env-switcher
+rspec-console
+invoker

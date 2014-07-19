@@ -1,0 +1,18 @@
+require 'rubygems'
+
+irb_config_dir = "#{ENV['SUBMODULES_DIR']}/irb-config"
+$LOAD_PATH.unshift(irb_config_dir)
+
+require "irb/gem_loader"
+require "irb/pry_loader"
+require "irb/custom" if File.exists?("#{Dir.home}/.dotfiles/irb/custom.rb")
+require "irb/awesome_print_loader"
+require "irb/bypass_reloader"
+require "irb/rails_env_switcher"
+require "irb/rspec_console"
+#require "irb/cucumber_console"
+require "irb/rails_colors"
+# require "irb/mongoid_colors"
+#require "irb/plot"
+require "irb/rails_commands"
+
