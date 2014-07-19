@@ -7,3 +7,6 @@
 [submodule "submodule/direnv"]
 	path = submodule/direnv
 	url = https://github.com/zimbatm/direnv.git
+[submodule "submodule/irb-config"]
+	path = submodule/irb-config
+	url = https://github.com/nviennot/irb-config.git
