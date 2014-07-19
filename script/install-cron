@@ -5,22 +5,16 @@ cd "$(dirname $0)"/..
 
 CRON_FILE=`pwd`/support/etc_cron_d_update_dotfiles
 CRON_FILE_DEST=/etc/cron.d/update_dotfiles
-LOGROTATE_FILE=`pwd`/support/etc_logrotate_d_dotfiles
-LOGROTATE_DEST=/etc/logrotate.d/dotfiles
+LOGROTATE_FILE=`pwd`/support/etc_logrotate_d_update_dotfiles
+LOGROTATE_DEST=/etc/logrotate.d/dotfiles.conf
 LOG_FILE=/var/log/dotfiles.log
 
 if [[ $EUID -ne 0 ]]; then
   echo "This script must be run as root" 1>&2
   exit 1
 else
-  echo "installing $CRON_FILE_DEST..."
   cp $CRON_FILE $CRON_FILE_DEST
-  echo "done."
-  echo "installing $LOGROTATE_DEST..."
   cp $LOGROTATE_FILE $LOGROTATE_DEST
-  echo "done."
-  echo "creating $LOG_FILE..."
   touch $LOG_FILE
-  echo "done."
-  echo "Cron Job installed. Go now, and do vim sudo:$CRON_FILE_DEST."
+  echo "Cron Job installed. Go now, and edit "
 fi
