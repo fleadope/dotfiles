@@ -38,5 +38,5 @@ alias zweep=zsw
 # Tmux
 alias tmux="tmux -2"
 
-
+alias ping="ping -c5"
 
