@@ -29,3 +29,46 @@ command_exists() {
   return $?
 }
 
+# Added from https://github.com/jdavis/zsh-files/blob/master/functions/functions.zsh
+# Automatically run ls when cd-ing into a directory
+cd() {
+    builtin cd $* && ls;
+}
+
+#Get IP
+ip-addr() {
+    wget -qO- http://ipecho.net/plain
+    echo
+}
+
+# Time ZSH startup
+zsh-time() {
+    time zsh -i -c exit
+}
+
+# Run a command or multiple commands without saving it in the $HISTFILE
+incognito() {
+    if [ -z $EDITOR ]; then
+        EDITOR=vim
+    fi
+
+    # Create temp for storing commands
+    TEMPFILE=`mktemp -q incognito.XXXXXXXX`
+
+    # Prompt for commands, only run if successful
+    $EDITOR $TEMPFILE || {
+        echo "Invalid return on the editing"
+        return
+    }
+
+    # Run the script
+    sh $TEMPFILE
+
+    # Clean everything up
+    rm -f $TEMPFILE
+}
+
+mkcd(){
+  mkdir -p $1
+  cd $1
+}
