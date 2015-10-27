@@ -7,6 +7,6 @@
 [submodule "submodule/irb-config"]
 	path = submodule/irb-config
 	url = https://github.com/nviennot/irb-config.git
-[submodule "submodules/zgen"]
-	path = submodules/zgen
-	url = git@github.com:tarjoilija/zgen.git
+[submodule "submodule/zgen"]
+	path = submodule/zgen
+	url = https://github.com/tarjoilija/zgen.git
