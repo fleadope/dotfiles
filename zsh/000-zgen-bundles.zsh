@@ -12,6 +12,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/last-working-dir
     zgen oh-my-zsh plugins/taskwarrior
     zgen oh-my-zsh plugins/rake-fast
+    zgen oh-my-zsh plugins/fasd
 
     zgen loadall <<EOBUNDLES
       zsh-users/zsh-completions
@@ -21,9 +22,7 @@ if ! zgen saved; then
 
       oknowton/zsh-dwim
 
-      heroku
-
-      fasd
+      heroku/heroku
 
 EOBUNDLES
     zgen save
