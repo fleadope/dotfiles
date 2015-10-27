@@ -1,6 +1,3 @@
-[submodule "submodule/antigen"]
-	path = submodule/antigen
-	url = https://github.com/zsh-users/antigen.git
 [submodule "submodule/zaw"]
 	path = submodule/zaw
 	url = https://github.com/zsh-users/zaw.git
@@ -10,3 +7,6 @@
 [submodule "submodule/irb-config"]
 	path = submodule/irb-config
 	url = https://github.com/nviennot/irb-config.git
+[submodule "submodules/zgen"]
+	path = submodules/zgen
+	url = git@github.com:tarjoilija/zgen.git

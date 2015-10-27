@@ -8,8 +8,8 @@ export CASE_SENSITIVE="true"
 local_env_file=$DOTFILES_DIR/env.local
 [[ -f $local_env_file ]] && source $local_env_file
 
-# use antigen
-source $SUBMODULES_DIR/antigen/antigen.zsh
+# use zgen
+source $SUBMODULES_DIR/zgen/zgen.zsh
 
 # load all of our zsh files
 typeset -U config_files
@@ -54,4 +54,3 @@ if [ -d $HOME/projects ]; then
 fi
 
 eval "$(direnv hook zsh)"
-
