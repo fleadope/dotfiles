@@ -1,4 +1,4 @@
-antigen bundle debian
+zgen load debian
 
 # this alias ends up overriding silver searcher
 unalias 'ag'
