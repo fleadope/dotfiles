@@ -5,7 +5,7 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 
 function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg_bold[red]%} [% NORMAL]%  %{$reset_color%}"
+    VIM_PROMPT="%{$fg[red]%} [% NORMAL]%  %{$reset_color%}"
     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
       zle reset-prompt
 }
