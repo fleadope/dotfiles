@@ -3,17 +3,17 @@ if ! zgen saved; then
 
     echo "Creating a zgen save"
     zgen oh-my-zsh
+
+    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/ssh-agent
+    zgen oh-my-zsh plugins/vagrant
+    zgen oh-my-zsh plugins/dirpersist
+    zgen oh-my-zsh plugins/last-working-dir
+    zgen oh-my-zsh plugins/taskwarrior
+    zgen oh-my-zsh plugins/rake-fast
+
     zgen loadall <<EOBUNDLES
-
-      command-not-found
-      git
-      ssh-agent
-      vagrant
-      dirpersist
-      last-working-dir
-      taskwarrior
-      rake-fast
-
       zsh-users/zsh-completions
       zsh-users/zsh-syntax-highlighting
       zsh-users/zsh-history-substring-search

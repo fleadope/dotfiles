@@ -1,4 +1,4 @@
-zgen load debian
+zgen oh-my-zsh plugins/debian
 
 # this alias ends up overriding silver searcher
 unalias 'ag'
