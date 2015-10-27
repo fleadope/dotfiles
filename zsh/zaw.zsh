@@ -1,4 +1,4 @@
-antigen bundle zsh-users/zaw
+zgen load zsh-users/zaw
 
 bindkey '^R' zaw-history
 
