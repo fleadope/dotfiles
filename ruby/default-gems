@@ -33,3 +33,4 @@ commands
 rails-env-switcher
 rspec-console
 invoker
+cheat
