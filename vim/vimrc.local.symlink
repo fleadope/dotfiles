@@ -5,3 +5,7 @@
 for f in split(glob('~/.dotfiles/vim/config/*.vim'), '\n')
   exe 'source' f
 endfor
+
+" ... add ignore rules
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
