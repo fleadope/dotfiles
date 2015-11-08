@@ -9,7 +9,8 @@ unbind C-b
 bind C-a send-prefix
 
 # set index to 1 instead of 0
-# set -g base-index 1
+set -g base-index 1
+set-window-option -g pane-base-index 1
 
 # faster command sequences
 set -s escape-time 0
