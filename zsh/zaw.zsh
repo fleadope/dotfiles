@@ -1,5 +1,3 @@
-zgen load zsh-users/zaw
-
 bindkey '^R' zaw-history
 
 bindkey -M filterselect '^J' down-line-or-history

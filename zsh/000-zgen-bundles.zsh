@@ -19,10 +19,12 @@ if ! zgen saved; then
       zsh-users/zsh-syntax-highlighting
       zsh-users/zsh-history-substring-search
       abull/better_zeus
-
       oknowton/zsh-dwim
-
       heroku/heroku
+      djui/alias-tips
+      zsh-users/zaw
+      smallhadroncollider/antigen-git-rebase
+      caarlos0/zsh-pg
 
 EOBUNDLES
     zgen save
