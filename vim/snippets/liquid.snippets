@@ -1,0 +1,73 @@
+# Generic Tags
+snippet %
+  {% ${1} %}${2}
+
+snippet %%
+  {% ${1:tag_name} %}
+    ${2}
+  {% end$1 %}
+
+snippet {
+  {{ ${1} }}${2}
+
+# Template Tags
+
+# Enter visual mode, press <tab>, insert #, press <tab> again
+snippet #
+  {% comment %}
+    ${VISUAL}${1}
+  {% endcomment %}
+
+snippet comment
+  {% comment %}
+    ${1}
+  {% endcomment %}
+
+snippet for
+  {% for ${1} in ${2} %}
+    ${3}
+  {% endfor %}
+
+snippet if
+  {% if ${1} %}
+    ${2}
+  {% endif %}
+
+snippet ife
+  {% if ${1} %}
+    ${2}
+  {% else %}
+    ${3}
+  {% endif %}
+
+snippet el
+  {% else %}
+    ${1}
+
+snippet unless
+  {% unless ${1} %}
+    ${2}
+  {% endunless %}
+
+snippet assign
+  {% assign ${1} = ${2} %}
+
+# Shopify snippets
+
+snippet inc
+  {% include '${1}' %}
+
+snippet asset
+  {{ '${1}' | asset_url }}
+
+snippet blank
+  {% if ${1} and $1 != blank %}
+    ${2}
+  {% endif %}
+
+# Jekyll-specific snippets
+snippet hl
+  {% highlight ${1} %}
+    ${VISUAL}${2}
+  {% endhighlight %}
+
