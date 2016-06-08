@@ -24,7 +24,7 @@ function extract() {
 
   remove_archive=1
   if [[ "$1" == "-r" ]] || [[ "$1" == "--remove" ]]; then
-    remove_archive=0 
+    remove_archive=0
     shift
   fi
 
@@ -54,7 +54,7 @@ function extract() {
       (*.lzma) unlzma "$1" ;;
       (*.Z) uncompress "$1" ;;
       (*.zip) unzip "$1" -d $extract_dir ;;
-      (*.rar|*.rar.part) unrar e -kb -y "$1" ;;
+      (*.rar|*.rar.part|*rar.opdownload) unrar e -kb -y "$1" ;;
       (*.7z) 7za x "$1" ;;
       (*.deb)
         mkdir -p "$extract_dir/control"
@@ -65,10 +65,10 @@ function extract() {
         cd ..; rm *.tar.gz debian-binary
         cd ..
       ;;
-      (*) 
+      (*)
         echo "extract: '$1' cannot be extracted" 1>&2
-        success=1 
-      ;; 
+        success=1
+      ;;
     esac
 
     (( success = $success > 0 ? $success : $? ))
