@@ -1,5 +1,5 @@
 " Mappings for neosnippet https://github.com/Shougo/neosnippet.vim
-let g:neosnippet#snippets_directory .= ", ~/.dotfiles/vim/snippets"
+let g:neosnippet#snippets_directory .= ",~/.dotfiles/vim/snippets"
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?

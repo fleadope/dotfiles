@@ -9,3 +9,4 @@ endfor
 " ... add ignore rules
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
+let g:spf13_no_neosnippet_expand = 1

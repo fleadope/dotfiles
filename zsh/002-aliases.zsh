@@ -40,3 +40,4 @@ alias tmux="tmux -2"
 
 alias ping="ping -c5"
 
+alias update_zgen="zgen update && source $DOTFILES_DIR/zsh/000-zgen-bundles.zsh"
