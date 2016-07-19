@@ -1,0 +1,11 @@
+###
+# From https://github.com/thoughtbot/dotfiles/blob/master/agignore
+###
+
+log
+tags
+tmp
+vendor
+.git/
+bower_components/
+node_modules/
