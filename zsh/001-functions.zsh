@@ -3,7 +3,13 @@ isdarwin(){
     return 1
 }
 
+isalpine(){
+    [[ $OSTYPE == linux-musl ]] && return 0
+    return 1
+}
+
 islinux(){
+    [[ $OSTYPE == linux-musl ]] && return 1
     [[ $OSTYPE == linux* ]] && return 0
     return 1
 }

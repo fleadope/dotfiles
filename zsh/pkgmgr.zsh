@@ -17,5 +17,10 @@ elif isdarwin; then
     alias install="brew install "
     alias search="brew search "
     alias remove="brew uninstall "
+elif isalpine; then
+    alias update="sudo apk update "
+    alias upgrade="sudo apk upgrade "
+    alias install="sudo apk add "
+    alias remove="sudo apk del "
+    alias search="apk search "
 fi
-
