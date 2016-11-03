@@ -53,4 +53,3 @@ if [ -d $HOME/projects ]; then
     export CDPATH=$PROJECTS:$HOME:$CDPATH
 fi
 
-eval "$(direnv hook zsh)"
