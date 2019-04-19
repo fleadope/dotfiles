@@ -1,0 +1,834 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+,/	nvim/keybindings.vim	/^nnoremap ,\/ :BLines<cr>$/;"	m
+/	vim/config/easymotion.vim	/^map \/ <Plug>(easymotion-sn)$/;"	m
+/	vim/config/easymotion.vim	/^omap \/ <Plug>(easymotion-tn)$/;"	m
+<C-H>	nvim/keybindings.vim	/^nnoremap <C-H> <C-W><C-J>$/;"	m
+<C-J>	nvim/keybindings.vim	/^nnoremap <C-J> <C-W><C-J>$/;"	m
+<C-K>	nvim/keybindings.vim	/^nnoremap <C-K> <C-W><C-J>$/;"	m
+<C-L>	nvim/keybindings.vim	/^nnoremap <C-L> <C-W><C-J>$/;"	m
+<C-M>	vim/config/ctrlp.vim	/^map <C-M> :CtrlPMRU<CR>$/;"	m
+<C-b>	nvim-save/init.vim	/^map <C-b> :Buffers<cr>$/;"	m
+<C-b>	nvim-save/init.vim	/^nmap <C-b> :Buffers<cr>$/;"	m
+<C-b>	nvim/plugins/fzf.vim	/^map <C-b> :Buffers<cr>$/;"	m
+<C-b>	nvim/plugins/fzf.vim	/^nmap <C-b> :Buffers<cr>$/;"	m
+<C-f>	vim/config/precise_jump.vim	/^nmap <C-f> :call PreciseJumpF(-1, -1, 0)<cr>$/;"	m
+<C-f>	vim/config/precise_jump.vim	/^omap <C-f> :call PreciseJumpF(-1, -1, 0)<cr>$/;"	m
+<C-f>	vim/config/precise_jump.vim	/^vmap <C-f> <ESC>:call PreciseJumpF(-1, -1, 1)<cr>$/;"	m
+<C-h>	nvim/keybindings.vim	/^nnoremap <C-h> <C-w>h$/;"	m
+<C-j>	nvim/keybindings.vim	/^inoremap <C-j> <C-n>$/;"	m
+<C-j>	nvim/keybindings.vim	/^nnoremap <C-j> <C-n>$/;"	m
+<C-j>	nvim/keybindings.vim	/^nnoremap <C-j> <C-w>j$/;"	m
+<C-j>	nvim/keybindings.vim	/^vnoremap <C-j> <C-n>$/;"	m
+<C-k>	nvim/keybindings.vim	/^inoremap <C-k> <C-p>$/;"	m
+<C-k>	nvim/keybindings.vim	/^nnoremap <C-k> <C-p>$/;"	m
+<C-k>	nvim/keybindings.vim	/^nnoremap <C-k> <C-w>k$/;"	m
+<C-k>	nvim/keybindings.vim	/^vnoremap <C-k> <C-p>$/;"	m
+<C-k>	vim/config/rails.vim	/^imap <C-k> <C-o>b:<Esc>Ea$/;"	m
+<C-k>	vim/config/rails.vim	/^nmap <C-k> lbi:<Esc>E$/;"	m
+<C-l>	nvim/keybindings.vim	/^nnoremap <C-l> <C-w>l$/;"	m
+<C-l>	vim/config/rails.vim	/^imap <C-l> <Space>=><Space>$/;"	m
+<C-n>	nvim/plugins/deoplete.vim	/^inoremap <expr><C-n> pumvisible() ? "\\<C-n>" :$/;"	m
+<C-p>	nvim-save/init.vim	/^map <C-p> :Files<cr>$/;"	m
+<C-p>	nvim-save/init.vim	/^nmap <C-p> :Files<cr>$/;"	m
+<C-p>	nvim/plugins/fzf.vim	/^map <C-p> :Files<cr>$/;"	m
+<C-p>	nvim/plugins/fzf.vim	/^nmap <C-p> :Files<cr>$/;"	m
+<C-x><C-k>	nvim-save/init.vim	/^inoremap <expr> <C-x><C-k> fzf#complete ('cat \/usr\/share\/dict\/words')$/;"	m
+<C-x><C-k>	nvim/plugins/fzf.vim	/^inoremap <expr> <C-x><C-k> fzf#complete ('cat \/usr\/share\/dict\/words')$/;"	m
+<C-x><C-t>	nvim-save/init.vim	/^inoremap <expr> <C-x><C-t> fzf#complete( 'tmuxwords.rb -all-but-current --scroll 499 --min 5')$/;"	m
+<C-x><C-t>	nvim/plugins/fzf.vim	/^inoremap <expr> <C-x><C-t> fzf#complete( 'tmuxwords.rb -all-but-current --scroll 499 --min 5')$/;"	m
+<CR>	nvim/plugins/deoplete.vim	/^inoremap <silent><expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\\<CR>"$/;"	m
+<CR>	vim/config/supertab.vim	/^inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\\<CR>"$/;"	m
+<F3>	vim/config/search.vim	/^nnoremap <F3> :set hlsearch!<CR>$/;"	m
+<Leader><Space>	vim/config/airblade.vim	/^nnoremap <Leader><Space> :noh<CR>$/;"	m
+<Leader><Tab>	nvim/keybindings.vim	/^nnoremap <Leader><Tab> :e#<CR> " switch to last buffer$/;"	m
+<Leader>P	vim/config/airblade.vim	/^noremap <Leader>P :set paste<CR>"*P:set nopaste<CR>$/;"	m
+<Leader>as	vim/config/rspec.vim	/^map <Leader>as :call RunAllSpecs()<CR>$/;"	m
+<Leader>c	nvim-save/init.vim	/^nmap <Leader>c :Commits<cr>$/;"	m
+<Leader>c	nvim/plugins/fzf.vim	/^nmap <Leader>c :Commits<cr>$/;"	m
+<Leader>do	vim/config/fugitive.vim	/^nnoremap <Leader>do call :Gdiffoff$/;"	m
+<Leader>fmt	vim/config/format.vim	/^nnoremap <Leader>fmt ggVG=`$/;"	m
+<Leader>gP	nvim/plugins/git.vim	/^nmap <Leader>gP <Plug>Gpush$/;"	m
+<Leader>gha	nvim/plugins/git.vim	/^nmap <Leader>gha <Plug>GitGutterStageHunk$/;"	m
+<Leader>ghp	nvim/plugins/git.vim	/^nmap <Leader>ghp <Plug>GitGutterPreviewHunk$/;"	m
+<Leader>ghu	nvim/plugins/git.vim	/^nmap <Leader>ghu <Plug>GitGutterUndoHunk$/;"	m
+<Leader>gn	nvim/plugins/git.vim	/^nmap <Leader>gn <Plug>GitGutterNextHunk$/;"	m
+<Leader>gp	nvim/plugins/git.vim	/^nmap <Leader>gp <Plug>GitGutterPrevHunk$/;"	m
+<Leader>h	nvim/keybindings.vim	/^nnoremap <Leader>h <C-w>h<CR>$/;"	m
+<Leader>h	vim/config/airblade.vim	/^map <Leader>h :s\/\\v:(\\w+)\\s*\\=\\>\\s*(\\S)\/\\1: \\2\/<CR>:noh<CR>$/;"	m
+<Leader>j	nvim-save/init.vim	/^  nmap <Leader>j :SplitjoinJoin<cr>$/;"	m
+<Leader>j	nvim/keybindings.vim	/^nnoremap <Leader>j <C-w>j<CR>$/;"	m
+<Leader>j	vim/config/easymotion.vim	/^map <Leader>j <Plug>(easymotion-j)$/;"	m
+<Leader>k	nvim/keybindings.vim	/^nnoremap <Leader>k <C-w>k<CR>$/;"	m
+<Leader>k	vim/config/easymotion.vim	/^map <Leader>k <Plug>(easymotion-k)$/;"	m
+<Leader>l	nvim/keybindings.vim	/^nnoremap <Leader>l <C-w>l<CR>$/;"	m
+<Leader>ls	vim/config/rspec.vim	/^map <Leader>ls :call RunLastSpec()<CR>$/;"	m
+<Leader>m	nvim/plugins/fzf.vim	/^nnoremap <silent> <Leader>m :call fzf#run({$/;"	m
+<Leader>p	vim/config/airblade.vim	/^noremap <Leader>p :set paste<CR>"*p:set nopaste<CR>$/;"	m
+<Leader>s	nvim-save/init.vim	/^  nmap <Leader>s :SplitjoinSplit<cr>$/;"	m
+<Leader>ss	vim/config/rspec.vim	/^map <Leader>ss :call RunNearestSpec()<CR>$/;"	m
+<Leader>t	vim/config/rspec.vim	/^map <Leader>t :call RunCurrentSpecFile()<CR>$/;"	m
+<Leader>t:	vim/config/tabularize.vim	/^nmap <Leader>t: :Tabularize \/:\\zs<CR>$/;"	m
+<Leader>t:	vim/config/tabularize.vim	/^vmap <Leader>t: :Tabularize \/:\\zs<CR>$/;"	m
+<Leader>t<Tab>	nvim/keybindings.vim	/^nmap <Leader>t<Tab> :exe "tabn ".g:lasttab<CR>$/;"	m
+<Leader>t=	vim/config/tabularize.vim	/^nmap <Leader>t= :Tabularize \/=<CR>$/;"	m
+<Leader>t=	vim/config/tabularize.vim	/^vmap <Leader>t= :Tabularize \/=<CR>$/;"	m
+<Leader>tg	nvim/plugins/goyo.vim	/^noremap <Leader>tg :Goyo<CR>:echo 'Toggled Goyo'<CR>" Toggle goyo time$/;"	m
+<Leader>th	nvim/plugins/hardtime.vim	/^noremap <Leader>th :HardTimeToggle<CR>:echo 'Toggled hardtime'<CR>" Toggle hard time$/;"	m
+<Leader>ti	nvim/keybindings.vim	/^noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters$/;"	m
+<Leader>tl	nvim/keybindings.vim	/^noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'<CR>" Toggle relative line numbers$/;"	m
+<Leader>ts	vim/config/tabularize.vim	/^nmap <Leader>ts :Tabularize \/:\/l1c0l0<CR>$/;"	m
+<Leader>ts	vim/config/tabularize.vim	/^vmap <Leader>ts :Tabularize \/:\/l1c0l0<CR>$/;"	m
+<Leader>ws	vim/config/airblade.vim	/^nnoremap <Leader>ws :%s\/\\s\\+$\/\/<CR>$/;"	m
+<Leader>x	vim/config/autoclose.vim	/^nmap <Leader>x <Plug>ToggleAutoCloseMappings$/;"	m
+<Leader>yr	vim/config/ctrlp.vim	/^noremap <Leader>yr :CtrlPYankring<CR>$/;"	m
+<S-Space>	vim/config/airblade.vim	/^nnoremap <S-Space> <C-B>$/;"	m
+<Space>	vim/config/airblade.vim	/^nnoremap <Space> <C-F>$/;"	m
+<c-b>	nvim/keybindings.vim	/^nnoremap <c-b> :Buffers<CR>$/;"	m
+<c-b>	vim/config/ctrlp.vim	/^map <c-b> :CtrlPBuffer<CR>$/;"	m
+<c-p>	nvim/keybindings.vim	/^nnoremap <c-p> :Files<CR>$/;"	m
+<c-x><c-f>	nvim-save/init.vim	/^imap <c-x><c-f> <plug>(fzf-complete-path)$/;"	m
+<c-x><c-f>	nvim/plugins/fzf.vim	/^imap <c-x><c-f> <plug>(fzf-complete-path)$/;"	m
+<c-x><c-j>	nvim-save/init.vim	/^imap <c-x><c-j> <plug>(fzf-complete-file-ag)$/;"	m
+<c-x><c-j>	nvim/plugins/fzf.vim	/^imap <c-x><c-j> <plug>(fzf-complete-file-ag)$/;"	m
+<c-x><c-k>	nvim-save/init.vim	/^imap <c-x><c-k> <plug>(fzf-complete-word)$/;"	m
+<c-x><c-k>	nvim-save/init.vim	/^inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})$/;"	m
+<c-x><c-k>	nvim/plugins/fzf.vim	/^imap <c-x><c-k> <plug>(fzf-complete-word)$/;"	m
+<c-x><c-k>	nvim/plugins/fzf.vim	/^inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})$/;"	m
+<c-x><c-l>	nvim-save/init.vim	/^imap <c-x><c-l> <plug>(fzf-complete-line)$/;"	m
+<c-x><c-l>	nvim/plugins/fzf.vim	/^imap <c-x><c-l> <plug>(fzf-complete-line)$/;"	m
+<leader>"	vim/config/surround.vim	/^vmap <leader>" S"lvi"$/;"	m
+<leader>'	vim/config/surround.vim	/^vmap <leader>' S'lvi'$/;"	m
+<leader>(	vim/config/surround.vim	/^vmap <leader>( S)lvi($/;"	m
+<leader>/	nvim/keybindings.vim	/^nnoremap <silent> <leader>\/ :nohlsearch<CR>$/;"	m
+<leader><	vim/config/surround.vim	/^vmap <leader>< S>lvi<$/;"	m
+<leader><tab>	nvim-save/init.vim	/^nmap <leader><tab> <plug>(fzf-maps-n)$/;"	m
+<leader><tab>	nvim-save/init.vim	/^omap <leader><tab> <plug>(fzf-maps-o$/;"	m
+<leader><tab>	nvim/plugins/fzf.vim	/^nmap <leader><tab> <plug>(fzf-maps-n)$/;"	m
+<leader><tab>	nvim/plugins/fzf.vim	/^omap <leader><tab> <plug>(fzf-maps-o$/;"	m
+<leader>T	nvim-save/init.vim	/^  nmap <silent> <leader>T :TestFile<CR>$/;"	m
+<leader>T	vim/config/vim-test.vim	/^nmap <silent> <leader>T :TestFile<CR>$/;"	m
+<leader>[	vim/config/surround.vim	/^vmap <leader>[ S]lvi[$/;"	m
+<leader>_U	nvim/keybindings.vim	/^nnoremap <leader>_U :PlugUpgrade<CR>$/;"	m
+<leader>_c	nvim/keybindings.vim	/^nnoremap <leader>_c :PlugClean<CR>$/;"	m
+<leader>_i	nvim/keybindings.vim	/^nnoremap <leader>_i :PlugInstall<CR>$/;"	m
+<leader>_u	nvim/keybindings.vim	/^nnoremap <leader>_u :PlugUpdate<CR>$/;"	m
+<leader>`	vim/config/surround.vim	/^vmap <leader>` S`lvi`$/;"	m
+<leader>a	vim/config/vim-test.vim	/^nmap <silent> <leader>a :TestSuite<CR>$/;"	m
+<leader>b/	nvim/keybindings.vim	/^nnoremap <leader>b\/ :Lines<CR>$/;"	m
+<leader>bb	nvim/keybindings.vim	/^nnoremap <leader>bb :Buffers<CR>$/;"	m
+<leader>bd	nvim/keybindings.vim	/^nnoremap <leader>bd :bdelete<CR>$/;"	m
+<leader>bl	nvim/keybindings.vim	/^nnoremap <leader>bl :BLines<CR>$/;"	m
+<leader>bn	nvim/keybindings.vim	/^nnoremap <leader>bn :bnext<CR>$/;"	m
+<leader>bp	nvim/keybindings.vim	/^nnoremap <leader>bp :bprevious<CR>$/;"	m
+<leader>dc	vim/config/airblade.vim	/^nmap <leader>dc :t.<CR>k<Plug>NERDComComment$/;"	m
+<leader>ff	nvim/keybindings.vim	/^nnoremap <leader>ff :Files<CR>$/;"	m
+<leader>g	vim/config/ctrlp.vim	/^  nmap <silent> <leader>g :Ag<SPACE>$/;"	m
+<leader>g	vim/config/vim-test.vim	/^nmap <silent> <leader>g :TestVisit<CR>$/;"	m
+<leader>gc	nvim/plugins/git.vim	/^nnoremap <leader>gc :Gcommit<CR>$/;"	m
+<leader>gl	nvim/plugins/git.vim	/^nnoremap <leader>gl :Commits<CR>$/;"	m
+<leader>gp	nvim/plugins/git.vim	/^nnoremap <leader>gp :Gpush<CR>$/;"	m
+<leader>gs	nvim/plugins/git.vim	/^nnoremap <leader>gs :Gstatus<CR>$/;"	m
+<leader>l	vim/config/vim-test.vim	/^nmap <silent> <leader>l :TestLast<CR>$/;"	m
+<leader>p/	nvim/keybindings.vim	/^nnoremap <leader>p\/ :Ag<CR>$/;"	m
+<leader>pf	nvim/keybindings.vim	/^nnoremap <leader>pf :GitFiles<CR>$/;"	m
+<leader>pr	nvim/keybindings.vim	/^nnoremap <leader>pr :History<CR>$/;"	m
+<leader>t	nvim-save/init.vim	/^  nmap <silent> <leader>t :TestNearest<CR>$/;"	m
+<leader>t	vim/config/vim-test.vim	/^nmap <silent> <leader>t :TestNearest<CR>$/;"	m
+<leader>ta	nvim-save/init.vim	/^  nmap <silent> <leader>ta :TestSuite<CR>$/;"	m
+<leader>tc	nvim/keybindings.vim	/^nnoremap <leader>tc :tabnew<cr>$/;"	m
+<leader>tl	nvim-save/init.vim	/^  nmap <silent> <leader>tl :TestLast<CR>$/;"	m
+<leader>tn	nvim/keybindings.vim	/^nnoremap <leader>tn :tabnext<cr>$/;"	m
+<leader>tp	nvim/keybindings.vim	/^nnoremap <leader>tp :tabprevious<cr>$/;"	m
+<leader>tt	nvim/keybindings.vim	/^nnoremap <leader>tt :Windows<cr>$/;"	m
+<leader>tv	nvim-save/init.vim	/^  nmap <silent> <leader>tv :TestVisit<CR>$/;"	m
+<leader>tx	nvim/keybindings.vim	/^nnoremap <leader>tx :tabclose<cr>$/;"	m
+<leader>wh	nvim/keybindings.vim	/^nnoremap <leader>wh <C-w>s<C-w>j   " split horizontally$/;"	m
+<leader>wv	nvim/keybindings.vim	/^nnoremap <leader>wv <C-w>v<C-w>l   " split vertically$/;"	m
+<leader>{	vim/config/surround.vim	/^vmap <leader>{ S}lvi{$/;"	m
+<plug>(slash-after)	nvim/plugins/slash.vim	/^noremap <plug>(slash-after) zz$/;"	m
+<space>ga	vim/config/fugitive.vim	/^nnoremap <space>ga :Git add %:p<CR><CR>$/;"	m
+<space>gb	vim/config/fugitive.vim	/^nnoremap <space>gb :Git branch<Space>$/;"	m
+<space>gc	vim/config/fugitive.vim	/^nnoremap <space>gc :Gcommit -v -q<CR>$/;"	m
+<space>gd	vim/config/fugitive.vim	/^nnoremap <space>gd :Gdiff<CR>$/;"	m
+<space>ge	vim/config/fugitive.vim	/^nnoremap <space>ge :Gedit<CR>$/;"	m
+<space>gl	vim/config/fugitive.vim	/^nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>$/;"	m
+<space>gm	vim/config/fugitive.vim	/^nnoremap <space>gm :Gmove<Space>$/;"	m
+<space>go	vim/config/fugitive.vim	/^nnoremap <space>go :Git checkout<Space>$/;"	m
+<space>gp	vim/config/fugitive.vim	/^nnoremap <space>gp :Ggrep<Space>$/;"	m
+<space>gpl	vim/config/fugitive.vim	/^nnoremap <space>gpl :Dispatch git pull<CR>$/;"	m
+<space>gps	vim/config/fugitive.vim	/^nnoremap <space>gps :Dispatch git push<CR>$/;"	m
+<space>gr	vim/config/fugitive.vim	/^nnoremap <space>gr :Gread<CR>$/;"	m
+<space>gs	vim/config/fugitive.vim	/^nnoremap <space>gs :Gstatus<CR>$/;"	m
+<space>gt	vim/config/fugitive.vim	/^nnoremap <space>gt :Gcommit -v -q %:p<CR>$/;"	m
+<space>gw	vim/config/fugitive.vim	/^nnoremap <space>gw :Gwrite<CR><CR>$/;"	m
+==	bin/hub	/^      def ==(other) other.to_s == self.to_s end$/;"	f	class:Hub.SshConfig.HostPattern
+==	bin/hub	/^      def ==(other)$/;"	f	class:Hub.Hub.Context.GithubProject
+==	bin/hub	/^      def ==(other)$/;"	f	class:Hub.Hub.Remote
+===	bin/hub	/^      def self.===(exception)$/;"	F	class:Hub.GitHubAPI.Exceptions
+ACK	submodule/direnv/shell.go	/^	ACK           = 6$/;"	c
+AMPERSTAND	submodule/direnv/shell.go	/^	AMPERSTAND    = 38$/;"	c
+Allow	submodule/direnv/rc.go	/^func (self *RC) Allow() (err error) {$/;"	f
+AllowDir	submodule/direnv/config.go	/^func (self *Config) AllowDir() string {$/;"	f
+Allowed	submodule/direnv/rc.go	/^func (self *RC) Allowed() bool {$/;"	f
+Any	submodule/direnv/env_diff.go	/^func (self *EnvDiff) Any() bool {$/;"	f
+Args	bin/hub	/^  class Args < Array$/;"	c	class:Hub
+BACKSLASH	submodule/direnv/shell.go	/^	BACKSLASH     = 92$/;"	c
+BACKTICK	submodule/direnv/shell.go	/^	BACKTICK      = 96$/;"	c
+BASH	submodule/direnv/shell_bash.go	/^var BASH bash$/;"	v
+BASH_HOOK	submodule/direnv/shell_bash.go	/^const BASH_HOOK = `$/;"	c
+Branch	bin/hub	/^    class Branch < Struct.new(:local_repo, :name)$/;"	c	class:Hub.Hub
+BuildEnvDiff	submodule/direnv/env_diff.go	/^func BuildEnvDiff(e1, e2 Env) *EnvDiff {$/;"	f
+CLOSE_BRACKET	submodule/direnv/shell.go	/^	CLOSE_BRACKET = 93$/;"	c
+CR	submodule/direnv/shell.go	/^	CR            = 13$/;"	c
+Cmd	submodule/direnv/commands.go	/^type Cmd struct {$/;"	t
+CmdAllow	submodule/direnv/cmd_allow.go	/^var CmdAllow = &Cmd{$/;"	v
+CmdApplyDump	submodule/direnv/cmd_apply_dump.go	/^var CmdApplyDump = &Cmd{$/;"	v
+CmdDeny	submodule/direnv/cmd_deny.go	/^var CmdDeny = &Cmd{$/;"	v
+CmdDotEnv	submodule/direnv/cmd_dotenv.go	/^var CmdDotEnv = &Cmd{$/;"	v
+CmdDump	submodule/direnv/cmd_dump.go	/^var CmdDump = &Cmd{$/;"	v
+CmdEdit	submodule/direnv/cmd_edit.go	/^var CmdEdit = &Cmd{$/;"	v
+CmdExec	submodule/direnv/cmd_exec.go	/^var CmdExec = &Cmd{$/;"	v
+CmdExpandPath	submodule/direnv/cmd_expand_path.go	/^var CmdExpandPath = &Cmd{$/;"	v
+CmdExport	submodule/direnv/cmd_export.go	/^var CmdExport = &Cmd{$/;"	v
+CmdHelp	submodule/direnv/cmd_help.go	/^var CmdHelp = &Cmd{$/;"	v
+CmdHook	submodule/direnv/cmd_hook.go	/^var CmdHook = &Cmd{$/;"	v
+CmdList	submodule/direnv/commands.go	/^var CmdList []*Cmd$/;"	v
+CmdReload	submodule/direnv/cmd_reload.go	/^var CmdReload = &Cmd{$/;"	v
+CmdStatus	submodule/direnv/cmd_status.go	/^var CmdStatus = &Cmd{$/;"	v
+CmdStdlib	submodule/direnv/cmd_stdlib.go	/^var CmdStdlib = &Cmd{$/;"	v
+CmdVersion	submodule/direnv/cmd_version.go	/^var CmdVersion = &Cmd{$/;"	v
+Commands	bin/hub	/^  module Commands$/;"	m	class:Hub
+CommandsDispatch	submodule/direnv/commands.go	/^func CommandsDispatch(env Env, args []string) error {$/;"	f
+Config	submodule/direnv/config.go	/^type Config struct {$/;"	t
+Configuration	bin/hub	/^    class Configuration$/;"	c	class:Hub.GitHubAPI.HttpMethods
+Context	bin/hub	/^  module Context$/;"	m	class:Hub.Hub
+Copy	submodule/direnv/env.go	/^func (env Env) Copy() Env {$/;"	f
+DEL	submodule/direnv/shell.go	/^	DEL           = 127$/;"	c
+DESTDIR	submodule/direnv/Makefile	/^DESTDIR ?= \/usr\/local$/;"	m
+DIRENV_BASH	submodule/direnv/const.go	/^	DIRENV_BASH   = "DIRENV_BASH"$/;"	c
+DIRENV_CONFIG	submodule/direnv/const.go	/^	DIRENV_CONFIG = "DIRENV_CONFIG"$/;"	c
+DIRENV_DIFF	submodule/direnv/const.go	/^	DIRENV_DIFF  = "DIRENV_DIFF"$/;"	c
+DIRENV_DIR	submodule/direnv/const.go	/^	DIRENV_DIR   = "DIRENV_DIR"$/;"	c
+DIRENV_MTIME	submodule/direnv/const.go	/^	DIRENV_MTIME = "DIRENV_MTIME"$/;"	c
+DOTENV_ESC_REG	submodule/direnv/cmd_dotenv.go	/^var DOTENV_ESC_REG = regexp.MustCompile("\\\\\\\\.")$/;"	v
+DOTENV_LF_REG	submodule/direnv/cmd_dotenv.go	/^var DOTENV_LF_REG = regexp.MustCompile("\\\\\\\\n")$/;"	v
+DOTENV_REG	submodule/direnv/cmd_dotenv.go	/^var DOTENV_REG = regexp.MustCompile("(?:export\\\\s+)?([\\\\w\\\\.]+)(?:\\\\s*=\\\\s*|:\\\\s+?)(.*)")$/;"	v
+Deny	submodule/direnv/rc.go	/^func (self *RC) Deny() error {$/;"	f
+DetectShell	submodule/direnv/shell.go	/^func DetectShell(target string) Shell {$/;"	f
+Diff	submodule/direnv/env.go	/^func (e1 Env) Diff(e2 Env) *EnvDiff {$/;"	f
+DoUpdate	nvim/init.vim	/^function! DoUpdate(args)$/;"	f
+EDITORS	submodule/direnv/cmd_edit.go	/^var EDITORS = [][]string{$/;"	v
+Env	submodule/direnv/env.go	/^type Env map[string]string$/;"	t
+EnvDiff	submodule/direnv/config.go	/^func (self *Config) EnvDiff() (*EnvDiff, error) {$/;"	f
+EnvDiff	submodule/direnv/env_diff.go	/^type EnvDiff struct {$/;"	t
+Error	bin/hub	/^    class Error < RuntimeError; end$/;"	c	class:Hub.Hub.Context
+Escape	submodule/direnv/shell_bash.go	/^func (b bash) Escape(str string) string {$/;"	f
+Escape	submodule/direnv/shell_fish.go	/^func (f fish) Escape(str string) string {$/;"	f
+Escape	submodule/direnv/shell_tcsh.go	/^func (f tcsh) Escape(str string) string {$/;"	f
+Escape	submodule/direnv/shell_zsh.go	/^func (z zsh) Escape(str string) string {$/;"	f
+EscapeKey	submodule/direnv/shell_vim.go	/^func (x vim) EscapeKey(str string) string {$/;"	f
+EscapeValue	submodule/direnv/shell_vim.go	/^func (x vim) EscapeValue(str string) string {$/;"	f
+Exceptions	bin/hub	/^    module Exceptions$/;"	m	class:Hub.GitHubAPI
+ExpandSnippetOrCarriageReturn	vim/config/supertab.vim	/^function ExpandSnippetOrCarriageReturn()$/;"	f
+Export	submodule/direnv/shell_bash.go	/^func (b bash) Export(key, value string) string {$/;"	f
+Export	submodule/direnv/shell_fish.go	/^func (f fish) Export(key, value string) string {$/;"	f
+Export	submodule/direnv/shell_tcsh.go	/^func (f tcsh) Export(key, value string) string {$/;"	f
+Export	submodule/direnv/shell_vim.go	/^func (x vim) Export(key, value string) string {$/;"	f
+Export	submodule/direnv/shell_zsh.go	/^func (z zsh) Export(key, value string) string {$/;"	f
+FISH	submodule/direnv/shell_fish.go	/^var FISH fish$/;"	v
+FZFR	nvim/plugins/fzf.vim	/^command! FZFR call s:find_root()$/;"	c
+FatalError	bin/hub	/^    class FatalError < Error; end$/;"	c	class:Hub.Hub.Context
+FileStore	bin/hub	/^    class FileStore$/;"	c	class:Hub.GitHubAPI.HttpMethods
+FindRC	submodule/direnv/config.go	/^func (self *Config) FindRC() *RC {$/;"	f
+FindRC	submodule/direnv/rc.go	/^func FindRC(wd string, allowDir string) *RC {$/;"	f
+Gdiffoff	vim/config/fugitive.vim	/^  command Gdiffoff diffoff | q | Gedit$/;"	c
+Generator	bin/hub	/^  module Generator$/;"	m
+GetEnv	submodule/direnv/env.go	/^func GetEnv() Env {$/;"	f
+GitHubAPI	bin/hub	/^  class GitHubAPI$/;"	c	class:Hub
+GitReader	bin/hub	/^    class GitReader$/;"	c	class:Hub.Hub.Context
+GitReaderMethods	bin/hub	/^    module GitReaderMethods$/;"	m	class:Hub.Hub.Context
+GithubProject	bin/hub	/^    class GithubProject < Struct.new(:local_repo, :owner, :name, :host)$/;"	c	class:Hub.Hub.Context
+GithubURL	bin/hub	/^    class GithubURL < URI::HTTPS$/;"	c	class:Hub.Hub
+Hook	submodule/direnv/shell_bash.go	/^func (b bash) Hook() string {$/;"	f
+Hook	submodule/direnv/shell_fish.go	/^func (f fish) Hook() string {$/;"	f
+Hook	submodule/direnv/shell_tcsh.go	/^func (f tcsh) Hook() string {$/;"	f
+Hook	submodule/direnv/shell_vim.go	/^func (x vim) Hook() string {$/;"	f
+Hook	submodule/direnv/shell_zsh.go	/^func (z zsh) Hook() string {$/;"	f
+HostPattern	bin/hub	/^    class HostPattern$/;"	c	class:Hub.SshConfig
+HttpMethods	bin/hub	/^    module HttpMethods$/;"	m	class:Hub.GitHubAPI
+Hub	bin/hub	/^class Hub::JSON$/;"	c
+Hub	bin/hub	/^module Hub$/;"	m
+Hub	bin/hub	/^module Hub$/;"	m	class:Hub
+IGNORED_KEYS	submodule/direnv/env_diff.go	/^var IGNORED_KEYS = map[string]bool{$/;"	v
+IgnoredEnv	submodule/direnv/env_diff.go	/^func IgnoredEnv(key string) bool {$/;"	f
+LF	submodule/direnv/shell.go	/^	LF            = 10$/;"	c
+LOWERCASE_Z	submodule/direnv/shell.go	/^	LOWERCASE_Z   = 90$/;"	c
+LightLineFilename	nvim-save/init.vim	/^  function! LightLineFilename()$/;"	f
+LightLineFilename	nvim/statusline.vim	/^  function! LightLineFilename()$/;"	f
+LightLineFugitive	nvim-save/init.vim	/^  function! LightLineFugitive()$/;"	f
+LightLineFugitive	nvim/statusline.vim	/^  function! LightLineFugitive()$/;"	f
+LightLineGitGutter	nvim-save/init.vim	/^  function! LightLineGitGutter()$/;"	f
+LightLineGitGutter	nvim/statusline.vim	/^  function! LightLineGitGutter()$/;"	f
+LightLineModified	nvim-save/init.vim	/^  function! LightLineModified()$/;"	f
+LightLineModified	nvim/statusline.vim	/^  function! LightLineModified()$/;"	f
+LightLineReadonly	nvim-save/init.vim	/^  function! LightLineReadonly()$/;"	f
+LightLineReadonly	nvim/statusline.vim	/^  function! LightLineReadonly()$/;"	f
+Load	submodule/direnv/rc.go	/^func (self *RC) Load(config *Config, env Env) (newEnv Env, err error) {$/;"	f
+LoadConfig	submodule/direnv/config.go	/^func LoadConfig(env Env) (config *Config, err error) {$/;"	f
+LoadEnv	submodule/direnv/env.go	/^func LoadEnv(base64env string) (env Env, err error) {$/;"	f
+LoadEnvDiff	submodule/direnv/env_diff.go	/^func LoadEnvDiff(base64env string) (diff *EnvDiff, err error) {$/;"	f
+LoadedRC	submodule/direnv/config.go	/^func (self *Config) LoadedRC() *RC {$/;"	f
+LocalRepo	bin/hub	/^    class LocalRepo < Struct.new(:git_reader, :dir)$/;"	c	class:Hub.Hub.Context
+MAN_MD	submodule/direnv/Makefile	/^MAN_MD = $(wildcard man\/*.md)$/;"	m
+N	vim/config/easymotion.vim	/^map  N <Plug>(easymotion-prev)$/;"	m
+NINE	submodule/direnv/shell.go	/^	NINE          = 57$/;"	c
+NOT_ALLOWED	submodule/direnv/rc.go	/^const NOT_ALLOWED = "%s is blocked. Run `direnv allow` to approve its content."$/;"	c
+OAuth	bin/hub	/^    module OAuth$/;"	m	class:Hub.GitHubAPI.HttpMethods
+OPEN_BRACKET	submodule/direnv/shell.go	/^	OPEN_BRACKET  = 91$/;"	c
+PATH_add	submodule/direnv/stdlib.sh	/^PATH_add() {$/;"	f
+PLUS	submodule/direnv/shell.go	/^	PLUS          = 43$/;"	c
+ParseDotEnv	submodule/direnv/cmd_dotenv.go	/^func ParseDotEnv(data string) Env {$/;"	f
+Patch	submodule/direnv/env_diff.go	/^func (self *EnvDiff) Patch(env Env) (newEnv Env) {$/;"	f
+PostInstallVimgo	nvim/lang/go.vim	/^function! PostInstallVimgo(info)$/;"	f
+ProjectFiles	nvim/plugins/fzf.vim	/^command! ProjectFiles execute 'Files' s:find_git_root()$/;"	c
+Q	nvim/keybindings.vim	/^nnoremap Q <nop>$/;"	m
+QUESTION	submodule/direnv/shell.go	/^	QUESTION      = 63$/;"	c
+RC	submodule/direnv/rc.go	/^type RC struct {$/;"	t
+RCFromEnv	submodule/direnv/rc.go	/^func RCFromEnv(path string, mtime int64) *RC {$/;"	f
+RCFromPath	submodule/direnv/rc.go	/^func RCFromPath(path string, allowDir string) *RC {$/;"	f
+ROFFS	submodule/direnv/Makefile	/^ROFFS = $(MAN_MD:.md=)$/;"	m
+RelTo	submodule/direnv/rc.go	/^func (self *RC) RelTo(wd string) string {$/;"	f
+Remote	bin/hub	/^    class Remote < Struct.new(:local_repo, :name)$/;"	c	class:Hub.Hub
+ResponseMethods	bin/hub	/^      module ResponseMethods$/;"	m	class:Hub.GitHubAPI.HttpMethods
+Reverse	submodule/direnv/env_diff.go	/^func (self *EnvDiff) Reverse() *EnvDiff {$/;"	f
+Runner	bin/hub	/^  class Runner$/;"	c	class:Hub
+SINGLE_QUOTE	submodule/direnv/shell.go	/^	SINGLE_QUOTE  = 39$/;"	c
+SPACE	submodule/direnv/shell.go	/^	SPACE         = 32$/;"	c
+STDLIB	submodule/direnv/stdlib.go	/^const STDLIB = "#!bash\\n" +$/;"	c
+Serialize	submodule/direnv/env.go	/^func (env Env) Serialize() string {$/;"	f
+Serialize	submodule/direnv/env_diff.go	/^func (self *EnvDiff) Serialize() string {$/;"	f
+Shell	submodule/direnv/shell.go	/^type Shell interface {$/;"	t
+ShellEscape	submodule/direnv/shell.go	/^func ShellEscape(str string) string {$/;"	f
+SshConfig	bin/hub	/^  class SshConfig$/;"	c	class:Hub
+System	bin/hub	/^    module System$/;"	m	class:Hub
+TAB	submodule/direnv/shell.go	/^	TAB           = 9$/;"	c
+TCSH	submodule/direnv/shell_tcsh.go	/^var TCSH tcsh$/;"	v
+TEST_EXPORTED	submodule/direnv/cmd_dotenv_test.go	/^const TEST_EXPORTED = `export OPTION_A=2$/;"	c
+TEST_PLAIN	submodule/direnv/cmd_dotenv_test.go	/^const TEST_PLAIN = `OPTION_A=1$/;"	c
+TEST_QUOTED	submodule/direnv/cmd_dotenv_test.go	/^const TEST_QUOTED = `OPTION_A='1'$/;"	c
+TEST_YAML	submodule/direnv/cmd_dotenv_test.go	/^const TEST_YAML = `OPTION_A: 1$/;"	c
+TILDA	submodule/direnv/shell.go	/^	TILDA         = 126$/;"	c
+TestDotEnvExported	submodule/direnv/cmd_dotenv_test.go	/^func TestDotEnvExported(t *testing.T) {$/;"	f
+TestDotEnvPlain	submodule/direnv/cmd_dotenv_test.go	/^func TestDotEnvPlain(t *testing.T) {$/;"	f
+TestDotEnvQuoted	submodule/direnv/cmd_dotenv_test.go	/^func TestDotEnvQuoted(t *testing.T) {$/;"	f
+TestDotEnvYAML	submodule/direnv/cmd_dotenv_test.go	/^func TestDotEnvYAML(t *testing.T) {$/;"	f
+TestEnv	submodule/direnv/env_test.go	/^func TestEnv(t *testing.T) {$/;"	f
+TestEnvDiff	submodule/direnv/env_diff_test.go	/^func TestEnvDiff(t *testing.T) {$/;"	f
+TestEnvDiffEmptyValue	submodule/direnv/env_diff_test.go	/^func TestEnvDiffEmptyValue(t *testing.T) {$/;"	f
+TestIgnoredEnv	submodule/direnv/env_diff_test.go	/^func TestIgnoredEnv(t *testing.T) {$/;"	f
+TestRootDir	submodule/direnv/rc_test.go	/^func TestRootDir(t *testing.T) {$/;"	f
+TestShellDetection	submodule/direnv/shell_test.go	/^func TestShellDetection(t *testing.T) {$/;"	f
+TestShellEscape	submodule/direnv/shell_test.go	/^func TestShellEscape(t *testing.T) {$/;"	f
+TestSomething	submodule/direnv/rc_test.go	/^func TestSomething(t *testing.T) {$/;"	f
+ToGoEnv	submodule/direnv/env.go	/^func (env Env) ToGoEnv() []string {$/;"	f
+ToShell	submodule/direnv/env.go	/^func (env Env) ToShell(shell Shell) string {$/;"	f
+ToShell	submodule/direnv/env_diff.go	/^func (self *EnvDiff) ToShell(shell Shell) string {$/;"	f
+Touch	submodule/direnv/rc.go	/^func (self *RC) Touch() error {$/;"	f
+UNDERSCORE	submodule/direnv/shell.go	/^	UNDERSCORE    = 95$/;"	c
+US	submodule/direnv/shell.go	/^	US            = 31$/;"	c
+UltiSnips_Complete	nvim/plugins/snippets.vim	/^function! g:UltiSnips_Complete()$/;"	f
+UltiSnips_Reverse	nvim/plugins/snippets.vim	/^function! g:UltiSnips_Reverse()$/;"	f
+Unset	submodule/direnv/shell_bash.go	/^func (b bash) Unset(key string) string {$/;"	f
+Unset	submodule/direnv/shell_fish.go	/^func (f fish) Unset(key string) string {$/;"	f
+Unset	submodule/direnv/shell_tcsh.go	/^func (f tcsh) Unset(key string) string {$/;"	f
+Unset	submodule/direnv/shell_vim.go	/^func (x vim) Unset(key string) string {$/;"	f
+Unset	submodule/direnv/shell_zsh.go	/^func (z zsh) Unset(key string) string {$/;"	f
+VERSION	submodule/direnv/version.go	/^const VERSION = "2.7.0"$/;"	c
+VIM	submodule/direnv/shell_vim.go	/^var VIM vim$/;"	v
+XdgConfigDir	submodule/direnv/xdg.go	/^func XdgConfigDir(env Env, programName string) string {$/;"	f
+Y	vim/config/airblade.vim	/^noremap Y y\$$/;"	m
+ZSH	submodule/direnv/shell_zsh.go	/^var ZSH zsh$/;"	v
+ZSH_HOOK	submodule/direnv/shell_zsh.go	/^const ZSH_HOOK = `$/;"	c
+[c	nvim/plugins/git.vim	/^nmap [c <Plug>GitGutterPrevHunk$/;"	m
+]c	nvim/plugins/git.vim	/^nmap ]c <Plug>GitGutterNextHunk$/;"	m
+_tmuxinator	tmux/tmuxinator.zsh	/^_tmuxinator() {$/;"	f
+_tmuxinator	zsh/tmuxinator_completion.zsh	/^_tmuxinator() {$/;"	f
+_wanted	submodule/zaw/sources/perldoc.zsh	/^    function _wanted() {$/;"	f
+aar	zsh/os/linux/linux-zgen-bundles.zsh	/^aar () {$/;"	f
+add_exec_flags	bin/hub	/^      def add_exec_flags(flags)$/;"	f	class:Hub.Hub.Context.GitReader
+add_exec_flags	bin/hub	/^    def add_exec_flags(flags)$/;"	f	class:Hub.Args
+after	bin/hub	/^    def after(cmd_or_args = nil, args = nil, &block)$/;"	f	class:Hub.Args
+alias	bin/hub	/^    def alias(args)$/;"	f
+am	bin/hub	/^    def am(args)$/;"	f	class:Hub
+api_client	bin/hub	/^    def api_client$/;"	f
+api_host	bin/hub	/^    def api_host host$/;"	f	class:Hub.GitHubAPI
+api_token	bin/hub	/^      def api_token host, user$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+apply_authentication	bin/hub	/^      def apply_authentication req, url$/;"	f	class:Hub.GitHubAPI.HttpMethods.OAuth
+apply_authentication	bin/hub	/^      def apply_authentication req, url$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+array	bin/hub	/^  def array$/;"	f	class:Hub
+askpass	bin/hub	/^      def askpass$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+assertEqual	submodule/direnv/shell_test.go	/^func assertEqual(t *testing.T, a, b string) {$/;"	f
+assertNotNil	submodule/direnv/shell_test.go	/^func assertNotNil(t *testing.T, a Shell) {$/;"	f
+bash	submodule/direnv/shell_bash.go	/^type bash int$/;"	t
+before	bin/hub	/^    def before(cmd_or_args = nil, args = nil, &block)$/;"	f	class:Hub.Args
+branch_in_url	bin/hub	/^    def branch_in_url(branch)$/;"	f
+browse	bin/hub	/^    def browse(args)$/;"	f
+browse_command	bin/hub	/^    def browse_command(args)$/;"	f
+browser_launcher	bin/hub	/^      def browser_launcher$/;"	f	class:Hub.System
+byte_size	bin/hub	/^      def byte_size str$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+cd	zsh/001-functions.zsh	/^cd() {$/;"	f
+chained?	bin/hub	/^    def chained?$/;"	f	class:Hub.Args
+changed?	bin/hub	/^    def changed?$/;"	f	class:Hub.Args
+check_back_space	nvim/plugins/deoplete.vim	/^		function! s:check_back_space() abort "{{{$/;"	f
+checkout	bin/hub	/^    def checkout(args)$/;"	f	class:Hub
+cherry_pick	bin/hub	/^    def cherry_pick(args)$/;"	f	class:Hub
+ci_status	bin/hub	/^    def ci_status(args)$/;"	f	class:Hub.Commands
+clone	bin/hub	/^    def clone(args)$/;"	f	class:Hub
+command	bin/hub	/^    def command$/;"	f	class:Hub.Runner
+command?	bin/hub	/^      def command?(name)$/;"	f	class:Hub.System
+command_exists	zsh/001-functions.zsh	/^command_exists() {$/;"	f
+command_to_string	bin/hub	/^      def command_to_string(cmd)$/;"	f	class:Hub.Hub.Context.GitReader
+commands	bin/hub	/^    def commands$/;"	f	class:Hub.Args
+commands	bin/hub	/^    def commands$/;"	f	class:Hub.Runner
+compare	bin/hub	/^    def compare(args)$/;"	f
+configure_connection	bin/hub	/^      def configure_connection req, url$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+create	bin/hub	/^    def create(args)$/;"	f	class:Hub
+create_connection	bin/hub	/^      def create_connection url$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+create_pullrequest	bin/hub	/^    def create_pullrequest options$/;"	f	class:Hub.GitHubAPI
+create_repo	bin/hub	/^    def create_repo project, options = {}$/;"	f	class:Hub.GitHubAPI
+current_branch	bin/hub	/^      def current_branch$/;"	f	class:Hub.Hub.Context.LocalRepo
+current_dir	bin/hub	/^    def current_dir$/;"	f	class:Hub
+current_project	bin/hub	/^      def current_project$/;"	f	class:Hub.Hub.Context.LocalRepo
+custom_command?	bin/hub	/^    def custom_command? cmd$/;"	f
+data	bin/hub	/^        def data() @data ||= JSON.parse(body) end$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+data?	bin/hub	/^        def data?() content_type =~ \/\\bjson\\b\/ end$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+defaultLogFormat	submodule/direnv/log.go	/^	defaultLogFormat = "direnv: %s"$/;"	c
+default_host	bin/hub	/^      def self.default_host$/;"	F	class:Hub.Hub.Context.LocalRepo
+delete_editmsg	bin/hub	/^    def delete_editmsg(file = pullrequest_editmsg_file)$/;"	f
+detectEditor	submodule/direnv/cmd_edit.go	/^func detectEditor(pathenv string) string {$/;"	f
+direnvKey	submodule/direnv/cmd_export.go	/^func direnvKey(key string) bool {$/;"	f
+direnv_eval	submodule/direnv/test/direnv-test.sh	/^direnv_eval() {$/;"	f
+direnv_load	submodule/direnv/stdlib.sh	/^direnv_load() {$/;"	f
+display_api_exception	bin/hub	/^    def display_api_exception(action, response)$/;"	f
+dotenv	submodule/direnv/stdlib.sh	/^dotenv() {$/;"	f
+eachDir	submodule/direnv/rc.go	/^func eachDir(path string) (paths []string) {$/;"	f
+endkey	bin/hub	/^  def endkey() scan(KEY) or space end$/;"	f	class:Hub
+entry_for_user	bin/hub	/^      def entry_for_user host, username$/;"	f	class:Hub.GitHubAPI.HttpMethods.FileStore
+errNotFound	submodule/direnv/look_path.go	/^var errNotFound = errors.New("executable file not found in $PATH")$/;"	v
+error	bin/hub	/^  def error$/;"	f	class:Hub
+errorLogFormat	submodule/direnv/log.go	/^	errorLogFormat   = "\\033[31mdirenv: %s\\033[0m"$/;"	c
+error_message	bin/hub	/^        def error_message() error_sentences || data['message'] end$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+error_message?	bin/hub	/^        def error_message?() data? and data['errors'] || data['message'] end$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+error_sentences	bin/hub	/^        def error_sentences$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+exec	bin/hub	/^    def exec *args$/;"	f	class:Hub.Runner
+execute	bin/hub	/^    def execute$/;"	f	class:Hub.Runner
+execute	bin/hub	/^    def self.execute(*args)$/;"	F	class:Hub.Runner
+execute_command_chain	bin/hub	/^    def execute_command_chain commands$/;"	f	class:Hub.Runner
+expandPath	submodule/direnv/cmd_expand_path.go	/^func expandPath(path, relTo string) string {$/;"	f
+expand_alias	bin/hub	/^    def expand_alias(cmd)$/;"	f
+expand_path	submodule/direnv/stdlib.sh	/^expand_path() {$/;"	f
+extended	bin/hub	/^      def self.extended(base)$/;"	F	class:Hub.Hub.Context.GitReaderMethods
+extract	zsh/004-extract.zsh	/^function extract() {$/;"	f
+fail	script/bootstrap	/^fail () {$/;"	f
+fd	nvim/keybindings.vim	/^imap fd <esc>$/;"	m
+fetch	bin/hub	/^    def fetch(args)$/;"	f	class:Hub
+fetch_user	bin/hub	/^      def fetch_user host$/;"	f	class:Hub.GitHubAPI.HttpMethods.FileStore
+fetch_value	bin/hub	/^      def fetch_value host, user, key$/;"	f	class:Hub.GitHubAPI.HttpMethods.FileStore
+fileExists	submodule/direnv/rc.go	/^func fileExists(path string) bool {$/;"	f
+fileHash	submodule/direnv/rc.go	/^func fileHash(path string) (hash string, err error) {$/;"	f
+fileMtime	submodule/direnv/rc.go	/^func fileMtime(path string) (int64, error) {$/;"	f
+findExecutable	submodule/direnv/look_path.go	/^func findExecutable(file string) error {$/;"	f
+findUp	submodule/direnv/rc.go	/^func findUp(searchDir string, fileName string) (path string) {$/;"	f
+find_git_root	nvim/plugins/fzf.vim	/^function! s:find_git_root()$/;"	f
+find_root	nvim/plugins/fzf.vim	/^function! s:find_root()$/;"	f
+find_up	submodule/direnv/stdlib.sh	/^find_up() {$/;"	f
+fish	submodule/direnv/shell_fish.go	/^type fish int$/;"	t
+flags	bin/hub	/^    def flags$/;"	f	class:Hub.Args
+fork	bin/hub	/^    def fork(args)$/;"	f	class:Hub
+fork_repo	bin/hub	/^    def fork_repo project$/;"	f	class:Hub.GitHubAPI
+from_url	bin/hub	/^      def self.from_url(url, local_repo)$/;"	F	class:Hub.Hub.Context.GithubProject
+function	submodule/zaw/sources/ack.zsh	/^    function() {$/;"	f
+function	submodule/zaw/zaw.plugin.zsh	/^function() {$/;"	f
+function	submodule/zaw/zaw.zsh	/^function() {$/;"	f
+g:PreciseJump_disable_bindings	vim/config/precise_jump.vim	/^let g:PreciseJump_disable_bindings = 1$/;"	v
+g:UltiSnipsExpandTrigger	vim/config/supertab.vim	/^let g:UltiSnipsExpandTrigger = "<nop>"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	nvim/plugins/snippets.vim	/^  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	nvim/plugins/snippets.vim	/^  let g:UltiSnipsJumpForwardTrigger = "<tab>"$/;"	v
+g:airline#extensions#branch#empty_message	nvim/plugins/airline.vim	/^let g:airline#extensions#branch#empty_message = ''$/;"	v
+g:airline#extensions#branch#enabled	nvim/plugins/airline.vim	/^let g:airline#extensions#branch#enabled = 1$/;"	v
+g:airline#extensions#tabline#enabled	nvim/plugins/airline.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#fnamemod	nvim/plugins/airline.vim	/^let g:airline#extensions#tabline#fnamemod = ':t'$/;"	v
+g:airline#extensions#whitespace#mixed_indent_format	nvim/plugins/airline.vim	/^let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent[%s]'$/;"	v
+g:airline#extensions#whitespace#trailing_format	nvim/plugins/airline.vim	/^let g:airline#extensions#whitespace#trailing_format = 'trailing[%s]'$/;"	v
+g:airline_powerline_fonts	nvim/plugins/airline.vim	/^let g:airline_powerline_fonts=1$/;"	v
+g:airline_theme	nvim/plugins/airline.vim	/^let g:airline_theme='tomorrow'$/;"	v
+g:ctrlp_custom_ignore	vim/config/ctrlp.vim	/^let g:ctrlp_custom_ignore = {$/;"	v
+g:ctrlp_extensions	vim/config/ctrlp.vim	/^let g:ctrlp_extensions = ['yankring', 'quickfix', 'changes', 'mixed']$/;"	v
+g:ctrlp_show_hidden	vim/config/ctrlp.vim	/^let g:ctrlp_show_hidden = 1$/;"	v
+g:ctrlp_use_caching	vim/config/ctrlp.vim	/^  let g:ctrlp_use_caching = 0$/;"	v
+g:ctrlp_user_command	vim/config/ctrlp.vim	/^  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'$/;"	v
+g:ctrlp_user_command	vim/config/ctrlp.vim	/^let g:ctrlp_user_command = ''$/;"	v
+g:deoplete#auto_complete_delay	nvim/plugins/deoplete.vim	/^let g:deoplete#auto_complete_delay = 0$/;"	v
+g:deoplete#enable_at_startup	nvim-save/init.vim	/^  let g:deoplete#enable_at_startup=1$/;"	v
+g:deoplete#enable_at_startup	nvim/plugins/deoplete.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:deoplete#ignore_sources	nvim/plugins/deoplete.vim	/^let g:deoplete#ignore_sources = {}$/;"	v
+g:deoplete#ignore_sources	nvim/plugins/deoplete.vim	/^let g:deoplete#ignore_sources._ = ['member', 'tag', 'neosnippet']$/;"	v
+g:deoplete#sources#go#align_class	nvim/lang/go.vim	/^let g:deoplete#sources#go#align_class = 1$/;"	v
+g:deoplete#sources#go#sort_class	nvim/lang/go.vim	/^let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']$/;"	v
+g:elixir_use_markdown_for_docs	nvim/lang/elixir.vim	/^let g:elixir_use_markdown_for_docs = 1$/;"	v
+g:gitgutter_map_keys	nvim/plugins/git.vim	/^let g:gitgutter_map_keys = 1$/;"	v
+g:gitgutter_sign_column_always	vim/config/gitgutter.vim	/^let g:gitgutter_sign_column_always = 1$/;"	v
+g:go_fmt_command	nvim/lang/go.vim	/^let g:go_fmt_command = "goimports"$/;"	v
+g:go_highlight_build_constraints	nvim/lang/go.vim	/^let g:go_highlight_build_constraints = 1$/;"	v
+g:go_highlight_fields	nvim/lang/go.vim	/^let g:go_highlight_fields = 1$/;"	v
+g:go_highlight_functions	nvim/lang/go.vim	/^let g:go_highlight_functions = 1$/;"	v
+g:go_highlight_interfaces	nvim/lang/go.vim	/^let g:go_highlight_interfaces = 1$/;"	v
+g:go_highlight_methods	nvim/lang/go.vim	/^let g:go_highlight_methods = 1$/;"	v
+g:go_highlight_operators	nvim/lang/go.vim	/^let g:go_highlight_operators = 1$/;"	v
+g:go_highlight_structs	nvim/lang/go.vim	/^let g:go_highlight_structs = 1$/;"	v
+g:hardtime_allow_different_key	nvim/plugins/hardtime.vim	/^let g:hardtime_allow_different_key = 1$/;"	v
+g:hardtime_default_on	nvim/plugins/hardtime.vim	/^let g:hardtime_default_on = 1$/;"	v
+g:hardtime_ignore_buffer_patterns	nvim/plugins/hardtime.vim	/^let g:hardtime_ignore_buffer_patterns = [ ".git\/index", "NERD.*" ]$/;"	v
+g:hardtime_maxcount	nvim/plugins/hardtime.vim	/^let g:hardtime_maxcount = 1$/;"	v
+g:hardtime_showmsg	nvim/plugins/hardtime.vim	/^let g:hardtime_showmsg = 1$/;"	v
+g:indent_guides_guide_size	nvim/style.vim	/^let g:indent_guides_guide_size = 1$/;"	v
+g:indent_guides_start_level	nvim/style.vim	/^let g:indent_guides_start_level = 2$/;"	v
+g:jsx_ext_required	nvim/lang/javascript.vim	/^let g:jsx_ext_required = 1$/;"	v
+g:lasttab	nvim/keybindings.vim	/^let g:lasttab = 1$/;"	v
+g:lightline	nvim-save/init.vim	/^  let g:lightline = {$/;"	v
+g:lightline	nvim/statusline.vim	/^  let g:lightline = {$/;"	v
+g:mapleader	nvim-save/init.vim	/^let g:mapleader = "\\<Space>"$/;"	v
+g:markdown_fenced_languages	nvim/lang/markdown.vim	/^let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'golang']$/;"	v
+g:multi_cursor_next_key	nvim/plugins/multiplecursors.vim	/^let g:multi_cursor_next_key='<C-n>'$/;"	v
+g:multi_cursor_prev_key	nvim/plugins/multiplecursors.vim	/^let g:multi_cursor_prev_key='<C-p>'$/;"	v
+g:multi_cursor_quit_key	nvim/plugins/multiplecursors.vim	/^let g:multi_cursor_quit_key='<Esc>'$/;"	v
+g:multi_cursor_skip_key	nvim/plugins/multiplecursors.vim	/^let g:multi_cursor_skip_key='<C-x>'$/;"	v
+g:neomake_go_gobuild_maker	nvim/lang/go.vim	/^let g:neomake_go_gobuild_maker = {$/;"	v
+g:rspec_command	vim/config/rspec.vim	/^let g:rspec_command = "Dispatch spring rspec {spec}"$/;"	v
+g:solarized_contrast	vim/config/color.vim	/^let g:solarized_contrast="high"    "default value is normal$/;"	v
+g:solarized_termcolors	vim/config/color.vim	/^let g:solarized_termcolors=256    "default value is 16$/;"	v
+g:solarized_termtrans	vim/config/color.vim	/^let g:solarized_termtrans=1    "default value is 0$/;"	v
+g:solarized_visibility	vim/config/color.vim	/^let g:solarized_visibility="high"    "default value is normal$/;"	v
+g:syntastic_javascript_checkers	nvim/lang/javascript.vim	/^let g:syntastic_javascript_checkers = ['eslint', 'jslint']$/;"	v
+g:syntastic_javascript_jslint_args	nvim/lang/javascript.vim	/^let g:syntastic_javascript_jslint_args = " "$/;"	v
+g:syntastic_ruby_checkers	nvim/lang/ruby.vim	/^let g:syntastic_ruby_checkers = ['rubocop']$/;"	v
+g:ulti_expand_or_jump_res	vim/config/supertab.vim	/^let g:ulti_expand_or_jump_res = 0$/;"	v
+g:user_emmet_leader_key	nvim/lang/html.vim	/^let g:user_emmet_leader_key='<C-Y>'$/;"	v
+g:user_emmet_mode	nvim/lang/html.vim	/^let g:user_emmet_mode='a'$/;"	v
+g:vmt_auto_update_on_save	nvim/lang/markdown.vim	/^let g:vmt_auto_update_on_save = 1$/;"	v
+ga	nvim/keybindings.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
+generate	bin/hub	/^    def generate(obj)$/;"	f	class:Generator
+generate_Array	bin/hub	/^    def generate_Array(ary) '[%s]' % ary.map {|o| generate_type(o) }.join(', ') end$/;"	f	class:Generator
+generate_Hash	bin/hub	/^    def generate_Hash(hash)$/;"	f	class:Generator
+generate_NilClass	bin/hub	/^    def generate_NilClass(*) 'null' end$/;"	f	class:Generator
+generate_String	bin/hub	/^    def generate_String(str)$/;"	f	class:Generator
+generate_Symbol	bin/hub	/^    def generate_Symbol(sym) generate_String(sym.to_s) end$/;"	f	class:Generator
+generate_simple	bin/hub	/^    def generate_simple(obj) obj.inspect end$/;"	f	class:Generator
+generate_type	bin/hub	/^    def generate_type(obj)$/;"	f	class:Generator
+get	bin/hub	/^      def get url, &block$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+get_value	bin/hub	/^    def get_value hostname, key$/;"	f	class:Hub.SshConfig
+getbyte	bin/hub	/^      def getbyte(io)$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+git_alias_for	bin/hub	/^    def git_alias_for(name)$/;"	f	class:Hub
+git_dir	bin/hub	/^    def git_dir$/;"	f	class:Hub
+git_editor	bin/hub	/^    def git_editor$/;"	f	class:Hub
+git_reader	bin/hub	/^    def git_reader$/;"	f	class:Hub.Hub.Context
+git_url	bin/hub	/^      def git_url(options = {})$/;"	f	class:Hub.Hub.Context
+git_url	bin/hub	/^    def git_url(owner = nil, name = nil, options = {})$/;"	f	class:Hub
+github_project	bin/hub	/^    def github_project(name, owner = nil)$/;"	f	class:Hub
+github_user	bin/hub	/^    def github_user host = nil, &block$/;"	f
+goyo_enter	nvim/plugins/goyo.vim	/^function! s:goyo_enter()$/;"	f
+goyo_leave	nvim/plugins/goyo.vim	/^function! s:goyo_leave()$/;"	f
+groff_command	bin/hub	/^    def groff_command$/;"	f
+has	submodule/direnv/stdlib.sh	/^has() {$/;"	f
+has_flag?	bin/hub	/^    def has_flag?(*flags)$/;"	f	class:Hub.Args
+hash	bin/hub	/^  def hash$/;"	f	class:Hub
+help	bin/hub	/^    def help(args)$/;"	f
+http_clone?	bin/hub	/^    def http_clone?$/;"	f	class:Hub
+https_protocol?	bin/hub	/^    def https_protocol?$/;"	f	class:Hub
+hub	bin/hub	/^    def hub(args)$/;"	f
+hub_manpage	bin/hub	/^    def hub_manpage$/;"	f
+hub_raw_manpage	bin/hub	/^    def hub_raw_manpage$/;"	f
+improved_help_text	bin/hub	/^    def improved_help_text$/;"	f
+incognito	zsh/001-functions.zsh	/^incognito() {$/;"	f
+info	script/bootstrap	/^info () {$/;"	f
+init	bin/hub	/^    def init(args)$/;"	f	class:Hub
+init	submodule/direnv/commands.go	/^func init() {$/;"	f
+initialize	bin/hub	/^      def initialize filename$/;"	f	class:Hub.GitHubAPI.HttpMethods.FileStore
+initialize	bin/hub	/^      def initialize pattern$/;"	f	class:Hub.SshConfig.HostPattern
+initialize	bin/hub	/^      def initialize store$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+initialize	bin/hub	/^      def initialize(*args)$/;"	f	class:Hub.Hub.Context.GithubProject
+initialize	bin/hub	/^      def initialize(*args)$/;"	f	class:Hub.Hub.GithubURL
+initialize	bin/hub	/^      def initialize(executable = nil, &read_proc)$/;"	f	class:Hub.Hub.Context.GitReader
+initialize	bin/hub	/^    def initialize config, options$/;"	f	class:Hub.GitHubAPI
+initialize	bin/hub	/^    def initialize files = nil$/;"	f	class:Hub.SshConfig
+initialize	bin/hub	/^    def initialize(*args)$/;"	f	class:Hub.Args
+initialize	bin/hub	/^    def initialize(*args)$/;"	f	class:Hub.Runner
+initialize	bin/hub	/^  def initialize data$/;"	f	class:Hub
+install_default_gems	bin/update-default-gems	/^function install_default_gems() {$/;"	f
+install_dotfiles	script/bootstrap	/^install_dotfiles () {$/;"	f
+is_repo?	bin/hub	/^    def is_repo?$/;"	f	class:Hub
+isdarwin	zsh/001-functions.zsh	/^isdarwin(){$/;"	f
+islinux	zsh/001-functions.zsh	/^islinux(){$/;"	f
+isutfenv	zsh/001-functions.zsh	/^isutfenv() {$/;"	f
+known_hosts	bin/hub	/^      def known_hosts$/;"	f	class:Hub.Hub.Context.LocalRepo
+layout	submodule/direnv/stdlib.sh	/^layout() {$/;"	f
+layout_go	submodule/direnv/stdlib.sh	/^layout_go() {$/;"	f
+layout_node	submodule/direnv/stdlib.sh	/^layout_node() {$/;"	f
+layout_perl	submodule/direnv/stdlib.sh	/^layout_perl() {$/;"	f
+layout_python	submodule/direnv/stdlib.sh	/^layout_python() {$/;"	f
+layout_python3	submodule/direnv/stdlib.sh	/^layout_python3() {$/;"	f
+layout_ruby	submodule/direnv/stdlib.sh	/^layout_ruby() {$/;"	f
+line_to_go	submodule/direnv/script/str2go	/^def line_to_go(line)$/;"	f
+lines_to_go	submodule/direnv/script/str2go	/^def lines_to_go(lines)$/;"	f
+link_files	script/bootstrap	/^link_files () {$/;"	f
+load	bin/hub	/^      def load$/;"	f	class:Hub.GitHubAPI.HttpMethods.FileStore
+load_prefix	submodule/direnv/stdlib.sh	/^load_prefix() {$/;"	f
+local_repo	bin/hub	/^    def local_repo(fatal = true)$/;"	f	class:Hub.Hub.Context
+log	submodule/direnv/log.go	/^func log(format, msg string, a ...interface{}) {$/;"	f
+log_error	submodule/direnv/log.go	/^func log_error(msg string, a ...interface{}) {$/;"	f
+log_status	submodule/direnv/log.go	/^func log_status(env Env, msg string, a ...interface{}) {$/;"	f
+log_status	submodule/direnv/stdlib.sh	/^log_status() {$/;"	f
+lookPath	submodule/direnv/look_path.go	/^func lookPath(file string, pathenv string) (string, error) {$/;"	f
+main	submodule/direnv/cmd_allow.go	/^package main$/;"	p
+main	submodule/direnv/cmd_apply_dump.go	/^package main$/;"	p
+main	submodule/direnv/cmd_deny.go	/^package main$/;"	p
+main	submodule/direnv/cmd_dotenv.go	/^package main$/;"	p
+main	submodule/direnv/cmd_dotenv_test.go	/^package main$/;"	p
+main	submodule/direnv/cmd_dump.go	/^package main$/;"	p
+main	submodule/direnv/cmd_edit.go	/^package main$/;"	p
+main	submodule/direnv/cmd_exec.go	/^package main$/;"	p
+main	submodule/direnv/cmd_expand_path.go	/^package main$/;"	p
+main	submodule/direnv/cmd_export.go	/^package main$/;"	p
+main	submodule/direnv/cmd_help.go	/^package main$/;"	p
+main	submodule/direnv/cmd_hook.go	/^package main$/;"	p
+main	submodule/direnv/cmd_reload.go	/^package main$/;"	p
+main	submodule/direnv/cmd_status.go	/^package main$/;"	p
+main	submodule/direnv/cmd_stdlib.go	/^package main$/;"	p
+main	submodule/direnv/cmd_version.go	/^package main$/;"	p
+main	submodule/direnv/commands.go	/^package main$/;"	p
+main	submodule/direnv/config.go	/^package main$/;"	p
+main	submodule/direnv/const.go	/^package main$/;"	p
+main	submodule/direnv/env.go	/^package main$/;"	p
+main	submodule/direnv/env_diff.go	/^package main$/;"	p
+main	submodule/direnv/env_diff_test.go	/^package main$/;"	p
+main	submodule/direnv/env_test.go	/^package main$/;"	p
+main	submodule/direnv/log.go	/^package main$/;"	p
+main	submodule/direnv/look_path.go	/^package main$/;"	p
+main	submodule/direnv/main.go	/^func main() {$/;"	f
+main	submodule/direnv/main.go	/^package main$/;"	p
+main	submodule/direnv/marshal.go	/^package main$/;"	p
+main	submodule/direnv/rc.go	/^package main$/;"	p
+main	submodule/direnv/rc_test.go	/^package main$/;"	p
+main	submodule/direnv/shell.go	/^package main$/;"	p
+main	submodule/direnv/shell_bash.go	/^package main$/;"	p
+main	submodule/direnv/shell_fish.go	/^package main$/;"	p
+main	submodule/direnv/shell_tcsh.go	/^package main$/;"	p
+main	submodule/direnv/shell_test.go	/^package main$/;"	p
+main	submodule/direnv/shell_vim.go	/^package main$/;"	p
+main	submodule/direnv/shell_zsh.go	/^package main$/;"	p
+main	submodule/direnv/stdlib.go	/^package main$/;"	p
+main	submodule/direnv/version.go	/^package main$/;"	p
+main	submodule/direnv/xdg.go	/^package main$/;"	p
+main_host	bin/hub	/^      def self.main_host$/;"	F	class:Hub.Hub.Context.LocalRepo
+main_project	bin/hub	/^      def main_project$/;"	f	class:Hub.Hub.Context.LocalRepo
+mapleader	nvim-save/init.vim	/^let mapleader ="\\<Space>"$/;"	v
+mapleader	nvim/keybindings.vim	/^let mapleader = "\\<Space>"$/;"	v
+marshal	submodule/direnv/marshal.go	/^func marshal(obj interface{}) string {$/;"	f
+master?	bin/hub	/^      def master?$/;"	f	class:Hub.Hub.Branch
+master_branch	bin/hub	/^      def master_branch$/;"	f	class:Hub.Hub.Context.LocalRepo
+master_branch	bin/hub	/^    def master_branch$/;"	f	class:Hub.Hub.Context
+match?	bin/hub	/^      def match? hostname$/;"	f	class:Hub.SshConfig.HostPattern
+matcher	bin/hub	/^      def matcher$/;"	f	class:Hub.SshConfig.HostPattern
+merge	bin/hub	/^    def merge(args)$/;"	f	class:Hub
+mkcd	zsh/001-functions.zsh	/^mkcd(){$/;"	f
+n	vim/config/easymotion.vim	/^map  n <Plug>(easymotion-next)$/;"	m
+name	bin/hub	/^      def name$/;"	f	class:Hub.Hub.Context.LocalRepo
+name_with_owner	bin/hub	/^      def name_with_owner$/;"	f	class:Hub.Hub.Context.GithubProject
+noop!	bin/hub	/^    def noop!$/;"	f	class:Hub.Args
+noop?	bin/hub	/^    def noop?$/;"	f	class:Hub.Args
+normalize_callback	bin/hub	/^    def normalize_callback(cmd_or_args, args, block)$/;"	f	class:Hub.Args
+normalize_host	bin/hub	/^      def normalize_host host$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+oauth_token	bin/hub	/^      def oauth_token host, user, &block$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+object	bin/hub	/^  def object$/;"	f	class:Hub
+obtain_oauth_token	bin/hub	/^      def obtain_oauth_token host, user$/;"	f	class:Hub.GitHubAPI.HttpMethods.OAuth
+origin_remote	bin/hub	/^      def origin_remote$/;"	f	class:Hub.Hub.Context.LocalRepo
+osx?	bin/hub	/^      def osx?$/;"	f	class:Hub.System
+owned_by	bin/hub	/^      def owned_by(new_owner)$/;"	f	class:Hub.Hub.Context.GithubProject
+page_stdout	bin/hub	/^    def page_stdout$/;"	f
+parse	bin/hub	/^  def parse$/;"	f	class:Hub
+parse	bin/hub	/^  def self.parse(data) new(data).parse end$/;"	F	class:Hub
+parse_file	bin/hub	/^    def parse_file file$/;"	f	class:Hub.SshConfig
+password	bin/hub	/^      def password host, user$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+path_add	submodule/direnv/stdlib.sh	/^path_add() {$/;"	f
+pattern_to_regexp	bin/hub	/^      def self.pattern_to_regexp pattern$/;"	F	class:Hub.SshConfig.HostPattern
+perform_request	bin/hub	/^      def perform_request url, type$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+post	bin/hub	/^      def post url, params = nil$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+post_form	bin/hub	/^      def post_form url, params$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+private?	bin/hub	/^      def private?$/;"	f	class:Hub.Hub.Context.GithubProject
+project	bin/hub	/^      def project$/;"	f	class:Hub.Hub.Remote
+project_path	bin/hub	/^      def project_path$/;"	f	class:Hub.Hub.GithubURL
+prompt	bin/hub	/^      def prompt what$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+prompt_password	bin/hub	/^      def prompt_password host, user$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+proxy_uri	bin/hub	/^      def proxy_uri(with_ssl)$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+pull_request	bin/hub	/^    def pull_request(args)$/;"	f	class:Hub
+pullrequest_editmsg	bin/hub	/^    def pullrequest_editmsg(changes)$/;"	f
+pullrequest_editmsg_file	bin/hub	/^    def pullrequest_editmsg_file$/;"	f
+pullrequest_info	bin/hub	/^    def pullrequest_info project, pull_id$/;"	f	class:Hub.GitHubAPI
+push	bin/hub	/^    def push(args)$/;"	f
+puts	bin/hub	/^    def puts(*args)$/;"	f
+read	bin/hub	/^      def read(cmd)$/;"	f	class:Hub.Hub.Context.GitReader
+read_config	bin/hub	/^      def read_config(cmd, all = false)$/;"	f	class:Hub.Hub.Context.GitReader
+read_editmsg	bin/hub	/^    def read_editmsg(file)$/;"	f
+read_msg	bin/hub	/^    def read_msg(message)$/;"	f
+record_setting	bin/hub	/^    def record_setting key, value, patterns$/;"	f	class:Hub.SshConfig
+remote	bin/hub	/^      def remote$/;"	f	class:Hub.Hub.Context.GithubProject
+remote	bin/hub	/^    def remote(args)$/;"	f	class:Hub
+remote?	bin/hub	/^      def remote?$/;"	f	class:Hub.Hub.Branch
+remote_by_name	bin/hub	/^      def remote_by_name(remote_name)$/;"	f	class:Hub.Hub.Context.LocalRepo
+remote_name	bin/hub	/^      def remote_name$/;"	f	class:Hub.Hub.Branch
+remotes	bin/hub	/^      def remotes$/;"	f	class:Hub.Hub.Context.LocalRepo
+remotes_group	bin/hub	/^      def remotes_group(name)$/;"	f	class:Hub.Hub.Context.LocalRepo
+repeat_until	bin/hub	/^  def repeat_until reg$/;"	f	class:Hub
+repo_exists?	bin/hub	/^    def repo_exists? project$/;"	f	class:Hub.GitHubAPI
+repo_host	bin/hub	/^      def repo_host$/;"	f	class:Hub.Hub.Context.LocalRepo
+repo_info	bin/hub	/^    def repo_info project$/;"	f	class:Hub.GitHubAPI
+repo_owner	bin/hub	/^      def repo_owner$/;"	f	class:Hub.Hub.Context.LocalRepo
+request_uri	bin/hub	/^      def request_uri url$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+resolve	bin/hub	/^      def self.resolve(url, local_repo)$/;"	F	class:Hub.Hub.GithubURL
+resolve_github_url	bin/hub	/^    def resolve_github_url(url)$/;"	f	class:Hub
+respect_help_flags	bin/hub	/^    def respect_help_flags args$/;"	f
+rev_list	bin/hub	/^    def rev_list(a, b)$/;"	f	class:Hub
+rootDir	submodule/direnv/rc.go	/^func rootDir(path string) string {$/;"	f
+run	bin/hub	/^    def run(args)$/;"	f	class:Hub.Commands
+rvm	submodule/direnv/stdlib.sh	/^rvm() {$/;"	f
+s	vim/config/easymotion.vim	/^map s <Plug>(easymotion-s2)$/;"	m
+save	bin/hub	/^      def save$/;"	f	class:Hub.GitHubAPI.HttpMethods.FileStore
+save_function	zsh/001-functions.zsh	/^save_function()$/;"	f
+select	submodule/zaw/zaw.plugin.zsh	/^function select-action() {}; zle -N select-action$/;"	f
+select	submodule/zaw/zaw.zsh	/^function select-action() {}; zle -N select-action$/;"	f
+setup_gitconfig	script/bootstrap	/^setup_gitconfig () {$/;"	f
+short_name	bin/hub	/^      def short_name$/;"	f	class:Hub.Hub.Branch
+skip!	bin/hub	/^    def skip!$/;"	f	class:Hub.Args
+skip?	bin/hub	/^    def skip?$/;"	f	class:Hub.Args
+slurp_global_flags	bin/hub	/^    def slurp_global_flags(args)$/;"	f
+source_env	submodule/direnv/stdlib.sh	/^source_env() {$/;"	f
+source_up	submodule/direnv/stdlib.sh	/^source_up() {$/;"	f
+space	bin/hub	/^  def space() scan WSP end$/;"	f	class:Hub
+ssh_config	bin/hub	/^      def ssh_config$/;"	f	class:Hub.Hub.Context.LocalRepo
+status	bin/hub	/^        def status() code.to_i end$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+statuses	bin/hub	/^    def statuses project, sha$/;"	f	class:Hub.GitHubAPI
+string	bin/hub	/^  def string$/;"	f	class:Hub
+stub!	bin/hub	/^      def stub!(values)$/;"	f	class:Hub.Hub.Context.GitReader
+stub_command_output	bin/hub	/^      def stub_command_output(cmd, value)$/;"	f	class:Hub.Hub.Context.GitReader
+stub_config_value	bin/hub	/^      def stub_config_value(key, value, get = '--get')$/;"	f	class:Hub.Hub.Context.GitReader
+submodule	bin/hub	/^    def submodule(args)$/;"	f	class:Hub
+success	script/bootstrap	/^success () {$/;"	f
+success?	bin/hub	/^        def success?() Net::HTTPSuccess === self end$/;"	f	class:Hub.GitHubAPI.HttpMethods.ResponseMethods
+t	vim/config/easymotion.vim	/^map t <Plug>(easymotion-t2)$/;"	m
+tcsh	submodule/direnv/shell_tcsh.go	/^type tcsh int$/;"	t
+test_start	submodule/direnv/test/direnv-test.sh	/^test_start() {$/;"	f
+test_stop	submodule/direnv/test/direnv-test.sh	/^test_stop() {$/;"	f
+tmp_dir	bin/hub	/^      def tmp_dir$/;"	f	class:Hub.System
+to_exec	bin/hub	/^      def to_exec(args)$/;"	f	class:Hub.Hub.Context.GitReader
+to_exec	bin/hub	/^    def to_exec(args = self)$/;"	f	class:Hub.Args
+to_s	bin/hub	/^      def to_s() @pattern end$/;"	f	class:Hub.SshConfig.HostPattern
+touch	submodule/direnv/rc.go	/^func touch(path string) (err error) {$/;"	f
+unmarshal	submodule/direnv/marshal.go	/^func unmarshal(base64env string, obj interface{}) error {$/;"	f
+update_submodules	script/bootstrap	/^update_submodules () {$/;"	f
+update_username	bin/hub	/^      def update_username host, old_username, new_username$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+upstream	bin/hub	/^      def upstream$/;"	f	class:Hub.Hub.Branch
+upstream_project	bin/hub	/^      def upstream_project$/;"	f	class:Hub.Hub.Context.LocalRepo
+uri_parse	bin/hub	/^      def uri_parse uri$/;"	f	class:Hub.Hub
+urls	bin/hub	/^      def urls$/;"	f	class:Hub.Hub.Remote
+use	submodule/direnv/stdlib.sh	/^use() {$/;"	f
+use_nix	submodule/direnv/stdlib.sh	/^use_nix() {$/;"	f
+use_rbenv	submodule/direnv/stdlib.sh	/^use_rbenv() {$/;"	f
+user	script/bootstrap	/^user () {$/;"	f
+user_rel_path	submodule/direnv/stdlib.sh	/^user_rel_path() {$/;"	f
+username	bin/hub	/^      def username host$/;"	f	class:Hub.GitHubAPI.HttpMethods.Configuration
+v	nvim/keybindings.vim	/^vno v <esc>$/;"	m
+valid_editmsg_file?	bin/hub	/^    def valid_editmsg_file?(message_file)$/;"	f
+value	bin/hub	/^  def value$/;"	f	class:Hub
+version	bin/hub	/^    def version(args)$/;"	f
+vim	submodule/direnv/shell_vim.go	/^type vim int$/;"	t
+w!!	vim/config/sudo.vim	/^cmap w!! s !sudo tee > \/dev\/null %$/;"	m
+web_url	bin/hub	/^      def web_url(path = nil)$/;"	f	class:Hub.Hub.Context.GithubProject
+which	bin/hub	/^      def which(cmd)$/;"	f	class:Hub.System
+windows?	bin/hub	/^      def windows?$/;"	f	class:Hub.System
+words	bin/hub	/^    def words$/;"	f	class:Hub.Args
+y	nvim/style.vim	/^map y <Plug>(operator-flashy)$/;"	m
+zaw	submodule/zaw/sources/ack.zsh	/^function zaw-src-ack() {$/;"	f
+zaw	submodule/zaw/sources/applications.zsh	/^function zaw-callback-launch-macapp() {$/;"	f
+zaw	submodule/zaw/sources/applications.zsh	/^function zaw-src-applications() {$/;"	f
+zaw	submodule/zaw/sources/bookmark.zsh	/^function zaw-bookmark-add() {$/;"	f
+zaw	submodule/zaw/sources/bookmark.zsh	/^function zaw-bookmark-add-buffer() {$/;"	f
+zaw	submodule/zaw/sources/bookmark.zsh	/^function zaw-bookmark-execute() {$/;"	f
+zaw	submodule/zaw/sources/bookmark.zsh	/^function zaw-bookmark-remove() {$/;"	f
+zaw	submodule/zaw/sources/bookmark.zsh	/^function zaw-bookmark-remove-buffer() {$/;"	f
+zaw	submodule/zaw/sources/bookmark.zsh	/^function zaw-src-bookmark() {$/;"	f
+zaw	submodule/zaw/sources/cdr.zsh	/^function zaw-src-cdr () {$/;"	f
+zaw	submodule/zaw/sources/cdr.zsh	/^function zaw-src-cdr-cd () {$/;"	f
+zaw	submodule/zaw/sources/cdr.zsh	/^function zaw-src-cdr-insert () {$/;"	f
+zaw	submodule/zaw/sources/cdr.zsh	/^function zaw-src-cdr-prune () {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches() {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches-checkout () {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches-create () {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches-delete () {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches-merge () {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches-merge-no-ff () {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches-merge-to () {$/;"	f
+zaw	submodule/zaw/sources/git-branches.zsh	/^function zaw-src-git-branches-reset () {$/;"	f
+zaw	submodule/zaw/sources/git-files.zsh	/^    function zaw-src-git-files-register-src() {$/;"	f
+zaw	submodule/zaw/sources/git-files.zsh	/^function zaw-src-git-files-add () {$/;"	f
+zaw	submodule/zaw/sources/git-files.zsh	/^function zaw-src-git-files-classify-aux() {$/;"	f
+zaw	submodule/zaw/sources/git-files.zsh	/^function zaw-src-git-files-legacy-aux() {$/;"	f
+zaw	submodule/zaw/sources/git-files.zsh	/^function zaw-src-git-files-raw() {$/;"	f
+zaw	submodule/zaw/sources/git-recent-branches.zsh	/^function zaw-src-git-branches-diff() {$/;"	f
+zaw	submodule/zaw/sources/git-recent-branches.zsh	/^function zaw-src-git-branches-diff-stat() {$/;"	f
+zaw	submodule/zaw/sources/git-recent-branches.zsh	/^function zaw-src-git-recent-all-branches () {$/;"	f
+zaw	submodule/zaw/sources/git-recent-branches.zsh	/^function zaw-src-git-recent-branches () {$/;"	f
+zaw	submodule/zaw/sources/git-recent-branches.zsh	/^function zaw-src-git-recent-branches-checkout () {$/;"	f
+zaw	submodule/zaw/sources/git-status.zsh	/^function zaw-src-git-status() {$/;"	f
+zaw	submodule/zaw/sources/git-status.zsh	/^function zaw-src-git-status-add() {$/;"	f
+zaw	submodule/zaw/sources/git-status.zsh	/^function zaw-src-git-status-add-p() {$/;"	f
+zaw	submodule/zaw/sources/git-status.zsh	/^function zaw-src-git-status-checkout() {$/;"	f
+zaw	submodule/zaw/sources/git-status.zsh	/^function zaw-src-git-status-reset() {$/;"	f
+zaw	submodule/zaw/sources/history.zsh	/^function zaw-src-history() {$/;"	f
+zaw	submodule/zaw/sources/open-file.zsh	/^function zaw-callback-open-file() {$/;"	f
+zaw	submodule/zaw/sources/open-file.zsh	/^function zaw-src-open-file() {$/;"	f
+zaw	submodule/zaw/sources/perldoc.zsh	/^function zaw-callback-perldoc-view() {$/;"	f
+zaw	submodule/zaw/sources/perldoc.zsh	/^function zaw-callback-perldoc-vim() {$/;"	f
+zaw	submodule/zaw/sources/perldoc.zsh	/^function zaw-src-perldoc() {$/;"	f
+zaw	submodule/zaw/sources/process.zsh	/^function zaw-src-process () {$/;"	f
+zaw	submodule/zaw/sources/process.zsh	/^function zaw-src-process-kill () {$/;"	f
+zaw	submodule/zaw/sources/screens.zsh	/^function zaw-callback-screens-attach() {$/;"	f
+zaw	submodule/zaw/sources/screens.zsh	/^function zaw-src-screens() {$/;"	f
+zaw	submodule/zaw/sources/ssh-hosts.zsh	/^function zaw-callback-ssh-connect(){$/;"	f
+zaw	submodule/zaw/sources/ssh-hosts.zsh	/^function zaw-src-ssh-hosts(){$/;"	f
+zaw	submodule/zaw/sources/tmux.zsh	/^function zaw-callback-tmux-attach() {$/;"	f
+zaw	submodule/zaw/sources/tmux.zsh	/^function zaw-src-tmux() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw-callback-append-to-buffer() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw-callback-edit-file() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw-callback-execute() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw-callback-replace-buffer() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw-print-src() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw-register-src() {$/;"	f
+zaw	submodule/zaw/zaw.plugin.zsh	/^function zaw-select-src() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw-callback-append-to-buffer() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw-callback-edit-file() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw-callback-execute() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw-callback-replace-buffer() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw-print-src() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw-register-src() {$/;"	f
+zaw	submodule/zaw/zaw.zsh	/^function zaw-select-src() {$/;"	f
+zgen	submodule/zgen/zgen.zsh	/^zgen() {$/;"	f
+zle	submodule/zaw/zaw-launcher.zsh	/^function zle-line-init() {$/;"	f
+zle	zsh/vim.zsh	/^function zle-line-init zle-keymap-select {$/;"	f
+zsh	submodule/direnv/shell_zsh.go	/^type zsh int$/;"	t

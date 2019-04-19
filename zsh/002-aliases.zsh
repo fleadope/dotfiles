@@ -41,3 +41,17 @@ alias tmux="tmux -2"
 alias ping="ping -c5"
 
 alias update_zgen="zgen update && source $DOTFILES_DIR/zsh/000-zgen-bundles.zsh"
+
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bil="bi --local"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+
+# Change volume from the command line
+alias voldown="pactl -- set-sink-volume @DEFAULT_SINK@ -5%"
+alias volup="pactl -- set-sink-volume @DEFAULT_SINK@ +5%"
+alias voltog="pactl set-sink-mute @DEFAULT_SINK@ toggle"
+
+alias kill-extra-mosh="pgrep -u "$USER" mosh-server | tr ' ' '\n' | grep -v "$PPID" | xargs kill"

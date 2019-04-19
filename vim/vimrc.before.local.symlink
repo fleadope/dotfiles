@@ -1,0 +1,11 @@
+" Looks like spf13-vim  overrides go here?
+"
+" Use semicolon as leader
+let g:spf13_leader=";"
+
+" Enough with not knowing where I am!
+let g:spf13_no_autochdir = 1
+
+let g:spf13_bundle_groups=['youcompleteme', 'general', 'programming', 'ruby', 'javascript', 'html', 'misc']
+
+" Solarized dark

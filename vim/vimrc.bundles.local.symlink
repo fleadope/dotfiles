@@ -1,15 +1,6 @@
-" Looks like spf13-vim  overrides go here?
-"
-" Use semicolon as leader
-let g:spf13_leader=";"
-
-" Enough with not knowing where I am!
-let g:spf13_no_autochdir = 1
-
-let g:spf13_bundle_groups=['general', 'neocomplete', 'programming', 'ruby', 'javascript', 'html', 'misc']
-
 " Extra bundles
 Bundle "vimux"
+Bundle "janko-m/vim-test"
 Bundle "vroom"
 Bundle 'sudo.vim'
 Bundle 'tpope/vim-dispatch'
@@ -30,3 +21,9 @@ Bundle 'xolox/vim-misc'
 Bundle 'slim-template/vim-slim'
 Bundle 'jplaut/vim-arduino-ino'
 Bundle 'tpope/vim-liquid'
+Bundle 'SuperTab'
+Bundle 'file-line'
+Bundle 'slashmili/alchemist'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'avdgaag/vim-phoenix'
+

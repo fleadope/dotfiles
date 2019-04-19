@@ -1,9 +1,12 @@
 [submodule "submodule/zaw"]
 	path = submodule/zaw
 	url = https://github.com/zsh-users/zaw.git
-[submodule "submodule/irb-config"]
-	path = submodule/irb-config
-	url = https://github.com/nviennot/irb-config.git
 [submodule "submodule/zgen"]
 	path = submodule/zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "submodule/asdf"]
+	path = submodule/asdf
+	url = https://github.com/asdf-vm/asdf.git
+[submodule "submodule/exenv"]
+	path = submodule/exenv
+	url = https://github.com/mururu/exenv.git
