@@ -7,6 +7,6 @@
 [submodule "submodule/asdf"]
 	path = submodule/asdf
 	url = https://github.com/asdf-vm/asdf.git
-[submodule "submodule/exenv"]
-	path = submodule/exenv
-	url = https://github.com/mururu/exenv.git
+[submodule "submodule/gnome-terminal-colors-solarized"]
+	path = submodule/gnome-terminal-colors-solarized
+	url = https://github.com/aruhier/gnome-terminal-colors-solarized.git
