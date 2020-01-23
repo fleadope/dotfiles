@@ -1,9 +1,6 @@
 [submodule "submodule/zaw"]
 	path = submodule/zaw
 	url = https://github.com/zsh-users/zaw.git
-[submodule "submodule/zgen"]
-	path = submodule/zgen
-	url = https://github.com/tarjoilija/zgen.git
 [submodule "submodule/asdf"]
 	path = submodule/asdf
 	url = https://github.com/asdf-vm/asdf.git
