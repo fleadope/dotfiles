@@ -1,0 +1,25 @@
+zsh-users/zsh-completions
+
+ohmyzsh/ohmyzsh
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/ssh-agent
+ohmyzsh/ohmyzsh path:plugins/dirpersist
+ohmyzsh/ohmyzsh path:plugins/last-working-dir
+ohmyzsh/ohmyzsh path:plugins/taskwarrior
+ohmyzsh/ohmyzsh path:plugins/fasd
+ohmyzsh/ohmyzsh path:plugins/mix
+ohmyzsh/ohmyzsh path:plugins/asdf
+ohmyzsh/ohmyzsh path:plugins/colorize
+ohmyzsh/ohmyzsh path:themes/agnoster.zsh-theme
+
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+oknowton/zsh-dwim
+heroku/heroku
+djui/alias-tips
+zsh-users/zaw
+smallhadroncollider/antigen-git-rebase
+caarlos0/zsh-pg
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting

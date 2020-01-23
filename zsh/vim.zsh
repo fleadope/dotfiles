@@ -1,10 +1,10 @@
-bindkey -v
+# bindkey -v
 
-function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg[red]%} [% NORMAL]%  %{$reset_color%}"
-    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-      zle reset-prompt
-}
+# function zle-line-init zle-keymap-select {
+#     VIM_PROMPT="%{$fg[red]%} [% NORMAL]%  %{$reset_color%}"
+#     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+#       zle reset-prompt
+# }
 
 zle -N zle-line-init
 zle -N zle-keymap-select

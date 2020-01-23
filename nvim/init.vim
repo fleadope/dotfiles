@@ -224,6 +224,9 @@ set background=dark
 let mapleader ="\<Space>"
 set noshowmode
 
+" use 'jk' instead of Escape
+inoremap jk <Esc>
+
 " Remember cursor position between vim sessions
 autocmd BufReadPost *
   \ if line("'\"") > 0 && line ("'\"") <= line("$") |

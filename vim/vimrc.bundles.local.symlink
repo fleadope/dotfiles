@@ -1,8 +1,8 @@
 " Extra bundles
-Bundle "vimux"
+Bundle "benmills/vimux"
 Bundle "janko-m/vim-test"
-Bundle "vroom"
-Bundle 'sudo.vim'
+Bundle "skalnik/vim-vroom"
+Bundle 'vim-scripts/sudo.vim'
 Bundle 'tpope/vim-dispatch'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'sgur/ctrlp-extensions.vim'
@@ -22,8 +22,8 @@ Bundle 'slim-template/vim-slim'
 Bundle 'jplaut/vim-arduino-ino'
 Bundle 'tpope/vim-liquid'
 Bundle 'SuperTab'
-Bundle 'file-line'
-Bundle 'slashmili/alchemist'
+Bundle 'bogado/file-line'
+Bundle 'slashmili/alchemist.vim'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'avdgaag/vim-phoenix'
-
+Bundle 'jamessan/vim-gnupg'
