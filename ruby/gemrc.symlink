@@ -7,3 +7,4 @@
 :verbose: true
 install: "--env-shebang"
 gem: "--no-document"
+gem: "--no-ri --no-rdoc"

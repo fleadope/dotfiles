@@ -123,3 +123,5 @@ unfunction _update_zcomp
 
 eval `dircolors ~/.dir_colors/dircolors`
 source ~/.dotfiles/zsh/fleadope.zsh-theme
+eval "$(direnv hook zsh)"
+

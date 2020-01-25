@@ -26,4 +26,4 @@ bind ^A select-pane -t :.+
 # make ctrl arrow keys jump word to word
 set-option -g xterm-keys on
 
-# set -w main-pane-width 140
+set -w main-pane-width 140
