@@ -1,9 +1,0 @@
-[submodule "submodule/zaw"]
-	path = submodule/zaw
-	url = https://github.com/zsh-users/zaw.git
-[submodule "submodule/antigen"]
-	path = submodule/antigen
-	url = https://github.com/zsh-users/antigen.git
-[submodule "submodule/spf13-vim"]
-	path = submodule/spf13-vim
-	url = http://github.com/spf13/spf13-vim.git
