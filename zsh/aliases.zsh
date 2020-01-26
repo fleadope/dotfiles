@@ -38,5 +38,24 @@ alias zweep=zsw
 # Tmux
 alias tmux="tmux -2"
 
+if islinux; then
+    alias update="sudo apt-get update "
+    alias upgrade="sudo aptitude safe-upgrade"
+    alias install="sudo aptitude install "
+    alias remove="sudo aptitude remove "
+    alias search="apt-cache search "
+elif isdarwin; then
+    alias update="brew update"
+    alias upgrade="brew outdated | xargs brew install"
+    alias install="brew install "
+    alias search="brew search "
+    alias remove="brew uninstall "
+elif isalpine; then
+    alias update="sudo apk update "
+    alias upgrade="sudo apk upgrade "
+    alias install="sudo apk add "
+    alias remove="sudo apk del "
+    alias search="apk search "
+fi
 
 
