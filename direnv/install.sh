@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
 
-install direnv
+sudo apt install direnv
 
 
 

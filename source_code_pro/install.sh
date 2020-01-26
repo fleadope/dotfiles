@@ -2,7 +2,7 @@
 
 version=1.010
 
-cd "$(dirname $0)""
+cd "$(dirname $0)"
 
 echo "\n* Downloading version $version of source code pro font..."
 rm -f SourceCodePro_FontsOnly-$version.zip
@@ -27,4 +27,4 @@ echo "\n* Now, you can use the 'Source Code Pro' fonts"
 echo "\n* cleaning up..."
 rm *SourceCodePro*
 
-echo "\n* Finished :)\n"
+echo "\n* Finished"

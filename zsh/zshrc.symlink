@@ -97,5 +97,8 @@ _update_zcomp() {
 _update_zcomp "$zcachedir"
 unfunction _update_zcomp
 
-eval `dircolors ~/.dir_colors/dircolors`
+if [ -f ~/.dir_colors/dircolors ]
+then
+  eval `dircolors ~/.dir_colors/dircolors`
+fi
 source ~/.dotfiles/zsh/fleadope.zsh-theme
