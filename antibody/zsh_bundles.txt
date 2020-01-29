@@ -22,5 +22,6 @@ djui/alias-tips
 zsh-users/zaw
 smallhadroncollider/antigen-git-rebase
 caarlos0/zsh-pg
+caarlos0/zsh-git-sync kind:path
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
