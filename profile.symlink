@@ -1,20 +1,21 @@
-export PATH=./.bin:./bin:$HOME/bin:$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:~/.npm-global/bin:$PATH
+export GOPATH=$HOME
 export DOTFILES_DIR=~/.dotfiles
 export ZSH_DIR=$DOTFILES_DIR/zsh
 export SUBMODULES_DIR=$DOTFILES_DIR/submodule
 export DEFAULT_USER="lee"
 
+export PATH=$PATH:./.bin:./bin:$HOME/bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/.dotfiles/bin:/usr/local/bin:~/.npm-global/bin
+export PATH=$PATH:$HOME/.asdf/bin:/usr/local/go/bin:$GOPATH/bin
+
 # Start ssh-agent if it's not already going
-if [ -z "$SSH_AUTH_SOCK" ]
-then
+if [ -z "$SSH_AUTH_SOCK" ]; then
    # Check for a currently running instance of the agent
-   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
-   if [ "$RUNNING_AGENT" = "0" ]
-   then
-        # Launch a new instance of the agent
-        ssh-agent -s &> .ssh/ssh-agent
+   RUNNING_AGENT="$(ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]')"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+      # Launch a new instance of the agent
+      ssh-agent -s &>$HOME/.ssh/ssh-agent
    fi
 fi
 
-eval `cat .ssh/ssh-agent`
-   
+eval $(cat $HOME/.ssh/ssh-agent)
