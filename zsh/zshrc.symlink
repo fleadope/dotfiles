@@ -7,7 +7,7 @@ unsetopt correct_all
 # zmodload zsh/zprof
 
 # load profile from ~/.profile, since other shells will use that too
-[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+[[ -e $HOME/.profile ]] && emulate sh -c 'source $HOME/.profile'
 
 # Grab some useful env variables i don't want in
 # a repository

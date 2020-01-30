@@ -8,9 +8,14 @@ _install_codium () {
 }
 
 echo "Do you wish to install codium?"
-select yn in "Yes" "No"
-case $yn in
-  Yes ) _install_codium;;
-    No ) exit;;
-esac
+select answer in "Yes" "No"
+do
+	case "$answer" in
+	  Yes)
+		_install_codium
+		exit 1;;
 
+	  No)
+		exit 0;;
+	esac
+done
